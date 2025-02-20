@@ -7,8 +7,13 @@ function getGuideline(x){
     let guidelines = getRandomItem(wsg.category[x].guidelines);
     document.getElementById("output").innerHTML = 
     `<a href="${guidelines.url}">${guidelines.guideline}</a>
+    <br>
+    <h2>Impact: ${guidelines.impact}</h2>
     <br><br>
     <p>${guidelines.description}</p>
+    <br>
+
+
     `;
     // return guidelines.description;
 }
