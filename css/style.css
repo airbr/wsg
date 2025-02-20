@@ -187,7 +187,7 @@ output > p, output > a {
 }
 
 .button:active {
-  transform: scale(.90);
+  transform: scale(.95);
 }
 
 /* Variants */
