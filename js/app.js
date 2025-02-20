@@ -5,24 +5,35 @@ function getRandomItem(jsonArray) {
 
 function getGuideline(x){
     let guidelines = getRandomItem(wsg.category[x].guidelines);
+    // let benefits = Object.keys(guidelines.benefits[0]);
+    var criterialist = "";
+    for (const element of guidelines.criteria) {
+        criterialist
+        +=
+        "<details><summary>"
+        +element.title+
+        "</summary>"+
+        element.description+
+        "</details>";
+    }
+
     document.getElementById("output").innerHTML = 
-    `<a href="${guidelines.url}">${guidelines.guideline}</a>
+    `
+    <h1><a class="fancy-url" href="${guidelines.url}">${guidelines.guideline}</a></h1>
     <br>
-    <h2>Impact: ${guidelines.impact}</h2>
-    <br>
+    <p>Impact: <strong>${guidelines.impact}</strong>. Effort: <strong>${guidelines.effort}</strong></p>
+    <h2>Success criteria:</h2>
+    ${criterialist}
     <p>${guidelines.description}</p>
     <br>
-
-
     `;
-    // return guidelines.description;
 }
 
 function getRandomInt(min, max) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
-  }
+}
   
 
 let wsg = {

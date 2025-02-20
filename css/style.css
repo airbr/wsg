@@ -84,6 +84,50 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+.fancy-url {
+  background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 100%;
+}
+.fancy-url:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+
+.fancy-url {
+  padding-bottom: 2px;
+  --bg-h: 2px;
+}
+
+
+.fancy-url {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
 h1 {
   font-size: 2em;
 }
@@ -105,11 +149,11 @@ section {
     min-height: 3vh;
   }
   output {
-    paddding: 20px;
+    padding: 16px;
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 500px) {
   section {
     min-height: 15vh;
   }
@@ -120,15 +164,21 @@ section {
 }
 
 output {
+  width: 670px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   padding-top: 60px;
 }
 
 output > p, output > a, output > h2 {
   font-size: 1.5em;
+}
+
+main { 
+  display: flex;
+  justify-content: center;
 }
 
 .button {
