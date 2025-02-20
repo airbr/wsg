@@ -9,7 +9,7 @@ function getGuideline(x){
     `<a href="${guidelines.url}">${guidelines.guideline}</a>
     <br>
     <h2>Impact: ${guidelines.impact}</h2>
-    <br><br>
+    <br>
     <p>${guidelines.description}</p>
     <br>
 
