@@ -91,7 +91,6 @@ code {
   padding: 0 3px;
 }
 
-
 .fancy-url {
   background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
   transition: background-size 350ms;
