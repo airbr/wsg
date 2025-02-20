@@ -7,24 +7,37 @@
   <title>Get a Guideline</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="Feeling lucky? Try out a Web Sustainability Guideline">
-
   <meta property="og:title" content="Get a Web Sustainability Guideline">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wsg-o-matic.netlify.app/">
-
   <link rel="icon" href="/favicon.ico" sizes="any">
-
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-  <footer style="text-align: center; font-size: .7em;">
+  <header style="text-align: center; font-size: .7em;">
     <a href="https://github.com/airbr">A demonstration of the draft Web Sustainability Guidelines by Morgan</a>
-  </footer>
+  </header>
   <section>
     <h1>Want to improve your website?</h1>
-    <button id="button" class="button" data-button-variant="primary" onclick="getGuideline(getRandomInt(2,5))">Get a Guideline</button>
+    <button id="button" class="button" data-button-variant="primary" onclick="getGuideline(getRandomInt(1,5))">Get a Guideline</button>
+    <!-- <ul class="cluster" role="list">
+      <li>
+      </li>
+      <li>
+        <button id="button" class="button" data-button-variant="positive" onclick="getGuideline(1)">UX Design</button>
+      </li>
+      <li>
+        <button id="button" class="button" data-button-variant="positive" onclick="getGuideline(2)">Web Development</button>
+      </li>
+      <li>
+        <button id="button" class="button" data-button-variant="positive" onclick="getGuideline(3)">Hosting & Infrastructure</button>
+      </li>
+      <li>
+        <button id="button" class="button" data-button-variant="positive" onclick="getGuideline(4)">Business & Product Strategy</button>
+      </li>
+      </ul> -->
   </section>
   <main>
   <output id="output"></output>

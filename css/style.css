@@ -253,6 +253,8 @@ main {
   --button-bg: #2d936c;
   --button-border-color: #107350;
   --button-hover-bg: #359d75;
+  --button-font-size: 1em;
+  margin: 10px;
 }
 
 .button[data-button-variant="negative"] {
@@ -310,6 +312,7 @@ Default: --gutter or var(--space-s-m).
 */
 
 .cluster {
+  list-style-type: none;
   display: flex;
   flex-direction: var(--cluster-direction, row);
   flex-wrap: var(--cluster-wrap, wrap);
