@@ -7,6 +7,7 @@ function getGuideline(x) {
     let guidelines = getRandomItem(wsg.category[x].guidelines);
     let shortName = wsg.category[x].shortName;
     var criterialist = "";
+    var examplelist = "";
     for (const element of guidelines.criteria) {
         criterialist
             +=
@@ -17,14 +18,25 @@ function getGuideline(x) {
             "</details>";
     }
 
+    for (const example of guidelines.example) {
+        // Temporary
+        var html = example.content.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>');
+        examplelist
+        +=
+        "<code>"
+        + html +
+        "</code>";
+    }
+
     document.getElementById("output").innerHTML =
-        `
-    <h1><a class="fancy-url" href="${guidelines.url}">${guidelines.guideline}</a></h1>
-    <p>${shortName}. Impact: <strong>${guidelines.impact}</strong>. Effort: <strong>${guidelines.effort}</strong></p>
+    `<h1><a class="fancy-url" href="${guidelines.url}">${guidelines.guideline}</a></h1>
+    <p><strong>${shortName}</strong>. Impact: <strong>${guidelines.impact}</strong>. Effort: <strong>${guidelines.effort}</strong></p>
     <h2>Success criteria:</h2>
     ${criterialist}
     <p>${guidelines.description}</p>
     <br>
+    <h2>example:</h2>
+    ${examplelist}
     `;
 }
 

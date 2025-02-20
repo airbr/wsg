@@ -84,6 +84,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  padding: 0 3px;
+}
+
 
 .fancy-url {
   background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
@@ -169,7 +176,6 @@ output {
   justify-content: center;
   /* align-items: center; */
   flex-direction: column;
-  padding-top: 60px;
 }
 
 output > p, output > a, output > h2 {
