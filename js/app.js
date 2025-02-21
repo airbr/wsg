@@ -39,6 +39,8 @@ function getGuideline(x) {
     ${examplelist}
     <br>
     <br>
+    <br>
+    <br>
     `;
 }
 
