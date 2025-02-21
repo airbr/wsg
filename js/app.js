@@ -19,8 +19,8 @@ function buildGuideline(guideline, shortName = "") {
             "<details><summary>"
             + element.title +
             "</summary>" +
-            element.description +
-            "</details>";
+            element.description + " " + element.testable.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>') +
+            ".</details>";
     }
 
     for (const example of guideline.example) {
