@@ -24,7 +24,6 @@ function buildGuideline(guideline, shortName = "") {
     }
 
     for (const example of guideline.example) {
-        // Temporary
         var html = example.content.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>');
         examplelist
         +=
@@ -40,6 +39,22 @@ function buildGuideline(guideline, shortName = "") {
             + tag +
             "</li>" 
     }
+
+    // var waterprogress = 0;
+    // console.log(guideline.GRI[0].water);
+    // switch (guideline.GRI[0].water) {
+    //     case "High":
+    //         waterprogress = 100;
+    //         break;
+    //     case "Medium":
+    //         waterprogress = 66;
+    //         break;
+    //     case "Low":
+    //         waterprogress = 33;
+    //         break;
+    //     default:
+    //       console.log(`Sorry, we are out of ${guideline.GRI[0].water}.`);
+    // }
  
     document.getElementById("output").innerHTML =
     `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
@@ -53,7 +68,7 @@ function buildGuideline(guideline, shortName = "") {
     <br>
     <br>
     <br>
-    <p>Other guidelines by tag:</p>
+    <p>Tags:</p>
     <ul class="taglist cluster">${taglist}</ul>
 
     `;
@@ -78,6 +93,80 @@ function getGuidelinesWithTag(tag){
         }
     }
     return matches
+}
+
+// Get All Tags Combined into one array, remove duplicates:
+// function getAllTags(){
+//     let matches = [];
+//     for (const category of wsg.category) {
+//         if (category.guidelines){
+//             for (const guideline of category.guidelines) {
+//                 if (guideline.tags) {
+//                     for (const tag of guideline.tags){ 
+//                             matches.push(tag);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     let uniq = [...new Set(matches)];
+//     return uniq;
+// }
+
+function generateButtonList() {
+
+    let buttonlist = [];
+    for (const tag of [
+        "Social Equity",
+        "Accessibility",
+        "Ideation",
+        "Research",
+        "Compatibility",
+        "Performance",
+        "Hardware",
+        "Software",
+        "Networking",
+        "Reporting",
+        "UI",
+        "Patterns",
+        "Usability",
+        "KPIs",
+        "E-Waste",
+        "Marketing",
+        "Strategy",
+        "Content",
+        "Assets",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Security",
+        "Privacy",
+        "Education",
+        "Governance"
+      ]) {
+        buttonlist
+            +=
+            `<li>
+            <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuidelineByTag('${tag}')">${tag}</button>
+            </li>`
+    }
+
+    document.getElementById("buttonlist").innerHTML =
+    buttonlist +
+    `
+    <li>
+        <button class="button" data-button-variant="positive" onclick="getGuideline(1)">UX Design</button>
+    </li>
+    <li>
+        <button class="button" data-button-variant="positive" onclick="getGuideline(2)">Web Development</button>
+    </li>
+    <li>
+        <button class="button" data-button-variant="positive" onclick="getGuideline(3)">Hosting & Infrastructure</button>
+    </li>
+    <li>
+        <button class="button" data-button-variant="positive" onclick="getGuideline(4)">Business & Product Strategy</button>
+    </li>
+    `
 }
 
 // Get Random Guideline with that Tag
