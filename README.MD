@@ -1,3 +1,3 @@
-# Get a Web Sustainability Guideline -- random, cookie-clicker like educational material
+# Get a Web Sustainability Guideline -- random, bite sized 
 
-## Currently very rough, refining
+Made with HTML5 Boilerplate
