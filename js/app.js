@@ -23,6 +23,7 @@ function buildGuideline(guideline, shortName = "") {
             ".</details>";
     }
 
+    // Replace markdown links with anchor tags
     for (const example of guideline.example) {
         var html = example.content.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>');
         examplelist
@@ -39,22 +40,6 @@ function buildGuideline(guideline, shortName = "") {
             + tag +
             "</li>"
     }
-
-    // var waterprogress = 0;
-    // console.log(guideline.GRI[0].water);
-    // switch (guideline.GRI[0].water) {
-    //     case "High":
-    //         waterprogress = 100;
-    //         break;
-    //     case "Medium":
-    //         waterprogress = 66;
-    //         break;
-    //     case "Low":
-    //         waterprogress = 33;
-    //         break;
-    //     default:
-    //       console.log(`Sorry, we are out of ${guideline.GRI[0].water}.`);
-    // }
 
     document.getElementById("output").innerHTML =
         `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
@@ -117,14 +102,13 @@ function generateButtonList() {
 
     let buttonlist = [];
     for (const tag of [
-        "Social Equity",
+        "Hardware",
+        "Software",
         "Accessibility",
         "Ideation",
         "Research",
         "Compatibility",
         "Performance",
-        "Hardware",
-        "Software",
         "Networking",
         "Reporting",
         "UI",
@@ -134,6 +118,7 @@ function generateButtonList() {
         "E-Waste",
         "Marketing",
         "Strategy",
+        "Social Equity",
         "Content",
         "Assets",
         "HTML",
@@ -158,22 +143,22 @@ function generateButtonList() {
     `
     <li>
         <a href="#output">
-        <button class="button" data-button-variant="positive" onclick="getGuideline(1)">UX Design</button>
+        <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuideline(1)">UX Design</button>
         </a>
     </li>
     <li>
     <a href="#output">
-    <button class="button" data-button-variant="positive" onclick="getGuideline(2)">Web Development</button>
+    <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuideline(2)">Web Development</button>
     </a>
     </li>
     <li>
         <a href="#output">
-        <button class="button" data-button-variant="positive" onclick="getGuideline(3)">Hosting & Infrastructure</button>
+        <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuideline(3)">Hosting & Infrastructure</button>
         </a>
     </li>
     <li>
         <a href="#output">
-        <button class="button" data-button-variant="positive" onclick="getGuideline(4)">Business & Product Strategy</button>
+        <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuideline(4)">Business & Product Strategy</button>
         </a>
     </li>
     `

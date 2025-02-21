@@ -19,6 +19,7 @@ html {
 :root {
   color-scheme: light dark;
 }
+
 body {
   color: light-dark(#222 #fff);
   background-color: light-dark(#fff, #223a2c);
