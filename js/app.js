@@ -13,6 +13,8 @@ function buildGuideline(guideline, shortName = "") {
     let criterialist = "";
     let examplelist = "";
     let taglist = "";
+
+    // Make Success Criteria
     for (const element of guideline.criteria) {
         criterialist
             +=
@@ -40,9 +42,10 @@ function buildGuideline(guideline, shortName = "") {
             + tag +
             "</li>"
     }
-
+    // Place contents into output container
     document.getElementById("output").innerHTML =
-        `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
+
+    `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
     <p><strong>${shortName}</strong>. Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong></p>
     <h2>Success criteria:</h2>
     ${criterialist}
@@ -54,9 +57,7 @@ function buildGuideline(guideline, shortName = "") {
     <br>
     <br>
     <p>Tags:</p>
-    <ul class="taglist cluster">${taglist}</ul>
-
-    `;
+    <ul class="taglist cluster">${taglist}</ul>`;
 }
 
 function getRandomInt(min, max) {
