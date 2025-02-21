@@ -12,10 +12,18 @@
    ========================================================================== */
 
 html {
-  color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
+
+:root {
+  color-scheme: light dark;
+}
+body {
+  color: light-dark(#222 #fff);
+  background-color: light-dark(#fff, #223a2c);
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -85,7 +93,6 @@ textarea {
    ========================================================================== */
 
 code {
-  background-color: #eee;
   border-radius: 3px;
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
   padding: 0 3px;
@@ -170,7 +177,7 @@ section {
 }
 
 output {
-  width: 670px;
+  width: 800px;
   display: flex;
   justify-content: center;
   /* align-items: center; */

@@ -37,6 +37,8 @@ function getGuideline(x) {
     <br>
     <h2>example:</h2>
     ${examplelist}
+    <br>
+    <br>
     `;
 }
 
