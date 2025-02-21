@@ -4,6 +4,7 @@
 
 Made with HTML5 Boilerplate and the [WSG JSON API](https://github.com/w3c/sustainableweb-wsg/blob/main/guidelines.json)
 
+# [Check out the actual WSGs online here](https://w3c.github.io/sustainableweb-wsg/).
 
 ### Pre v1.0 Development: Getting it working.
 

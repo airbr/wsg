@@ -81,6 +81,8 @@ function getGuidelinesWithTag(tag) {
 }
 
 // Get All Tags Combined into one array, remove duplicates:
+// This was useful but I decided it only needed to run once to generate the list and now it can be commented out
+// Until next time...
 // function getAllTags(){
 //     let matches = [];
 //     for (const category of wsg.category) {
@@ -133,7 +135,7 @@ function generateButtonList() {
             +=
             `<li>
             <a href="#output">
-            <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuidelineByTag('${tag}')">${tag}</button>
+            <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuidelineByTag('${tag}')">${tag}</button>
             </a>
             </li>`
     }
@@ -143,22 +145,22 @@ function generateButtonList() {
     `
     <li>
         <a href="#output">
-        <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuideline(1)">UX Design</button>
+        <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuideline(1)">UX Design</button>
         </a>
     </li>
     <li>
     <a href="#output">
-    <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuideline(2)">Web Development</button>
+    <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(2)">Web Development</button>
     </a>
     </li>
     <li>
         <a href="#output">
-        <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuideline(3)">Hosting & Infrastructure</button>
+        <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(3)">Hosting & Infrastructure</button>
         </a>
     </li>
     <li>
         <a href="#output">
-        <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuideline(4)">Business & Product Strategy</button>
+        <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(4)">Business & Product Strategy</button>
         </a>
     </li>
     `
@@ -172,7 +174,7 @@ function getGuidelineByTag(tag) {
 
 
 // This is Temporarily like this. Going to split or refine later.
-let wsg = {
+const wsg = {
     "title": "Web Sustainability Guidelines",
     "version": "1.0",
     "edition": "Editor's Draft",

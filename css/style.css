@@ -92,6 +92,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+header {
+  text-align: center; font-size: 1em;
+}
+
 .tag {
   text-decoration: underline;
   margin: 0px;
@@ -193,7 +197,7 @@ section {
 }
 
 output {
-  max-width: 100%;
+  max-width: 800px;
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -234,7 +238,7 @@ main {
 
   text-decoration: none;
   font-weight: var(--button-font-weight, 700);
-  font-size: var(--button-font-size, 2em);
+  font-size: var(--button-font-size, 1.5em);
   letter-spacing: 0.05ch;
   font-family: sans-serif;
   line-height: 1.1; /* Set or buttons will be different sizes (<a>/<button>) */
@@ -275,8 +279,21 @@ main {
   --button-border-color: currentColor;
   --button-hover-bg: #f1d979;
   --button-hover-color: #342a21;
+  --button-font-size: 1.4em;
 }
 
+
+.button[data-button-variant="main"] {
+  --button-bg: #f3de8a;
+  --button-color: #342a21;
+  --button-border-color: currentColor;
+  --button-hover-bg: #f1d979;
+  --button-hover-color: #342a21;
+  --button-font-size: 2em;
+}
+
+
+--button-font-size
 .button[data-button-variant="positive"] {
   --button-bg: #2d936c;
   --button-border-color: #107350;
