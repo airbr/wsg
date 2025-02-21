@@ -26,18 +26,18 @@ function buildGuideline(guideline, shortName = "") {
     for (const example of guideline.example) {
         var html = example.content.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>');
         examplelist
-        +=
-        "<code>"
-        + html +
-        "</code>";
+            +=
+            "<code>"
+            + html +
+            "</code>";
     }
 
     for (const tag of guideline.tags) {
         taglist
             +=
-            "<li class='tag' onclick='getGuidelineByTag(\""+tag+"\")'>"
+            "<li class='tag' onclick='getGuidelineByTag(\"" + tag + "\")'>"
             + tag +
-            "</li>" 
+            "</li>"
     }
 
     // var waterprogress = 0;
@@ -55,9 +55,9 @@ function buildGuideline(guideline, shortName = "") {
     //     default:
     //       console.log(`Sorry, we are out of ${guideline.GRI[0].water}.`);
     // }
- 
+
     document.getElementById("output").innerHTML =
-    `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
+        `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
     <p><strong>${shortName}</strong>. Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong></p>
     <h2>Success criteria:</h2>
     ${criterialist}
@@ -81,10 +81,10 @@ function getRandomInt(min, max) {
 }
 
 // Get all Guidelines with Tag
-function getGuidelinesWithTag(tag){
+function getGuidelinesWithTag(tag) {
     let matches = [];
     for (const category of wsg.category) {
-        if (category.guidelines){
+        if (category.guidelines) {
             for (const guideline of category.guidelines) {
                 if (guideline.tags.includes(tag)) {
                     matches.push(guideline);
@@ -143,28 +143,38 @@ function generateButtonList() {
         "Privacy",
         "Education",
         "Governance"
-      ]) {
+    ]) {
         buttonlist
             +=
             `<li>
+            <a href="#output">
             <button class="button" data-button-radius="hard" data-button-variant="positive" onclick="getGuidelineByTag('${tag}')">${tag}</button>
+            </a>
             </li>`
     }
 
     document.getElementById("buttonlist").innerHTML =
-    buttonlist +
+        buttonlist +
     `
     <li>
+        <a href="#output">
         <button class="button" data-button-variant="positive" onclick="getGuideline(1)">UX Design</button>
+        </a>
     </li>
     <li>
-        <button class="button" data-button-variant="positive" onclick="getGuideline(2)">Web Development</button>
+    <a href="#output">
+    <button class="button" data-button-variant="positive" onclick="getGuideline(2)">Web Development</button>
+    </a>
     </li>
     <li>
+        <a href="#output">
         <button class="button" data-button-variant="positive" onclick="getGuideline(3)">Hosting & Infrastructure</button>
+        </a>
     </li>
     <li>
+        <a href="#output">
         <button class="button" data-button-variant="positive" onclick="getGuideline(4)">Business & Product Strategy</button>
+        </a>
     </li>
     `
 }
