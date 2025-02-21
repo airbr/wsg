@@ -2,13 +2,18 @@ function getRandomItem(jsonArray) {
     const randomIndex = Math.floor(Math.random() * jsonArray.length);
     return jsonArray[randomIndex];
 }
-
+// Guideline by Category
 function getGuideline(x) {
-    let guidelines = getRandomItem(wsg.category[x].guidelines);
-    let shortName = wsg.category[x].shortName;
-    var criterialist = "";
-    var examplelist = "";
-    for (const element of guidelines.criteria) {
+    const guideline = getRandomItem(wsg.category[x].guidelines);
+    const shortName = wsg.category[x].shortName;
+    buildGuideline(guideline, shortName);
+}
+
+function buildGuideline(guideline, shortName = "") {
+    let criterialist = "";
+    let examplelist = "";
+    let taglist = "";
+    for (const element of guideline.criteria) {
         criterialist
             +=
             "<details><summary>"
@@ -18,7 +23,7 @@ function getGuideline(x) {
             "</details>";
     }
 
-    for (const example of guidelines.example) {
+    for (const example of guideline.example) {
         // Temporary
         var html = example.content.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>');
         examplelist
@@ -28,19 +33,29 @@ function getGuideline(x) {
         "</code>";
     }
 
+    for (const tag of guideline.tags) {
+        taglist
+            +=
+            "<li class='tag' onclick='getGuidelineByTag(\""+tag+"\")'>"
+            + tag +
+            "</li>" 
+    }
+ 
     document.getElementById("output").innerHTML =
-    `<h1><a class="fancy-url" href="${guidelines.url}">${guidelines.guideline}</a></h1>
-    <p><strong>${shortName}</strong>. Impact: <strong>${guidelines.impact}</strong>. Effort: <strong>${guidelines.effort}</strong></p>
+    `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
+    <p><strong>${shortName}</strong>. Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong></p>
     <h2>Success criteria:</h2>
     ${criterialist}
-    <p>${guidelines.description}</p>
+    <p>${guideline.description}</p>
     <br>
-    <h2>example:</h2>
-    ${examplelist}
-    <br>
+    <h3>example: ${examplelist}</h3>
     <br>
     <br>
     <br>
+    <br>
+    <p>Other guidelines by tag:</p>
+    <ul class="taglist cluster">${taglist}</ul>
+
     `;
 }
 
@@ -49,6 +64,28 @@ function getRandomInt(min, max) {
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
 }
+
+// Get all Guidelines with Tag
+function getGuidelinesWithTag(tag){
+    let matches = [];
+    for (const category of wsg.category) {
+        if (category.guidelines){
+            for (const guideline of category.guidelines) {
+                if (guideline.tags.includes(tag)) {
+                    matches.push(guideline);
+                }
+            }
+        }
+    }
+    return matches
+}
+
+// Get Random Guideline with that Tag
+function getGuidelineByTag(tag) {
+    const guideline = getRandomItem(getGuidelinesWithTag(tag));
+    buildGuideline(guideline);
+}
+
 
 // This is Temporarily like this. Going to split or refine later.
 let wsg = {

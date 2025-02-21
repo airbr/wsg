@@ -91,6 +91,20 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.tag {
+  text-decoration: underline;
+  margin: 0px;
+  font-size: large;
+  margin-right: 10px;
+}
+
+.tag:hover {
+  color: blue;
+}
+
+.taglist {
+  max-width: 100%;
+}
 
 code {
   border-radius: 3px;
@@ -178,7 +192,7 @@ section {
 }
 
 output {
-  width: 800px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -266,8 +280,8 @@ main {
   --button-bg: #2d936c;
   --button-border-color: #107350;
   --button-hover-bg: #359d75;
-  --button-font-size: 1em;
-  margin: 10px;
+  --button-font-size: 14px;
+  margin: 4px;
 }
 
 .button[data-button-variant="negative"] {
