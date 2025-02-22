@@ -14,6 +14,7 @@
 html {
   font-size: 1em;
   line-height: 1.4;
+  height: 100%;
 }
 
 :root {
@@ -92,7 +93,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-  
+
 #package {
     margin-top: 24px;
     align-content: center;
@@ -100,37 +101,17 @@ textarea {
     cursor: pointer;
 }
 
-.about > p {
-  text-align: center;
-  margin: 0px;
-}
-
-.about > ul {
-  text-align: center;
-  max-width: 300px;
-}
-
-.about > summary, .categories > summary {
-  text-align: center;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 1em;
+  align-items: center;
 }
 
-header > a {
+/* header > * {
   text-align: center; 
-}
+} */
 
 footer {
   text-align: center;
@@ -219,6 +200,7 @@ section {
 }
 
 @media (max-width: 600px) {
+
   section {
     min-height: 3vh;
   }
@@ -228,6 +210,9 @@ section {
 }
 
 @media (min-width: 600px) {
+  header > * {
+    width: 900px;
+  }
   section {
     min-height: 15vh;
   }
@@ -398,6 +383,8 @@ Default: --gutter or var(--space-s-m).
 */
 
 .cluster {
+  padding-left: 0px;
+
   list-style-type: none;
   display: flex;
   flex-direction: var(--cluster-direction, row);
