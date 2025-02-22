@@ -12,6 +12,11 @@
 
 ### Pre v1.0 Development: Getting it working.
 
-### The plan is to use the WSG's as I build.
+The plan is to use the WSG's as I build.
 
-# Commentary on Web Sustainability Guidelines's applied to this project
+### Commentary on Web Sustainability Guidelines's applied to this project starting with [Web Development](https://w3c.github.io/sustainableweb-wsg/star.html#web-development):
+
+STATUS:
+
+* [WD09-1](https://w3c.github.io/sustainableweb-wsg/star.html#WD09-1): Set Scripts To Load Either Asynchronously or Deferred
+    * Added async tag to `app.js`
