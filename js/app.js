@@ -53,9 +53,6 @@ function buildGuideline(guideline, shortName = "") {
     <br>
     <h3>example: ${examplelist}</h3>
     <br>
-    <br>
-    <br>
-    <br>
     <p>Tags:</p>
     <ul class="taglist cluster">${taglist}</ul>`;
 }

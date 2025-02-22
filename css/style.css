@@ -206,7 +206,7 @@ section {
   min-height: 15vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   section {
     min-height: 3vh;
   }
@@ -215,7 +215,7 @@ section {
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   section {
     min-height: 15vh;
   }
