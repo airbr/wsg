@@ -67,7 +67,7 @@ function buildGuideline(guideline, shortName = "") {
     <blockquote cite="${guideline.url}">
     <p><strong>${guideline.description}</strong></p>
     </blockquote>
-    <p><cite>${guideline.guideline}</cite></p>
+    <p>WSG 1.0 <cite>${guideline.guideline}</cite></p>
     </div>
     <h3>example: ${examplelist}</h3>
     <details>
