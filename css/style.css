@@ -109,10 +109,6 @@ header {
   align-items: center;
 }
 
-/* header > * {
-  text-align: center; 
-} */
-
 footer {
   text-align: center;
 }
@@ -206,9 +202,6 @@ section {
   section {
     min-height: 3vh;
   }
-  output {
-    padding: 16px;
-  }
 }
 
 @media (min-width: 600px) {
@@ -220,16 +213,20 @@ section {
     min-height: 15vh;
   }
   output {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
+/* output > .background {
+  background-color: whitesmoke;
+  padding: 24px;
+} */
+
 output {
-  max-width: 800px;
+  max-width: 840px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   flex-direction: column;
 }
 
