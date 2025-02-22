@@ -1,11 +1,6 @@
 /*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
 
 /* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -57,30 +52,6 @@ hr {
   padding: 0;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
 
 /*
  * Allow only vertical resizing of textareas.
@@ -100,6 +71,12 @@ textarea {
     align-content: center;
     font-size: 12em;
     cursor: pointer;
+}
+
+@media (prefers-reduced-motion) {
+  #package {
+    display: none;
+  }
 }
 
 header {
@@ -148,14 +125,9 @@ code {
 .fancy-url {
   padding-bottom: 2px;
   --bg-h: 2px;
-}
-
-
-.fancy-url {
   font-size: 1.5em;
   text-decoration: none;
 }
-
 
 details {
   border: 1px solid #aaa;
@@ -306,7 +278,6 @@ main {
   margin: 2px;
 }
 
-
 .button[data-button-variant="main"] {
   --button-bg: #f3de8a;
   --button-color: #342a21;
@@ -322,19 +293,6 @@ main {
   --button-hover-bg: #359d75;
   --button-font-size: 20px;
   margin: 4px;
-}
-
-.button[data-button-variant="negative"] {
-  --button-bg: #b33c48;
-  --button-border-color: #a62f3d;
-  --button-hover-bg: #c24a56;
-}
-
-/* Ghost buttons */
-.button[data-ghost-button] {
-  --button-bg: transparent;
-  --button-border-color: currentColor;
-  --button-color: currentColor;
 }
 
 /* Radius variants */
@@ -450,101 +408,3 @@ Default: --gutter or var(--space-s-m).
 .invisible {
   visibility: hidden;
 }
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-

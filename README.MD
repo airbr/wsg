@@ -6,7 +6,7 @@
 
 ### Made with [HTML5 Boilerplate](https://html5boilerplate.com/) and the [WSG JSON API](https://github.com/w3c/sustainableweb-wsg/blob/main/guidelines.json)
 
-## [Check out the Draft 1.0 Web Sustainability Guidelines (WSG) online](https://w3c.github.io/sustainableweb-wsg/). All the data used in this project is the work of many people at the W3C. Definitely keep an eye on the real deal over there rather than this project. I still havent figured out a good way to sync the JSON API if it updates other than a manual step.
+### [Check out the Draft 1.0 Web Sustainability Guidelines (WSG) online](https://w3c.github.io/sustainableweb-wsg/). The data used in this project is the work of many people at the W3C, Sustainable Web Design Community Group and Sustainable Web Interest Group. Definitely keep an eye on the real deal over there rather than this project for the freshest. I still havent figured out a good way to sync the JSON API if it updates other than a manual step.
 
 ### This project aims to meet as many of the 255 success criteria of the WSG's as possible.
 
