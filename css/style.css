@@ -131,6 +131,10 @@ header > a {
   text-align: center; 
 }
 
+footer {
+  text-align: center;
+}
+
 .tag {
   text-decoration: underline;
   margin: 0px;
