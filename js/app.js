@@ -8,7 +8,7 @@ function getGuideline(x) {
     const shortName = wsg.category[x].shortName;
     buildGuideline(guideline, shortName);
 }
-
+// Basic HTML builder
 function buildGuideline(guideline, shortName = "") {
     let criterialist = "";
     let benefitlist = [];
@@ -56,29 +56,26 @@ function buildGuideline(guideline, shortName = "") {
             "</li>"
     }
 
-
-
-
-
-
     // Place contents into output container
     document.getElementById("output").innerHTML =
 
-    `<div class="background"><h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
+    `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
     <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong></p>
     <h2>Success criteria:</h2>
     ${criterialist}
-    <p>${guideline.description}</p>
-    <br>
+    <div>
+    <blockquote cite="${guideline.url}">
+    <p><strong>${guideline.description}</strong></p>
+    </blockquote>
+    <p><cite>${guideline.guideline}</cite></p>
+    </div>
     <h3>example: ${examplelist}</h3>
-    <br>
     <details>
     <summary>Benefits of this guideline</summary>
         ${benefitlist}
     </details>
-    <br>
     <p>Tags:</p>
-    <ul class="taglist cluster">${taglist}</ul></div>
+    <ul class="taglist cluster">${taglist}</ul>
     `;
     
 }
