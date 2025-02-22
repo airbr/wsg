@@ -92,16 +92,25 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.about > section {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  font-size: 1em;
-  text-align: left;
+.about > p {
+  text-align: center;
+  margin: 0px;
+}
+
+.about > ul {
+  text-align: center;
+  max-width: 300px;
 }
 
 .about > summary, .categories > summary {
   text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 
 header {
