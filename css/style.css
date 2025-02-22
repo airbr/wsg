@@ -92,8 +92,27 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.about > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-size: 1em;
+  text-align: left;
+}
+
+.about > summary, .categories > summary {
+  text-align: center;
+}
+
 header {
-  text-align: center; font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1em;
+}
+
+header > a {
+  text-align: center; 
 }
 
 .tag {
@@ -163,6 +182,7 @@ details[open] summary {
 
 h1 {
   font-size: 2em;
+  margin: 16px;
 }
 
 body {
@@ -274,11 +294,11 @@ main {
 
 /* Variants */
 .button[data-button-variant="primary"] {
-  --button-bg: #f3de8a;
-  --button-color: #342a21;
+  --button-bg: #005a9c;
+  --button-color: #ffffff;
   --button-border-color: currentColor;
-  --button-hover-bg: #f1d979;
-  --button-hover-color: #342a21;
+  --button-hover-bg: #043f6a;
+  --button-hover-color: #d7d7d7;
   --button-font-size: 1em;
   margin: 2px;
 }
