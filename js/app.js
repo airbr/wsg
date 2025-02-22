@@ -11,6 +11,7 @@ function getGuideline(x) {
 
 function buildGuideline(guideline, shortName = "") {
     let criterialist = "";
+    let benefitlist = [];
     let examplelist = "";
     let taglist = "";
 
@@ -25,6 +26,18 @@ function buildGuideline(guideline, shortName = "") {
             ".</details>";
     }
 
+    // Benefits
+    const entries = Object.entries(guideline.benefits[0]);
+    for (let [key,value] of entries) {
+          benefitlist
+        +=
+        "<details><summary>"
+        + key +
+        "</summary>" +
+        value +
+        "</details>";
+    }
+ 
     // Replace markdown links with anchor tags
     for (const example of guideline.example) {
         var html = example.content.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>');
@@ -42,6 +55,12 @@ function buildGuideline(guideline, shortName = "") {
             + tag +
             "</li>"
     }
+
+
+
+
+
+
     // Place contents into output container
     document.getElementById("output").innerHTML =
 
@@ -53,8 +72,15 @@ function buildGuideline(guideline, shortName = "") {
     <br>
     <h3>example: ${examplelist}</h3>
     <br>
+    <details>
+    <summary>Benefits of this guideline</summary>
+        ${benefitlist}
+    </details>
+    <br>
     <p>Tags:</p>
-    <ul class="taglist cluster">${taglist}</ul>`;
+    <ul class="taglist cluster">${taglist}</ul>
+    `;
+    
 }
 
 function getRandomInt(min, max) {
