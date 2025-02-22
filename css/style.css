@@ -80,7 +80,8 @@ textarea {
 }
 
 div:has(> blockquote) {
-  background-color: #ededed;
+  color: light-dark(#222, #fff);
+  background-color: light-dark(#ededed, #223a2c);
   margin: 10px auto;
   padding: 15px;
   border-radius: 5px;
