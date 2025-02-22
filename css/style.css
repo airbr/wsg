@@ -97,6 +97,7 @@ textarea {
     margin-top: 24px;
     align-content: center;
     font-size: 10em;
+    cursor: pointer;
 }
 
 .about > p {
