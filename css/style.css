@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  color: light-dark(#222 #fff);
+  color: light-dark(#222, #fff);
   background-color: light-dark(#fff, #223a2c);
 }
 
