@@ -97,7 +97,7 @@ textarea {
 #package {
     margin-top: 24px;
     align-content: center;
-    font-size: 10em;
+    font-size: 12em;
     cursor: pointer;
 }
 
@@ -200,7 +200,9 @@ section {
 }
 
 @media (max-width: 600px) {
-
+  header > * {
+    width: 100%;
+  }
   section {
     min-height: 3vh;
   }
@@ -211,7 +213,8 @@ section {
 
 @media (min-width: 600px) {
   header > * {
-    width: 900px;
+    min-width: 600px;
+    max-width: 900px;
   }
   section {
     min-height: 15vh;
