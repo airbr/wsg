@@ -46,7 +46,7 @@ function buildGuideline(guideline, shortName = "") {
     document.getElementById("output").innerHTML =
 
     `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
-    <p><strong>${shortName}</strong>. Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong></p>
+    <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong></p>
     <h2>Success criteria:</h2>
     ${criterialist}
     <p>${guideline.description}</p>
@@ -135,9 +135,7 @@ function generateButtonList() {
         buttonlist
             +=
             `<li>
-            <a href="#output">
             <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuidelineByTag('${tag}')">${tag}</button>
-            </a>
             </li>`
     }
 
@@ -145,24 +143,16 @@ function generateButtonList() {
         buttonlist +
     `
     <li>
-        <a href="#output">
         <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuideline(1)">UX Design</button>
-        </a>
     </li>
     <li>
-    <a href="#output">
     <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(2)">Web Development</button>
-    </a>
     </li>
     <li>
-        <a href="#output">
         <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(3)">Hosting & Infrastructure</button>
-        </a>
     </li>
     <li>
-        <a href="#output">
         <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(4)">Business & Product Strategy</button>
-        </a>
     </li>
     `
 }
