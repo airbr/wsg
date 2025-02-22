@@ -92,6 +92,13 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+  
+#package {
+    margin-top: 24px;
+    align-content: center;
+    font-size: 10em;
+}
+
 .about > p {
   text-align: center;
   margin: 0px;
