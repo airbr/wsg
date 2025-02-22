@@ -307,7 +307,8 @@ main {
   --button-color: #ffffff;
   --button-border-color: currentColor;
   --button-hover-bg: #043f6a;
-  --button-hover-color: #d7d7d7;
+  --button-hover-color: #d7e5d8;
+  --button-outline-color: #150202;
   --button-font-size: 1em;
   margin: 2px;
 }
