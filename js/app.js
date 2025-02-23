@@ -1,4 +1,4 @@
-// Register the service worker
+// Register the service worker for offline cache ability
 if ('serviceWorker' in navigator) {
     // Wait for the 'load' event to not block other work
     window.addEventListener('load', async () => {
@@ -8,12 +8,12 @@ if ('serviceWorker' in navigator) {
         let reg;
           // In production, use the normal service worker registration
         reg = await navigator.serviceWorker.register('/service-worker.js');
-        console.log('Service worker registered! 😎', reg);
+        console.log('Service worker registered!', reg);
       } catch (err) {
-        console.log('😥 Service worker registration failed: ', err);
+        console.log('Service worker registration failed: ', err);
       }
     });
-  }
+}
 
 function getRandomItem(jsonArray) {
     const randomIndex = Math.floor(Math.random() * jsonArray.length);
