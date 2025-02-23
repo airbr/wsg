@@ -16,7 +16,6 @@ if ('serviceWorker' in navigator) {
 }
 
 function getRandomItem(jsonArray) {
-    console.log(jsonArray);
     const randomIndex = Math.floor(Math.random() * jsonArray.length);
     return jsonArray[randomIndex];
 }
@@ -51,8 +50,6 @@ function getGuidelineByTag(tag) {
 }
 // Basic HTML builder
 function buildGuideline(guideline) {
-
-    console.log(guideline);
 
     let criterialist = "";
     let benefitlist = [];
@@ -103,7 +100,7 @@ function buildGuideline(guideline) {
     // Place contents into output container
     document.getElementById("output").innerHTML =
 
-        `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
+    `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
     <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong></p>
     <h2>Success criteria:</h2>
     ${criterialist}
