@@ -96,8 +96,8 @@ footer {
   margin-right: 10px;
 }
 
-.tag:hover {
-  color: blue;
+.tagline {
+  margin-bottom: 0px;
 }
 
 .taglist {

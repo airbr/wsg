@@ -6,6 +6,7 @@ const precacheResources =
   '/index.html', 
   '/css/style.css', 
   '/js/app.js', 
+  '/js/guidelines.json',
   '/site.webmanifest', 
   '/favicon.ico',
   '/img/android-chrome-192x192.png'
