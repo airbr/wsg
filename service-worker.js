@@ -1,32 +1,27 @@
-// Establish a cache name
-const cacheName = 'WSGCACHE';
+// Choose a cache name
+const cacheName = 'cache-v1';
+// List the files to precache
+const precacheResources = ['/', '/index.html', '/css/style.css', '/js/app.js'];
 
-// Assets to precache
-const precachedAssets = [
-  '/index.html',
-  '/js/app.js',
-  '/css/styles.css'
-];
-
+// When the service worker is installing, open the cache and add the precache resources to it
 self.addEventListener('install', (event) => {
-  // Precache assets on install
-  event.waitUntil(caches.open(cacheName).then((cache) => {
-    return cache.addAll(precachedAssets);
-  }));
+  console.log('Service worker install event!');
+  event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(precacheResources)));
 });
 
-self.addEventListener('fetch', (event) => {
-  // Is this one of our precached assets?
-  const url = new URL(event.request.url);
-  const isPrecachedRequest = precachedAssets.includes(url.pathname);
+self.addEventListener('activate', (event) => {
+  console.log('Service worker activate event!');
+});
 
-  if (isPrecachedRequest) {
-    // Grab the precached asset from the cache
-    event.respondWith(caches.open(cacheName).then((cache) => {
-      return cache.match(event.request.url);
-    }));
-  } else {
-    // Go to the network
-    return;
-  }
+// When there's an incoming fetch request, try and respond with a precached resource, otherwise fall back to the network
+self.addEventListener('fetch', (event) => {
+  console.log('Fetch intercepted for:', event.request.url);
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+      return fetch(event.request);
+    }),
+  );
 });
