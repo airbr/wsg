@@ -161,7 +161,7 @@ function generateButtonList() {
         buttonlist
             +=
             `<li>
-            <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuidelineByTag('${tag}')">${tag}</button>
+              <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuidelineByTag('${tag}'); mobileScroll()" >${tag}</button>
             </li>`
     }
 
@@ -169,16 +169,16 @@ function generateButtonList() {
         buttonlist +
         `
     <li>
-        <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuideline(1)">UX Design</button>
+        <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuideline(1); mobileScroll()">UX Design</button>
     </li>
     <li>
-    <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(2)">Web Development</button>
+    <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(2); mobileScroll()">Web Development</button>
     </li>
     <li>
-        <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(3)">Hosting & Infrastructure</button>
+        <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(3); mobileScroll()">Hosting & Infrastructure</button>
     </li>
     <li>
-        <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(4)">Business & Product Strategy</button>
+        <button class="button" data-button-radius="hard"  data-button-variant="primary" onclick="getGuideline(4); mobileScroll()">Business & Product Strategy</button>
     </li>
     `
 }
