@@ -193,15 +193,12 @@ function generateButtonList() {
     </li>
     `
 }
-
 // Get Random Guideline with that Tag
 function getGuidelineByTag(tag) {
     const guideline = getRandomItem(getGuidelinesWithTag(tag));
     buildGuideline(guideline);
 }
-
-
-// This is Temporarily like this. Going to split or refine later.
+// This is Temporarily like this just as a let variable here. Going to investigate options for improvement.
 const wsg = {
     "title": "Web Sustainability Guidelines",
     "version": "1.0",
