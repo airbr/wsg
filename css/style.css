@@ -89,7 +89,7 @@ header {
   height: 72px;
 }
 
-article {
+aside {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -100,7 +100,7 @@ article {
   margin-top: 16px;
 }
 
-article > details > summary {
+aside > details > summary {
   background: #005a9c;
   color: #fff;
 }
@@ -172,7 +172,7 @@ details[open] summary {
   margin-bottom: 0.5em;
 }
 
-h1 {
+h1, h2 {
   font-size: 2em;
   margin-top: 16px;
   margin-bottom: 16px;
