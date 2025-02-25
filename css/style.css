@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  color: light-dark(#222, #fff);
+  color: light-dark( #111111, #fff);
   background-color: light-dark(#fff, #223a2c);
 }
 
@@ -85,6 +85,18 @@ header {
   align-items: center;
 }
 
+header > details > summary {
+  background: #005a9c;
+  color: #fff;
+}
+
+a {
+  color: #005797;
+}
+a:hover {
+  color: #024488;
+}
+
 footer {
   text-align: center;
 }
@@ -128,10 +140,10 @@ code {
 }
 
 details {
-  border: 1px solid #aaa;
+  border: 1px solid  #bdbdbd ;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 summary {
@@ -277,7 +289,7 @@ main {
 }
 
 .button[data-button-variant="main"] {
-  --button-bg: #f3de8a;
+  --button-bg: #f9dc4a;
   --button-color: #342a21;
   --button-border-color: currentColor;
   --button-hover-bg: #f1d979;
