@@ -91,10 +91,10 @@ header > details > summary {
 }
 
 a {
-  color: #005797;
+  color: light-dark( #005797, #fff);;
 }
 a:hover {
-  color: #024488;
+  color: light-dark( #024488, #fff);;
 }
 
 footer {
@@ -163,7 +163,8 @@ details[open] summary {
 
 h1 {
   font-size: 2em;
-  margin: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 body {
