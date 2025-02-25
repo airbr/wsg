@@ -17,24 +17,7 @@
 </head>
 <body>
   <header>
-    <details class="about">
-      <summary>More about the Web Sustainability Guidelines (WSGs)</summary>
-      This is an independent <a href="https://github.com/airbr/wsg">demo made by Morgan Murrah</a> of the draft Web Sustainability Guidelines, making use of the JSON API. Click "Open Guideline" or select a topic to get a guideline to display.
-      <p><strong>Why: </strong>Improve digital sustainability so that the Web works better for all people and the planet. See the 
-        <a href="https://w3c.github.io/sustainableweb-wsg/">draft WSG's</a>.
-      </p>
-      <p><strong>What:</strong> 94 Guidelines, 255 Success Criteria from 100+ contributors from over 20 nations around the world.</p>
-    </details> 
-    <details class="categories">
-      <summary onclick="generateButtonList()">Get a random WSG by topic</summary>
-      <span><em>Scroll below after making a selection</em></span>
-      <ul class="cluster" id="buttonlist">
-        <!-- Topic List is generated here -->
-      </ul>
-      <noscript>
-        <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the WSG's directly</a>
-      </noscript>       
-    </details>
+    <h1><strong>WSG-o-matic</strong></h1>
   </header>
   <section>
     <h1>Want to improve your website?</h1>
@@ -49,6 +32,26 @@
     </noscript>
   </output>
   </main>
+  <article>
+    <details class="about">
+      <summary>More about the Web Sustainability Guidelines (WSGs)</summary>
+      This is an independent <a href="https://github.com/airbr/wsg">demo made by Morgan Murrah</a> of the draft Web Sustainability Guidelines, making use of the JSON API. Click "Open Guideline" or select a topic to get a guideline to display.
+      <p><strong>Why: </strong>Improve digital sustainability so that the Web works better for all people and the planet. See the 
+        <a href="https://w3c.github.io/sustainableweb-wsg/">draft WSG's</a>.
+      </p>
+      <p><strong>What:</strong> 94 Guidelines, 255 Success Criteria from 100+ contributors from over 20 nations around the world.</p>
+    </details> 
+    <details class="categories">
+      <summary onclick="generateButtonList()">Get a random WSG by topic</summary>
+      <span><em>Scroll above after making a selection</em></span>
+      <ul class="cluster" id="buttonlist">
+        <!-- Topic List is generated here -->
+      </ul>
+      <noscript>
+        <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the WSG's directly</a>
+      </noscript>       
+    </details>
+  </article>
   <script async src="js/app.js"></script>
   <script>
     // A little whimsy

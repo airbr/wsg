@@ -78,14 +78,29 @@ blockquote + p {
 }
 
 header {
+  background: #005a9c;
+  color: #fff;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 1em;
   align-items: center;
+  height: 72px;
 }
 
-header > details > summary {
+article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1em;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+article > details > summary {
   background: #005a9c;
   color: #fff;
 }
@@ -95,10 +110,6 @@ a {
 }
 a:hover {
   color: light-dark( #024488, #fff);;
-}
-
-footer {
-  text-align: center;
 }
 
 .tag {
@@ -143,7 +154,7 @@ details {
   border: 1px solid  #bdbdbd ;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
-  font-size: 1.3em;
+  font-size: 1.15em;
 }
 
 summary {
@@ -172,6 +183,7 @@ body {
 }   
 
 section {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,19 +192,12 @@ section {
 }
 
 @media (max-width: 600px) {
-  header > * {
-    width: 100%;
-  }
   section {
     min-height: 3vh;
   }
 }
 
 @media (min-width: 600px) {
-  header > * {
-    min-width: 600px;
-    max-width: 900px;
-  }
   section {
     min-height: 15vh;
   }
