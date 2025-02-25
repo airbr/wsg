@@ -191,21 +191,6 @@ section {
   min-height: 15vh;
 }
 
-@media (max-width: 600px) {
-  section {
-    min-height: 3vh;
-  }
-}
-
-@media (min-width: 600px) {
-  section {
-    min-height: 15vh;
-  }
-  output {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
 
 output {
   max-width: 840px;
