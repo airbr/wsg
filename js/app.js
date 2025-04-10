@@ -24,7 +24,7 @@ function getGuideline(x) {
     fetch('/js/guidelines.json')
         .then(response => response.json())
         .then(data => {
-            const guideline = getRandomItem(data[0].category[x].guidelines);
+            const guideline = getRandomItem(data.category[x].guidelines);
             buildGuideline(guideline);
         })
         .catch(error => console.error('Error loading data:', error));
@@ -35,7 +35,7 @@ function getGuidelineByTag(tag) {
         .then(response => response.json())
         .then(data => {
             let matches = [];
-            for (const category of data[0].category) {
+            for (const category of data.category) {
                 if (category.guidelines) {
                     for (const guideline of category.guidelines) {
                         if (guideline.tags.includes(tag)) {
@@ -106,9 +106,9 @@ function buildGuideline(guideline) {
     ${criterialist}
     <div>
     <blockquote cite="${guideline.url}">
-    <p><strong>${guideline.description}</strong></p>
+    <p><strong>${guideline.intent}</strong></p>
     </blockquote>
-    <p>WSG 1.0 Draft: <cite>${guideline.guideline}</cite></p>
+    <p>WSG 1.0 Draft Intent: <cite>${guideline.guideline}</cite></p>
     </div>
     <h3>example: ${examplelist}</h3>
     <details>
