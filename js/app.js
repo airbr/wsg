@@ -55,6 +55,7 @@ function buildGuideline(guideline) {
     let benefitlist = [];
     let examplelist = "";
     let taglist = "";
+    let resourcelist = [];
 
     // Make Success Criteria
     for (const element of guideline.criteria) {
@@ -97,6 +98,14 @@ function buildGuideline(guideline) {
             "</li>"
     }
 
+    // Resources
+    const resources = Object.entries(guideline.resources[0]);
+    for (let [key, value] of resources) {
+        resourcelist
+            +=
+            `<h3><a href="${value}">${key}</a></h3>`
+    }
+
     // Place contents into output container
     document.getElementById("output").innerHTML =
 
@@ -114,6 +123,10 @@ function buildGuideline(guideline) {
     <details>
     <summary>Benefits of this guideline</summary>
         ${benefitlist}
+    </details>
+    <details>
+    <summary>Resources to help apply this guideline</summary>
+        ${resourcelist}
     </details>
     <p class="tagline">Tags:</p>
     <ul class="taglist cluster">${taglist}</ul>

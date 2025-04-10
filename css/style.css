@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  color: light-dark( #111111, #fff);
+  color: light-dark(#111111, #fff);
   background-color: light-dark(#fff, #223a2c);
 }
 
@@ -43,22 +43,42 @@ body {
    ========================================================================== */
 
 #package {
-    text-align: center;
-    margin-top: 24px;
-    align-content: center;
-    font-size: 12em;
-    cursor: pointer;
-    animation: bounce 3s ease infinite;
+  text-align: center;
+  margin-top: 24px;
+  align-content: center;
+  font-size: 12em;
+  cursor: pointer;
+  animation: bounce 3s ease infinite;
 }
 
 @keyframes bounce {
-    70% { transform:translateY(0%); }
-    80% { transform:translateY(-15%); }
-    90% { transform:translateY(0%); }
-    95% { transform:translateY(-7%); }
-    97% { transform:translateY(0%); }
-    99% { transform:translateY(-3%); }
-    100% { transform:translateY(0); }
+  70% {
+    transform: translateY(0%);
+  }
+
+  80% {
+    transform: translateY(-15%);
+  }
+
+  90% {
+    transform: translateY(0%);
+  }
+
+  95% {
+    transform: translateY(-7%);
+  }
+
+  97% {
+    transform: translateY(0%);
+  }
+
+  99% {
+    transform: translateY(-3%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 div:has(> blockquote) {
@@ -78,7 +98,7 @@ blockquote p::after {
   content: '\201D';
 }
 
-blockquote + p {
+blockquote+p {
   text-align: right;
 }
 
@@ -91,7 +111,7 @@ header {
   justify-content: center;
   font-size: 1em;
   align-items: center;
-  height: 72px;
+  text-align: center;
 }
 
 aside {
@@ -105,21 +125,24 @@ aside {
   margin-top: 16px;
 }
 
-aside > * {
+aside>* {
   width: 100%;
   text-align: center;
 }
 
-aside > details > summary {
+aside>details>summary {
   background: #005a9c;
   color: #fff;
 }
 
 a {
-  color: light-dark( #005797, #fff);;
+  color: light-dark(#005797, #fff);
+  ;
 }
+
 a:hover {
-  color: light-dark( #024488, #fff);;
+  color: light-dark(#024488, #fff);
+  ;
 }
 
 .tag {
@@ -148,6 +171,7 @@ code {
   transition: background-size 350ms;
   --bg-h: 100%;
 }
+
 .fancy-url:where(:hover, :focus-visible) {
   background-size: 100% var(--bg-h);
   background-position-x: left;
@@ -161,10 +185,10 @@ code {
 }
 
 details {
-  border: 1px solid  #bdbdbd ;
+  border: 1px solid #bdbdbd;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
-  font-size: 1.15em;
+  font-size: 1.2em;
 }
 
 summary {
@@ -182,7 +206,8 @@ details[open] summary {
   margin-bottom: 0.5em;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 2em;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -190,7 +215,7 @@ h1, h2 {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
-}   
+}
 
 section {
   text-align: center;
@@ -210,11 +235,13 @@ output {
   flex-direction: column;
 }
 
-output > p, output > a, output > h2 {
+output>p,
+output>a,
+output>h2 {
   font-size: 1.5em;
 }
 
-main { 
+main {
   display: flex;
   justify-content: center;
 }
@@ -247,7 +274,8 @@ main {
   font-size: var(--button-font-size, 1.5em);
   letter-spacing: 0.05ch;
   font-family: sans-serif;
-  line-height: 1.1; /* Set or buttons will be different sizes (<a>/<button>) */
+  line-height: 1.1;
+  /* Set or buttons will be different sizes (<a>/<button>) */
 
   cursor: pointer;
 }
@@ -268,10 +296,8 @@ main {
   outline-width: var(--button-outline-width, var(--button-border-width));
   outline-style: var(--button-outline-style, var(--button-border-style));
   outline-color: var(--button-outline-color, var(--button-border-color));
-  outline-offset: var(
-    --button-outline-offset,
-    calc(var(--button-border-width) * 2)
-  );
+  outline-offset: var(--button-outline-offset,
+      calc(var(--button-border-width) * 2));
 }
 
 .button:active {
