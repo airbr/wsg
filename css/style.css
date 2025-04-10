@@ -48,12 +48,17 @@ body {
     align-content: center;
     font-size: 12em;
     cursor: pointer;
+    animation: bounce 3s ease infinite;
 }
 
-@media (prefers-reduced-motion) {
-  #package {
-    display: none;
-  }
+@keyframes bounce {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
 }
 
 div:has(> blockquote) {
@@ -98,6 +103,11 @@ aside {
   align-items: center;
   gap: 8px;
   margin-top: 16px;
+}
+
+aside > * {
+  width: 100%;
+  text-align: center;
 }
 
 aside > details > summary {
@@ -193,6 +203,7 @@ section {
 
 
 output {
+  padding-top: 24px;
   max-width: 840px;
   display: flex;
   justify-content: center;
