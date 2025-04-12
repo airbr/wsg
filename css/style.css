@@ -48,7 +48,8 @@ body {
   align-content: center;
   font-size: 12em;
   cursor: pointer;
-  animation: bounce 3s ease infinite;
+  animation: bounce 3s ease;
+  animation-iteration-count: 5;
 }
 
 @keyframes bounce {
