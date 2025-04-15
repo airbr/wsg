@@ -20,6 +20,8 @@ The data used in this project is the work of many people at the W3C from the for
 
 The plan is to use the WSG's as I build.
 
+Note: I have temporarily disabled the Service Worker implementation, with a no-operation service worker as a replacement for now. Caching should operate as normal, and relying on "regular" caching. 
+
 ### Commentary on Web Sustainability Guidelines's applied to this project starting with [Web Development](https://w3c.github.io/sustainableweb-wsg/star.html#web-development):
 
 * [WD09-1](https://w3c.github.io/sustainableweb-wsg/star.html#WD09-1): Set Scripts To Load Either Asynchronously or Deferred
