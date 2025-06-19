@@ -42,6 +42,45 @@ body {
    Author's custom styles
    ========================================================================== */
 
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
 #package {
   text-align: center;
   margin-top: 24px;
@@ -103,16 +142,22 @@ blockquote+p {
   text-align: right;
 }
 
-header {
+nav.header {
+  margin: 0 auto;
   background: #005a9c;
   color: #fff;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: 1em;
   align-items: center;
-  text-align: center;
+  text-align: left;
+  min-height: 0%;
+}
+
+nav a, nav a:hover {
+  color: light-dark(#fff, #111111);
 }
 
 aside {
@@ -126,9 +171,12 @@ aside {
   margin-top: 16px;
 }
 
-aside>* {
+aside > * {
   width: 100%;
-  text-align: center;
+}
+
+summary {
+  cursor: pointer;
 }
 
 aside>details>summary {
@@ -137,17 +185,15 @@ aside>details>summary {
 }
 
 a {
-  color: light-dark(#005797, #fff);
-  ;
+  font-size: 1.05em;
+  color: light-dark(#005a9c, #fff);
 }
 
 a:hover {
   color: light-dark(#024488, #fff);
-  ;
 }
 
 .tag {
-  text-decoration: underline;
   margin: 0px;
   font-size: large;
   margin-right: 10px;

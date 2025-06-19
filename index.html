@@ -19,9 +19,10 @@
 </head>
 
 <body>
-  <header>
-    <h1><strong>WSG-o-matic.</strong> Updated 2025-04-09</h1>
-  </header>
+  <nav class="header">
+    <h1><a href="/"><strong>WSG-o-matic.</strong></a> Updated 2025-04-09</h1>
+    <a href="#button" class="skip visually-hidden">Skip to main content</a>
+  </nav>
   <section>
     <h2>Want to improve your website?</h2>
     <button id="button" class="button" data-button-variant="main" onclick="getGuideline(getRandomInt(1,5))">Open Random
@@ -54,6 +55,7 @@
       <summary onclick="generateButtonList()">Get a random WSG by topic</summary>
       <span><em>Scroll above after making a selection</em></span>
       <ul class="cluster" id="buttonlist">
+        <li>Topics...</li>
         <!-- Topic List is generated here -->
       </ul>
       <noscript>
