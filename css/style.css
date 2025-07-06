@@ -272,7 +272,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
 }
 
-section {
+.section {
+  gap: 8px;
   margin-top: 16px;
   text-align: center;
   display: flex;
@@ -283,7 +284,7 @@ section {
 }
 
 @media only screen and (max-width: 450px) {
-  section {
+  .section {
     flex-direction: column;
   }
 }

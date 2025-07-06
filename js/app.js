@@ -59,12 +59,6 @@ function getGuideline(x, boolean) {
         .catch(error => console.error('Error loading data:', error));
 }
 
-// Get Guideline by URL in Query Param
-
-
-
-
-
 function getGuidelineByTag(tag) {
     return fetch('/js/guidelines.json')
         .then(response => response.json())
@@ -79,7 +73,15 @@ function getGuidelineByTag(tag) {
                     }
                 }
             }
-            return buildGuideline(getRandomItem(matches));
+            const randomTagItem = getRandomItem(matches);
+            const url = new URL(window.location.href);
+            const params = new URLSearchParams(url.search);
+            const parameterName = 'url'; 
+            params.set('url', randomTagItem.url);
+            url.search = params.toString();
+            history.pushState(null, '', url.toString());
+            
+            return buildGuideline(randomTagItem);
         })
         .catch(error => console.error('Error loading data:', error));
 }
@@ -145,19 +147,11 @@ function buildGuideline(guideline) {
             "</li>"
     }
 
-    // Resources
-    // for (let [key, value] of guideline.criteria.resources) {
-    //   resourcelist
-    //         +=
-    //         `<h3><a href="${value}">${key}</a></h3>`
-    // }
-
-
     // Place contents into output container
     document.getElementById("output").innerHTML =
 
    `<h2><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h2>
-    <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong></p>
+    <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong>.</p>
     <h2>Success criteria:</h2>
     ${criterialist}
     <div>
