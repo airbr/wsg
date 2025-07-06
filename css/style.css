@@ -309,6 +309,10 @@ main {
   justify-content: center;
 }
 
+.extended {
+  min-height: 1000px;
+}
+
 .button {
   --button-bg: #342a21;
   --button-color: #ffffff;
@@ -508,4 +512,9 @@ Default: --gutter or var(--space-s-m).
 
 .invisible {
   visibility: hidden;
+}
+
+html {
+    visibility: visible;
+    opacity: 1;
 }

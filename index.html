@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Get a Guideline (WSG)</title>
+  <style>html{visibility: hidden;opacity:0;}</style>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="A lightweight interactive website using the Web Sustainability Guidelines (WSGs)">
   <meta property="og:title" content="Open a WSG today">
@@ -32,7 +33,7 @@
   <main>
     <!-- <aside class="back-side"><</aside> -->
     <output id="output">
-      <span onclick="getGuideline(getRandomInt(1,5), true)" id="package">📦</span>
+      <span class="hidden" onclick="getGuideline(getRandomInt(1,5), true)" id="package">📦</span>
       <!-- Guideline is generated here -->
       <noscript>
         <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the WSG's
@@ -41,12 +42,12 @@
     </output>
     <!-- <aside class="forward-side">></aside> -->
   </main>
-  <aside>
-    <details class="about">
+  <aside class="hidden">
+    <details open class="about">
       <summary>More about this website and the draft Web Sustainability Guidelines (WSGs)</summary>
       This is an educational resource project <a href="https://github.com/airbr/wsg">demo made by Morgan Murrah</a> including the draft Web
-      Sustainability Guidelines, making use of the JSON API. Click "Open Guideline" or select a topic to get a guideline
-      to display.
+      Sustainability Guidelines, making use of the JSON API. Click "Open Random Guideline" to get a draft guideline in full.
+      to display. <a href="https://w3c.github.io/sustainableweb-wsg/#acknowledgments">All credit to all the contributors</a>, this work is intended to help educate.
       <p><strong>Why: </strong>Improve digital sustainability so that the Web works better for all people and the
         planet. See the
         <a href="https://w3c.github.io/sustainableweb-wsg/">draft WSG's</a>.
@@ -86,6 +87,9 @@
         const parameterName = 'url'; 
         if (params.has(parameterName)){
           getGuideline(getRandomInt(1,5));
+        } else {
+          document.querySelector('#package').classList.remove('hidden');
+          document.querySelector('aside').classList.remove('hidden');
         }
     };
     document.getElementById("go-forward").addEventListener("click", () => {
