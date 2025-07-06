@@ -158,7 +158,11 @@ nav.header {
 }
 
 nav a, nav a:hover {
-  color: light-dark(#fff, #111111);
+  color: white;
+}
+
+.back-side, .forward-side {
+  font-size: 3em;
 }
 
 aside {
@@ -272,7 +276,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   min-height: 15vh;
 }
 
