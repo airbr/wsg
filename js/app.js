@@ -101,7 +101,7 @@ function buildGuideline(guideline) {
         for (let [key, value] of Object.entries(element.resources[0])) {
            resourcelist
                 +=
-                `<h3><a href="${value}">${key}</a></h3>`
+                `<p><a href="${value}">${key}</a></p>`
         }
 
         criterialist
@@ -110,7 +110,7 @@ function buildGuideline(guideline) {
             + element.title +
             "</summary>" +
             element.description + " " + element.testable.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>') +
-            "<h2>Resources</h2>" +
+            "<p>Resources</p>" +
             resourcelist +
             "</details>";
     }
@@ -156,7 +156,7 @@ function buildGuideline(guideline) {
     // Place contents into output container
     document.getElementById("output").innerHTML =
 
-   `<h1><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h1>
+   `<h2><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h2>
     <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong></p>
     <h2>Success criteria:</h2>
     ${criterialist}
