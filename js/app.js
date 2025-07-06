@@ -142,9 +142,9 @@ function buildGuideline(guideline) {
     for (const tag of guideline.tags) {
         taglist
             +=
-            "<li class='tag'>"
+            `<li class='tag'><button class="button" data-button-variant="positive" data-button-radius="hard" onclick="getGuidelineByTag('${tag}')">`
             + tag +
-            "</li>"
+            "</button></li>"
     }
 
     // Place contents into output container
@@ -165,7 +165,7 @@ function buildGuideline(guideline) {
     <summary>Benefits of this guideline</summary>
         ${benefitlist}
     </details>
-    <p class="tagline">Tags:</p>
+    <p class="tagline">Get a random guideline by Tag:</p>
     <ul class="taglist cluster">${taglist}</ul>
     `;
 

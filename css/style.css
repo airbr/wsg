@@ -201,7 +201,7 @@ a:hover {
 
 .tag {
   margin: 0px;
-  font-size: large;
+  font-size: medium;
   margin-right: 10px;
 }
 
@@ -443,7 +443,7 @@ Default: --gutter or var(--space-s-m).
 
 .cluster {
   padding-left: 0px;
-
+  --cluster-row-gap: 10px;
   list-style-type: none;
   display: flex;
   flex-direction: var(--cluster-direction, row);
