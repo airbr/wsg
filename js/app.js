@@ -1,34 +1,69 @@
-// Register the service worker for offline cache ability
-if ('serviceWorker' in navigator) {
-    // Wait for the 'load' event to not block other work
-    window.addEventListener('load', async () => {
-        // Try to register the service worker.
-        try {
-            // Capture the registration for later use, if needed
-            let reg;
-            // In production, use the normal service worker registration
-            reg = await navigator.serviceWorker.register('/service-worker.js');
-            console.log('Service worker registered!', reg);
-        } catch (err) {
-            console.log('Service worker registration failed: ', err);
-        }
-    });
-}
 
+function findObjectByValue(obj, targetValue) {
+  // Check if the current object is an array
+  if (Array.isArray(obj)) {
+    for (let i = 0; i < obj.length; i++) {
+      const result = findObjectByValue(obj[i], targetValue);
+      if (result) {
+        return result; // Return the found object
+      }
+    }
+  } 
+  // Check if the current object is an object (and not null)
+  else if (typeof obj === 'object' && obj !== null) {
+    for (const key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        const value = obj[key];
+        // If the current value matches the target value, return the parent object
+        if (value === targetValue) {
+          return obj; 
+        }
+        // Recursively search in nested objects/arrays
+        const result = findObjectByValue(value, targetValue);
+        if (result) {
+          return result; // Return the found object
+        }
+      }
+    }
+  }
+  return null; // Value not found
+}
 function getRandomItem(jsonArray) {
     const randomIndex = Math.floor(Math.random() * jsonArray.length);
     return jsonArray[randomIndex];
 }
 // Guideline by Category
-function getGuideline(x) {
+function getGuideline(x, boolean) {
     fetch('/js/guidelines.json')
         .then(response => response.json())
         .then(data => {
-            const guideline = getRandomItem(data.category[x].guidelines);
-            buildGuideline(guideline);
+           // If URL query param exists
+            const url = new URL(window.location.href);
+            const params = new URLSearchParams(url.search);
+            const parameterName = 'url'; 
+            if (params.has(parameterName) && boolean !== true) {
+                console.log(`The "${parameterName}" parameter exists.`);
+                // console.log(params.get('url')); 
+                const guideline = findObjectByValue(data, params.get('url'));
+                buildGuideline(guideline);
+            } else {
+                console.log(`The "${parameterName}" parameter does not exist or was skipped.`);
+                const guideline = getRandomItem(data.category[x].guidelines);
+                buildGuideline(guideline);
+                // console.log(guideline.url); 
+                params.set('url', guideline.url);
+                url.search = params.toString();
+                history.pushState(null, '', url.toString());
+            }
         })
         .catch(error => console.error('Error loading data:', error));
 }
+
+// Get Guideline by URL in Query Param
+
+
+
+
 
 function getGuidelineByTag(tag) {
     return fetch('/js/guidelines.json')
@@ -62,7 +97,7 @@ function buildGuideline(guideline) {
 
         let resourcelist = "";
 
-        console.log(element.resources);
+        // console.log(element.resources);
         for (let [key, value] of Object.entries(element.resources[0])) {
            resourcelist
                 +=

@@ -20,17 +20,19 @@
 
 <body>
   <nav class="header">
-    <h1><a href="/"><strong>WSG-o-matic.</strong></a> Updated 2025-06-04</h1>
+    <h1><a href="/"><strong>WSG-o-matic.</strong></a></h1>
     <a href="#button" class="skip visually-hidden">Skip to main content</a>
   </nav>
   <section>
     <h2>Want to improve your website?</h2>
-    <button id="button" class="button" data-button-variant="main" onclick="getGuideline(getRandomInt(1,5))">Open Random
+    <button id="go-back" class="button" data-button-variant="positive" onclick="getGuideline(getRandomInt(1,5))";><- Back</button>
+    <button id="button" class="button" data-button-variant="main" onclick="getGuideline(getRandomInt(1,5), true)">Open Random
       Guideline</button>
+    <button id="go-forward" class="button" data-button-variant="positive" onclick="getGuideline(getRandomInt(1,5))";>Forward -></button>
   </section>
   <main>
     <output id="output">
-      <span onclick="getGuideline(getRandomInt(1,5))" id="package">📦</span>
+      <span onclick="getGuideline(getRandomInt(1,5), true)" id="package">📦</span>
       <!-- Guideline is generated here -->
       <noscript>
         <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the WSG's
@@ -72,12 +74,25 @@
   <script>
     // Pass in the id of an element for a little surprise
     let confetti = new Confetti('package');
-
     function mobileScroll() {
       if (window.matchMedia("(orientation: portrait)").matches) {
         document.getElementById('output').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
       }
     }
+    window.onload = function() {
+        const url = new URL(window.location.href);
+        const params = new URLSearchParams(url.search);
+        const parameterName = 'url'; 
+        if (params.has(parameterName)){
+          getGuideline(getRandomInt(1,5));
+        }
+    };
+    document.getElementById("go-forward").addEventListener("click", () => {
+      history.forward();
+    });
+    document.getElementById("go-back").addEventListener("click", () => {
+      history.back();
+    });
   </script>
 </body>
 
