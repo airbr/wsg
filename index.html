@@ -1,39 +1,434 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Get a Guideline (WSG)</title>
-  <style>html{visibility: hidden;opacity:0;}</style>
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html {
+      font-size: 1.15em;
+      line-height: 1.4;
+      height: 100%;
+    }
+
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      color: light-dark(#201d1e, #fff);
+      background-color: light-dark(#fff, #201d1e);
+    }
+
+    #package {
+      text-align: center;
+      margin-top: 24px;
+      align-content: center;
+      font-size: 12em;
+      cursor: pointer;
+      animation: bounce 3s ease;
+      animation-iteration-count: 5;
+    }
+
+    @keyframes bounce {
+      70% {
+        transform: translateY(0%);
+      }
+
+      80% {
+        transform: translateY(-15%);
+      }
+
+      90% {
+        transform: translateY(0%);
+      }
+
+      95% {
+        transform: translateY(-7%);
+      }
+
+      97% {
+        transform: translateY(0%);
+      }
+
+      99% {
+        transform: translateY(-3%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    div:has(> blockquote) {
+      color: light-dark(#222, #fff);
+      background-color: light-dark(#ededed, #223a2c);
+      margin: 10px auto;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    blockquote p::before {
+      content: '\201C';
+    }
+
+    blockquote p::after {
+      content: '\201D';
+    }
+
+    blockquote+p {
+      text-align: right;
+    }
+
+    nav.header {
+      margin: 0 auto;
+      background: #005a9c;
+      color: #fff;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      font-size: 1em;
+      align-items: center;
+      text-align: left;
+      padding-inline: 20px;
+      min-height: 0%;
+    }
+
+    nav a,
+    nav a:hover {
+      color: white;
+    }
+
+    .back-side,
+    .forward-side {
+      font-size: 3em;
+    }
+
+    aside {
+      padding-inline: 8px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1em;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    aside>* {
+      width: 100%;
+    }
+
+    summary {
+      cursor: pointer;
+    }
+
+    aside>details>summary {
+      background: #005a9c;
+      color: #fff;
+    }
+
+    a {
+      font-size: 1.15em;
+      color: light-dark(#005a9c, #fff);
+    }
+
+    a:hover {
+      color: light-dark(#024488, #fff);
+    }
+
+    .tag {
+      margin: 0px;
+      font-size: medium;
+      margin-right: 10px;
+    }
+
+    .tagline {
+      margin-bottom: 0px;
+    }
+
+    .taglist {
+      max-width: 100%;
+    }
+
+    code {
+      border-radius: 3px;
+      font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+      padding: 0 3px;
+    }
+
+    .fancy-url {
+      background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
+      transition: background-size 350ms;
+      /* --bg-h: 100%; */
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+
+    .fancy-url:where(:hover, :focus-visible) {
+      background-size: 100% var(--bg-h);
+      background-position-x: left;
+    }
+
+    .fancy-url {
+      padding-bottom: 2px;
+      --bg-h: 2px;
+      font-size: 1.5em;
+    }
+
+    details {
+      border: 1px solid #bdbdbd;
+      border-radius: 4px;
+      padding: 0.5em 0.5em 0;
+      font-size: 1.2em;
+    }
+
+    summary {
+      font-weight: bold;
+      margin: -0.5em -0.5em 0;
+      padding: 0.5em;
+    }
+
+    details[open] {
+      padding: 0.5em;
+    }
+
+    details[open] summary {
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 0.5em;
+    }
+
+    h1,
+    h2 {
+      font-size: 1.4em;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    body {
+      margin: 0px;
+      font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+    }
+
+    .section {
+      gap: 8px;
+      margin-top: 16px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      min-height: 15vh;
+    }
+
+    @media only screen and (max-width: 450px) {
+      .section {
+        flex-direction: column;
+      }
+    }
+
+    output {
+      padding-top: 24px;
+      max-width: 840px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    output>p,
+    output>a,
+    output>h2 {
+      font-size: 1.5em;
+    }
+
+    main {
+      padding-inline: 8px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .extended {
+      min-height: 1000px;
+    }
+
+    .button {
+      --button-bg: #342a21;
+      --button-color: #ffffff;
+      --button-hover-bg: #4b4b4a;
+      --button-hover-color: #ffffff;
+      --button-border-width: 3px;
+      --button-border-style: solid;
+      --button-border-color: var(--button-bg);
+      --button-radius: 0.5em;
+
+      display: inline-flex;
+      align-items: center;
+      gap: var(--button-gap, 0.5em);
+      padding: var(--button-padding, 0.7em 1.2em);
+
+      background: var(--button-bg);
+      color: var(--button-color);
+
+      border-width: var(--button-border-width);
+      border-style: var(--button-border-style);
+      border-color: var(--button-border-color);
+      border-radius: var(--button-radius);
+
+      text-decoration: none;
+      font-weight: var(--button-font-weight, 700);
+      font-size: var(--button-font-size, 1.5em);
+      letter-spacing: 0.05ch;
+      font-family: sans-serif;
+      line-height: 1.1;
+      /* Set or buttons will be different sizes (<a>/<button>) */
+
+      cursor: pointer;
+    }
+
+    .button svg {
+      height: var(--button-icon-size, 1.2cap);
+      width: auto;
+      flex: none;
+    }
+
+    /* Hover/focus/active */
+    .button:hover {
+      background: var(--button-hover-bg);
+      color: var(--button-hover-color);
+    }
+
+    .button:focus {
+      outline-width: var(--button-outline-width, var(--button-border-width));
+      outline-style: var(--button-outline-style, var(--button-border-style));
+      outline-color: var(--button-outline-color, var(--button-border-color));
+      outline-offset: var(--button-outline-offset,
+          calc(var(--button-border-width) * 2));
+    }
+
+    .button:active {
+      transform: scale(.95);
+    }
+
+    /* Variants */
+    .button[data-button-variant="primary"] {
+      --button-bg: #005a9c;
+      --button-color: #ffffff;
+      --button-border-color: currentColor;
+      --button-hover-bg: #043f6a;
+      --button-hover-color: #d7e5d8;
+      --button-outline-color: #150202;
+      --button-font-size: 1em;
+      margin: 2px;
+    }
+
+    .button[data-button-variant="main"] {
+      --button-bg: #f9dc4a;
+      --button-color: #342a21;
+      --button-border-color: currentColor;
+      --button-hover-bg: #f1d979;
+      --button-hover-color: #342a21;
+      --button-font-size: 2em;
+    }
+
+    .button[data-button-variant="positive"] {
+      --button-bg: #2d936c;
+      --button-border-color: #107350;
+      --button-hover-bg: #359d75;
+      --button-font-size: 20px;
+      margin: 4px;
+    }
+
+    /* Radius variants */
+    .button[data-button-radius="hard"] {
+      --button-radius: 0;
+    }
+
+    .cluster {
+      padding-left: 0px;
+      --cluster-row-gap: 10px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: var(--cluster-direction, row);
+      flex-wrap: var(--cluster-wrap, wrap);
+      column-gap: var(--cluster-column-gap, var(--gutter, var(--space-s-m)));
+      row-gap: var(--cluster-row-gap, var(--gutter, var(--space-s-m)));
+      justify-content: var(--cluster-horizontal-alignment, flex-start);
+      align-items: var(--cluster-vertical-alignment, center);
+    }
+
+    .hidden,
+    [hidden] {
+      display: none !important;
+    }
+
+    .visually-hidden {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+      /* 1 */
+    }
+
+    /*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+    .visually-hidden.focusable:active,
+    .visually-hidden.focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      white-space: inherit;
+      width: auto;
+    }
+  </style>
   <meta name="description" content="A lightweight interactive website using the Web Sustainability Guidelines (WSGs)">
   <meta property="og:title" content="Open a WSG today">
   <meta property="og:description"
     content="A lightweight interactive website using the Web Sustainability Guidelines (WSGs)">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wsg-o-matic.netlify.app/">
+  <meta property="og:url" content="https://wsg-o-matic.com/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
-  <meta property="og:image" content="https://wsg-o-matic.netlify.app/img/android-chrome-192x192.png">
+  <meta property="og:image" content="https://wsg-o-matic.com/img/android-chrome-192x192.png">
 </head>
 
 <body>
   <nav class="header">
-    <h1><a href="/"><strong>WSG-o-matic:</strong></a> an educational resource about sustainability. Randomness encouraged.</h1>
+    <h1><a href="/"><strong>WSG-o-matic:</strong></a> an educational resource about sustainability. Randomness
+      encouraged.</h1>
     <a href="#button" class="skip visually-hidden">Skip to main content</a>
+    <noscript>
+      <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the draft WSG's
+        directly</a>
+    </noscript>
   </nav>
   <div class="section">
-    <button id="go-back" class="button" data-button-variant="positive" onclick="getGuideline(getRandomInt(1,5))">Back</button>
-    <button id="button" class="button" data-button-variant="main" onclick="getGuideline(getRandomInt(1,5), true)">Open Random
+    <button id="go-back" class="button" data-button-variant="positive"
+      onclick="getGuideline(getRandomInt(1,5))">Back</button>
+    <button id="button" class="button" data-button-variant="main" onclick="getGuideline(getRandomInt(1,5), true)">Open
+      Random
       Guideline</button>
-    <button id="go-forward" class="button" data-button-variant="positive" onclick="getGuideline(getRandomInt(1,5))">Forward</button>
-    </div>
+    <button id="go-forward" class="button" data-button-variant="positive"
+      onclick="getGuideline(getRandomInt(1,5))">Forward</button>
+  </div>
   <main>
     <!-- <aside class="back-side"><</aside> -->
     <output id="output">
-      <span class="hidden" onclick="getGuideline(getRandomInt(1,5), true)" id="package">📦</span>
+      <span onclick="getGuideline(getRandomInt(1,5), true)" id="package">📦</span>
       <!-- Guideline is generated here -->
       <noscript>
         <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the WSG's
@@ -42,12 +437,15 @@
     </output>
     <!-- <aside class="forward-side">></aside> -->
   </main>
-  <aside class="hidden">
+  <aside>
     <details open class="about">
       <summary>More about this website and the draft Web Sustainability Guidelines (WSGs)</summary>
-      This is an educational resource project <a href="https://github.com/airbr/wsg">demo made by Morgan Murrah</a> including the draft Web
-      Sustainability Guidelines, making use of the JSON API. Click "Open Random Guideline" to get a draft guideline in full.
-      to display. <a href="https://w3c.github.io/sustainableweb-wsg/#acknowledgments">All credit to all the contributors</a>, this work is intended to help educate.
+      This is an educational resource project <a href="https://github.com/airbr/wsg">demo made by Morgan Murrah</a>
+      including the draft Web
+      Sustainability Guidelines, making use of the JSON API. Click "Open Random Guideline" to get a draft guideline in
+      full.
+      to display. <a href="https://w3c.github.io/sustainableweb-wsg/#acknowledgments">All credit to all the
+        contributors</a>, this work is intended to help educate.
       <p><strong>Why: </strong>Improve digital sustainability so that the Web works better for all people and the
         planet. See the
         <a href="https://w3c.github.io/sustainableweb-wsg/">draft WSG's</a>.
@@ -62,35 +460,22 @@
         <li>Topics...</li>
         <!-- Topic List is generated here -->
       </ul>
-      <noscript>
-        <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the WSG's
-          directly</a>
-      </noscript>
     </details>
   </aside>
   <script async src="js/app.js"></script>
   <script>
-    // A little whimsy
-    var Confetti = function () { var t = function () { return function () { this.gravity = 10, this.particle_count = 75, this.particle_size = 1, this.explosion_power = 25, this.destroy_target = !0, this.fade = !1 } }(), e = function () { function e(n) { var r = this; if (this.bursts = [], this.setCount = function (t) { if ("number" != typeof t) throw new Error("Input must be of type 'number'"); e.CONFIG.particle_count = t }, this.setPower = function (t) { if ("number" != typeof t) throw new Error("Input must be of type 'number'"); e.CONFIG.explosion_power = t }, this.setSize = function (t) { if ("number" != typeof t) throw new Error("Input must be of type 'number'"); e.CONFIG.particle_size = t }, this.setFade = function (t) { if ("boolean" != typeof t) throw new Error("Input must be of type 'boolean'"); e.CONFIG.fade = t }, this.destroyTarget = function (t) { if ("boolean" != typeof t) throw new Error("Input must be of type 'boolean'"); e.CONFIG.destroy_target = t }, this.setupCanvasContext = function () { if (!e.CTX) { var t = document.createElement("canvas"); e.CTX = t.getContext("2d"), t.width = 2 * window.innerWidth, t.height = 2 * window.innerHeight, t.style.position = "fixed", t.style.top = "0", t.style.left = "0", t.style.width = "calc(100%)", t.style.height = "calc(100%)", t.style.margin = "0", t.style.padding = "0", t.style.zIndex = "999999999", t.style.pointerEvents = "none", document.body.appendChild(t), window.addEventListener("resize", function () { t.width = 2 * window.innerWidth, t.height = 2 * window.innerHeight }) } }, this.setupElement = function (t) { var n; r.element = document.getElementById(t), null === (n = r.element) || void 0 === n || n.addEventListener("click", function (t) { var n = new o(2 * t.clientX, 2 * t.clientY); r.bursts.push(new i(n)), e.CONFIG.destroy_target && (r.element.style.visibility = "hidden") }) }, this.update = function (t) { r.delta_time = (t - r.time) / 1e3, r.time = t; for (var e = r.bursts.length - 1; e >= 0; e--)r.bursts[e].update(r.delta_time), 0 == r.bursts[e].particles.length && r.bursts.splice(e, 1); r.draw(), window.requestAnimationFrame(r.update) }, !n) throw new Error("Missing id"); e.CONFIG || (e.CONFIG = new t), this.time = (new Date).getTime(), this.delta_time = 0, this.setupCanvasContext(), this.setupElement(n), window.requestAnimationFrame(this.update) } return e.prototype.draw = function () { s.clearScreen(); for (var t = 0, e = this.bursts; t < e.length; t++) { e[t].draw() } }, e }(), i = function () { function t(t) { this.particles = []; for (var i = 0; i < e.CONFIG.particle_count; i++)this.particles.push(new n(t)) } return t.prototype.update = function (t) { for (var e = this.particles.length - 1; e >= 0; e--)this.particles[e].update(t), this.particles[e].checkBounds() && this.particles.splice(e, 1) }, t.prototype.draw = function () { for (var t = this.particles.length - 1; t >= 0; t--)this.particles[t].draw() }, t }(), n = function () { function t(t) { this.size = new o((16 * Math.random() + 4) * e.CONFIG.particle_size, (4 * Math.random() + 4) * e.CONFIG.particle_size), this.position = new o(t.x - this.size.x / 2, t.y - this.size.y / 2), this.velocity = r.generateVelocity(), this.rotation = 360 * Math.random(), this.rotation_speed = 10 * (Math.random() - .5), this.hue = 360 * Math.random(), this.opacity = 100, this.lifetime = Math.random() + .25 } return t.prototype.update = function (t) { this.velocity.y += e.CONFIG.gravity * (this.size.y / (10 * e.CONFIG.particle_size)) * t, this.velocity.x += 25 * (Math.random() - .5) * t, this.velocity.y *= .98, this.velocity.x *= .98, this.position.x += this.velocity.x, this.position.y += this.velocity.y, this.rotation += this.rotation_speed, e.CONFIG.fade && (this.opacity -= this.lifetime) }, t.prototype.checkBounds = function () { return this.position.y - 2 * this.size.x > 2 * window.innerHeight }, t.prototype.draw = function () { s.drawRectangle(this.position, this.size, this.rotation, this.hue, this.opacity) }, t }(), o = function () { return function (t, e) { this.x = t || 0, this.y = e || 0 } }(), r = function () { function t() { } return t.generateVelocity = function () { var t = Math.random() - .5, i = Math.random() - .7, n = Math.sqrt(t * t + i * i); return i /= n, new o((t /= n) * (Math.random() * e.CONFIG.explosion_power), i * (Math.random() * e.CONFIG.explosion_power)) }, t }(), s = function () { function t() { } return t.clearScreen = function () { e.CTX && e.CTX.clearRect(0, 0, 2 * window.innerWidth, 2 * window.innerHeight) }, t.drawRectangle = function (t, i, n, o, r) { e.CTX && (e.CTX.save(), e.CTX.beginPath(), e.CTX.translate(t.x + i.x / 2, t.y + i.y / 2), e.CTX.rotate(n * Math.PI / 180), e.CTX.rect(-i.x / 2, -i.y / 2, i.x, i.y), e.CTX.fillStyle = "hsla(" + o + "deg, 90%, 65%, " + r + "%)", e.CTX.fill(), e.CTX.restore()) }, t }(); return e }();
-  </script>
-  <script>
-    // Pass in the id of an element for a little surprise
-    let confetti = new Confetti('package');
     function mobileScroll() {
       if (window.matchMedia("(orientation: portrait)").matches) {
         document.getElementById('output').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
       }
     }
-    window.onload = function() {
-        const url = new URL(window.location.href);
-        const params = new URLSearchParams(url.search);
-        const parameterName = 'url'; 
-        if (params.has(parameterName)){
-          getGuideline(getRandomInt(1,5));
-        } else {
-          document.querySelector('#package').classList.remove('hidden');
-          document.querySelector('aside').classList.remove('hidden');
-        }
+    window.onload = function () {
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams(url.search);
+      const parameterName = 'url';
+      if (params.has(parameterName)) {
+        getGuideline(getRandomInt(1, 5));
+      }
     };
     document.getElementById("go-forward").addEventListener("click", () => {
       history.forward();

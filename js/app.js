@@ -1,6 +1,5 @@
 
 function findObjectByValue(obj, targetValue) {
-  // Check if the current object is an array
   if (Array.isArray(obj)) {
     for (let i = 0; i < obj.length; i++) {
       const result = findObjectByValue(obj[i], targetValue);
@@ -9,45 +8,37 @@ function findObjectByValue(obj, targetValue) {
       }
     }
   } 
-  // Check if the current object is an object (and not null)
   else if (typeof obj === 'object' && obj !== null) {
     for (const key in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
         const value = obj[key];
-        // If the current value matches the target value, return the parent object
         if (value === targetValue) {
           return obj; 
         }
-        // Recursively search in nested objects/arrays
         const result = findObjectByValue(value, targetValue);
         if (result) {
-          return result; // Return the found object
+          return result; 
         }
       }
     }
   }
-  return null; // Value not found
+  return null; 
 }
 function getRandomItem(jsonArray) {
     const randomIndex = Math.floor(Math.random() * jsonArray.length);
     return jsonArray[randomIndex];
 }
-// Guideline by Category
 function getGuideline(x, boolean) {
     fetch('/js/guidelines.json')
         .then(response => response.json())
         .then(data => {
-           // If URL query param exists
             const url = new URL(window.location.href);
             const params = new URLSearchParams(url.search);
             const parameterName = 'url'; 
             if (params.has(parameterName) && boolean !== true) {
-                console.log(`The "${parameterName}" parameter exists.`);
-                // console.log(params.get('url')); 
                 const guideline = findObjectByValue(data, params.get('url'));
                 buildGuideline(guideline);
             } else {
-                console.log(`The "${parameterName}" parameter does not exist or was skipped.`);
                 const guideline = getRandomItem(data.category[x].guidelines);
                 buildGuideline(guideline);
                 // console.log(guideline.url); 
@@ -85,7 +76,6 @@ function getGuidelineByTag(tag) {
         })
         .catch(error => console.error('Error loading data:', error));
 }
-// Basic HTML builder
 function buildGuideline(guideline) {
 
     let criterialist = "";
@@ -94,12 +84,8 @@ function buildGuideline(guideline) {
     let taglist = "";
     let resourcelist = "";
 
-    // Make Success Criteria
     for (const element of guideline.criteria) {
-
         let resourcelist = "";
-
-        // console.log(element.resources);
         for (let [key, value] of Object.entries(element.resources[0])) {
            resourcelist
                 +=
@@ -116,8 +102,6 @@ function buildGuideline(guideline) {
             resourcelist +
             "</details>";
     }
-
-    // Benefits
     const entries = Object.entries(guideline.benefits[0]);
     for (let [key, value] of entries) {
         benefitlist
@@ -128,8 +112,6 @@ function buildGuideline(guideline) {
             value +
             "</details>";
     }
-
-    // Replace markdown links with anchor tags
     for (const example of guideline.example) {
         var html = example.content.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>');
         examplelist
@@ -146,8 +128,6 @@ function buildGuideline(guideline) {
             + tag +
             "</button></li>"
     }
-
-    // Place contents into output container
     document.getElementById("output").innerHTML =
 
    `<h2><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h2>
@@ -168,7 +148,6 @@ function buildGuideline(guideline) {
     <p class="tagline">Get a random guideline by Tag:</p>
     <ul class="taglist cluster">${taglist}</ul>
     `;
-
 }
 
 function getRandomInt(min, max) {
