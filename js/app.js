@@ -89,7 +89,7 @@ function buildGuideline(guideline) {
         for (let [key, value] of Object.entries(element.resources[0])) {
            resourcelist
                 +=
-                `<p><a href="${value}">${key}</a></p>`
+                `<li><a href="${value}">${key}</a></li>`
         }
 
         criterialist
@@ -98,9 +98,9 @@ function buildGuideline(guideline) {
             + element.title +
             "</summary>" +
             element.description + " " + element.testable.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>') +
-            "<p>Resources</p>" +
+            "<p>Resources list</p><ul>" +
             resourcelist +
-            "</details>";
+            "</ul></details>";
     }
     const entries = Object.entries(guideline.benefits[0]);
     for (let [key, value] of entries) {
