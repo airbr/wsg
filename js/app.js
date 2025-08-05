@@ -132,14 +132,14 @@ function buildGuideline(guideline) {
 
    `<h2><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h2>
     <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong>.</p>
-    <h2>Success criteria:</h2>
-    ${criterialist}
     <div>
     <blockquote cite="${guideline.url}">
     <p><strong>${guideline.intent}</strong></p>
     </blockquote>
     <p>WSG 1.0 Draft Intent: <cite>${guideline.guideline}</cite></p>
     </div>
+    <h2>Success criteria:</h2>
+    ${criterialist}
     <h3>example: ${examplelist}</h3>
     <details>
     <summary>Benefits of this guideline</summary>
