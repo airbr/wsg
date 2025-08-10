@@ -174,7 +174,6 @@ function getGuidelineByTag(tag) {
             const url = new URL(window.location.href);
             const params = new URLSearchParams(url.search);
             const parameterName = 'url';
-            console.log(randomTagItem);
             params.set('url', randomTagItem[0].url);
             url.search = params.toString();
             history.pushState(null, '', url.toString());
@@ -232,7 +231,7 @@ function buildGuideline(guideline, getStars) {
     for (const tag of guideline.tags) {
         taglist
             +=
-            `<li class='tag'><button class="button" data-button-variant="positive" data-button-radius="hard" onclick="getGuidelineByTag('${tag}')">`
+            `<li class='tag'><button class="button" data-button-variant="tagbutton" data-button-radius="hard" onclick="getGuidelineByTag('${tag}')">`
             + tag +
             "</button></li>"
     }
@@ -240,8 +239,9 @@ function buildGuideline(guideline, getStars) {
 
     document.getElementById("output").innerHTML =
 
-        `<p class="tagline">Get a random guideline by Tag:</p>
+    `<p class="tagline">Get another random guideline:</p>
     <ul class="taglist cluster">${taglist}</ul>
+    <hr />
     <h2><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h2>
     <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong>.</p>
     <div>
@@ -293,7 +293,7 @@ function generateButtonList() {
         "Assets",
         "HTML",
         "CSS",
-        "JavaScript",
+        "Javascript",
         "Security",
         "Privacy",
         "Education",
@@ -302,7 +302,7 @@ function generateButtonList() {
         buttonlist
             +=
             `<li>
-              <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuidelineByTag('${tag}'); mobileScroll()" >${tag}</button>
+              <button class="button" data-button-radius="hard" data-button-variant="tagbutton" onclick="getGuidelineByTag('${tag}'); mobileScroll()" >${tag}</button>
             </li>`
     }
 

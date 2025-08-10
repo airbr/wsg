@@ -218,7 +218,7 @@
 
     .section {
       gap: 8px;
-      margin-top: 16px;
+      margin-top: 4px;
       text-align: center;
       display: flex;
       justify-content: center;
@@ -340,9 +340,18 @@
       --button-bg: #2d936c;
       --button-border-color: #107350;
       --button-hover-bg: #359d75;
-      --button-font-size: 20px;
+      --button-font-size: 1eem;
       margin: 4px;
     }
+
+    .button[data-button-variant="tagbutton"] {
+      --button-bg: rgb(68, 91, 179);
+      --button-border-color: #81b0dc;
+      --button-hover-bg: #2d6ba2;
+      --button-font-size: 1em;
+      margin: 4px;
+    }
+
 
     /* Radius variants */
     .button[data-button-radius="hard"] {
@@ -351,7 +360,7 @@
 
     .cluster {
       padding-left: 0px;
-      --cluster-row-gap: 10px;
+      --cluster-row-gap: 2px;
       list-style-type: none;
       display: flex;
       flex-direction: var(--cluster-direction, row);
@@ -395,6 +404,15 @@
       position: static;
       white-space: inherit;
       width: auto;
+    }
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
     }
   </style>
   <meta name="description" content="A lightweight interactive website using the Web Sustainability Guidelines (WSGs)">
