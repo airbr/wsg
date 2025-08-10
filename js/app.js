@@ -139,17 +139,14 @@ function getStars(x, guidelineId) {
                             value +
                             "</li>";
                     }
-                    //  <p>${star.applicability.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>')}</p>
-
                     htmlContent += `
-                    <div>
+                    <li>
                         <h3>${star.title}</h3>
-                        <h4>Procedures</h4>
-                        <ul>${proceduresList}</ul>
-                    </div>
+                        <ul>${proceduresList.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>')}</ul>
+                    </li>
                 `;
                 });
-                newElement.innerHTML = `<details><summary>Tooling and Reporting</summary>` + htmlContent + `</details>`;
+                newElement.innerHTML = `<details><summary>Sustainable Tooling And Reporting (STAR)</summary><ol>` + htmlContent + `</ol></details>`;
                 const parentElement = document.getElementById('output');
                 parentElement.appendChild(newElement);
             }
@@ -248,11 +245,15 @@ function buildGuideline(guideline, getStars) {
     <blockquote cite="${guideline.url}">
     <p><strong>${guideline.intent}</strong></p>
     </blockquote>
-    <p>WSG 1.0 Draft Intent: <cite>${guideline.guideline}</cite></p>
+    <p>Guideline Draft Intent: <cite>${guideline.guideline}</cite></p>
     </div>
     <h2>Success criteria:</h2>
     ${criterialist}
+    <div>
+    <blockquote>
     <h3>example: ${examplelist}</h3>
+    </blockquote>
+    </div>
     <details>
     <summary>Benefits of this guideline</summary>
         ${benefitlist}
