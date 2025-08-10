@@ -1,28 +1,28 @@
 
 function findObjectByValue(obj, targetValue) {
-  if (Array.isArray(obj)) {
-    for (let i = 0; i < obj.length; i++) {
-      const result = findObjectByValue(obj[i], targetValue);
-      if (result) {
-        return result; // Return the found object
-      }
-    }
-  } 
-  else if (typeof obj === 'object' && obj !== null) {
-    for (const key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        const value = obj[key];
-        if (value === targetValue) {
-          return obj; 
+    if (Array.isArray(obj)) {
+        for (let i = 0; i < obj.length; i++) {
+            const result = findObjectByValue(obj[i], targetValue);
+            if (result) {
+                return result; // Return the found object
+            }
         }
-        const result = findObjectByValue(value, targetValue);
-        if (result) {
-          return result; 
-        }
-      }
     }
-  }
-  return null; 
+    else if (typeof obj === 'object' && obj !== null) {
+        for (const key in obj) {
+            if (Object.prototype.hasOwnProperty.call(obj, key)) {
+                const value = obj[key];
+                if (value === targetValue) {
+                    return obj;
+                }
+                const result = findObjectByValue(value, targetValue);
+                if (result) {
+                    return result;
+                }
+            }
+        }
+    }
+    return null;
 }
 function getRandomItem(jsonArray) {
     const randomIndex = Math.floor(Math.random() * jsonArray.length);
@@ -34,14 +34,14 @@ function getGuideline(x, boolean) {
         .then(data => {
             const url = new URL(window.location.href);
             const params = new URLSearchParams(url.search);
-            const parameterName = 'url'; 
+            const parameterName = 'url';
             if (params.has(parameterName) && boolean !== true) {
                 const guideline = findObjectByValue(data, params.get('url'));
-                buildGuideline(guideline);
+                buildGuideline(guideline, getStars(x, guideline.id));
             } else {
                 const guideline = getRandomItem(data.category[x].guidelines);
-                buildGuideline(guideline);
-                // console.log(guideline.url); 
+                buildGuideline(guideline, getStars(x, guideline.id));
+
                 params.set('url', guideline.url);
                 url.search = params.toString();
                 history.pushState(null, '', url.toString());
@@ -50,8 +50,114 @@ function getGuideline(x, boolean) {
         .catch(error => console.error('Error loading data:', error));
 }
 
+function getStars(x, guidelineId) {
+    fetch('/js/star.json')
+        .then(response => response.json())
+        .then(data => {
+            // console.log(x);
+            // console.log(guidelineId);
+            let prefix = "";
+            switch (x) {
+                case 1:
+                    prefix = "UX";
+                    // console.log("UX");
+                    break;
+                case 2:
+                    prefix = "WD";
+                    // console.log("WD");
+                    break;
+                case 3:
+                    prefix = "HIS";
+                    // console.log("HIS");
+                    break;
+                case 4:
+                    prefix = "BSPM";
+                    // console.log("BSPM");
+                    break;
+                default:
+                    console.log(`default`);
+            }
+            if (guidelineId < 10) {
+                prefix = prefix + "0"
+            }
+            let id = prefix + guidelineId;
+            let arrayOfStars = [];
+            try {
+                const star1 = findObjectByValue(data, id + "-1");
+                arrayOfStars.push(star1);
+                //   console.log(star1);
+            } catch (error) {
+                console.error(error);
+            }
+            try {
+                const star2 = findObjectByValue(data, id + "-2");
+                arrayOfStars.push(star2);
+                //   console.log(star2);
+            } catch (error) {
+                console.error(error);
+            }
+            try {
+                const star3 = findObjectByValue(data, id + "-3");
+                arrayOfStars.push(star3);
+                //   console.log(star3);
+            } catch (error) {
+                console.error(error);
+            }
+            try {
+                const star4 = findObjectByValue(data, id + "-4");
+                arrayOfStars.push(star4);
+                //   console.log(star4);
+            } catch (error) {
+                console.error(error);
+            }
+            try {
+                const star5 = findObjectByValue(data, id + "-5");
+                arrayOfStars.push(star5);
+                //   console.log(star5);
+            } catch (error) {
+                console.error(error);
+            }
+            try {
+                const star6 = findObjectByValue(data, id + "-6");
+                arrayOfStars.push(star6);
+                //   console.log(star6);
+            } catch (error) {
+                console.error(error);
+            }
+
+            const newElement = document.createElement('div');
+            let htmlContent = ''; // Accumulator for HTML strings
+            const filteredarrayOfStars = arrayOfStars.filter(item => item !== null);
+            if (filteredarrayOfStars.length > 0) {
+                filteredarrayOfStars.forEach(star => {
+                    let proceduresList = []
+                    const entries = Object.entries(star.tests[0].procedure[0]);
+                    for (let [key, value] of entries) {
+                        proceduresList
+                            +=
+                            "<li>" +
+                            value +
+                            "</li>";
+                    }
+                    //  <p>${star.applicability.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>')}</p>
+
+                    htmlContent += `
+                    <div>
+                        <h3>${star.title}</h3>
+                        <h4>Procedures</h4>
+                        <ul>${proceduresList}</ul>
+                    </div>
+                `;
+                });
+                newElement.innerHTML = `<details><summary>Tooling and Reporting</summary>` + htmlContent + `</details>`;
+                const parentElement = document.getElementById('output');
+                parentElement.appendChild(newElement);
+            }
+        })
+        .catch(error => console.error('Error loading data:', error));
+}
 function getGuidelineByTag(tag) {
-    return fetch('/js/guidelines.json')
+    fetch('/js/guidelines.json')
         .then(response => response.json())
         .then(data => {
             let matches = [];
@@ -59,7 +165,7 @@ function getGuidelineByTag(tag) {
                 if (category.guidelines) {
                     for (const guideline of category.guidelines) {
                         if (guideline.tags.includes(tag)) {
-                            matches.push(guideline);
+                            matches.push([guideline, category.id]);
                         }
                     }
                 }
@@ -67,16 +173,18 @@ function getGuidelineByTag(tag) {
             const randomTagItem = getRandomItem(matches);
             const url = new URL(window.location.href);
             const params = new URLSearchParams(url.search);
-            const parameterName = 'url'; 
-            params.set('url', randomTagItem.url);
+            const parameterName = 'url';
+            console.log(randomTagItem);
+            params.set('url', randomTagItem[0].url);
             url.search = params.toString();
             history.pushState(null, '', url.toString());
-            
-            return buildGuideline(randomTagItem);
+            return buildGuideline(randomTagItem[0], getStars(Number(randomTagItem[1]), randomTagItem[0].id));
         })
         .catch(error => console.error('Error loading data:', error));
 }
-function buildGuideline(guideline) {
+
+
+function buildGuideline(guideline, getStars) {
 
     let criterialist = "";
     let benefitlist = [];
@@ -87,7 +195,7 @@ function buildGuideline(guideline) {
     for (const element of guideline.criteria) {
         let resourcelist = "";
         for (let [key, value] of Object.entries(element.resources[0])) {
-           resourcelist
+            resourcelist
                 +=
                 `<li><a href="${value}">${key}</a></li>`
         }
@@ -128,9 +236,13 @@ function buildGuideline(guideline) {
             + tag +
             "</button></li>"
     }
+
+
     document.getElementById("output").innerHTML =
 
-   `<h2><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h2>
+        `<p class="tagline">Get a random guideline by Tag:</p>
+    <ul class="taglist cluster">${taglist}</ul>
+    <h2><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h2>
     <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong>.</p>
     <div>
     <blockquote cite="${guideline.url}">
@@ -145,9 +257,9 @@ function buildGuideline(guideline) {
     <summary>Benefits of this guideline</summary>
         ${benefitlist}
     </details>
-    <p class="tagline">Get a random guideline by Tag:</p>
-    <ul class="taglist cluster">${taglist}</ul>
     `;
+
+    getStars;
 }
 
 function getRandomInt(min, max) {
