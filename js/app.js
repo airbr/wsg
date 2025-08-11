@@ -236,9 +236,7 @@ function buildGuideline(guideline, getStars) {
 
     document.getElementById("output").innerHTML =
 
-    `<p class="tagline">Get another random guideline:</p>
-    <ul class="taglist cluster">${taglist}</ul>
-    <hr />
+    `
     <h2><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h2>
     <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong>.</p>
     <div>
@@ -247,7 +245,11 @@ function buildGuideline(guideline, getStars) {
     </blockquote>
     <p>Guideline Draft Intent: <cite>${guideline.guideline}</cite></p>
     </div>
-    <h2>Success criteria:</h2>
+    <hr />
+    <p class="tagline">Tags:</p>
+    <ul class="taglist cluster">${taglist}</ul>
+    <hr />
+    <h2>Success criteria for this guideline:</h2>
     ${criterialist}
     <div>
     <blockquote>
