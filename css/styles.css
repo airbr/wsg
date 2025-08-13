@@ -1,58 +1,164 @@
+/* =========================
+   Root & Base Styles
+   ========================= */
+:root {
+  color-scheme: light dark;
+}
+
 html {
   font-size: 1.10em;
   line-height: 1.4;
   height: 100%;
 }
 
-:root {
-  color-scheme: light dark;
-}
-
 body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
   color: light-dark(#201d1e, #fff);
   background-color: light-dark(#fff, #201d1e);
 }
 
-#package {
+/* =========================
+   Typography & Links
+   ========================= */
+h1,
+h2 {
+  font-size: 1.4em;
+  margin: 16px 0;
+}
+
+a {
+  font-size: 1.10em;
+  color: light-dark(#005a9c, #fff);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: light-dark(#024488, #fff);
+}
+
+/* =========================
+   Navigation & Header
+   ========================= */
+nav.header {
+  margin: 0 auto;
+  background: #005a9c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding-inline: 20px;
+}
+
+nav a,
+nav a:hover {
+  color: #fff;
+}
+
+/* =========================
+   Main Layout
+   ========================= */
+.section {
+  margin: 16px;
   text-align: center;
-  margin-top: 24px;
-  align-content: center;
-  font-size: 12em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  min-height: 15vh;
+}
+
+@media only screen and (max-width: 450px) {
+  .section {
+    flex-direction: column;
+  }
+}
+
+main {
+  padding-inline: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+output {
+  padding-top: 8px;
+  max-width: 65ch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+output > p,
+output > a,
+output > h2 {
+  font-size: 1.5em;
+}
+
+/* =========================
+   Footer & Aside
+   ========================= */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  padding: 10px;
+}
+
+aside {
+  padding-inline: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 1em;
+}
+
+aside > * {
+  width: 100%;
+}
+
+/* =========================
+   Details & Summary
+   ========================= */
+details {
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+  font-size: 1.2em;
+  max-width: 65ch;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+summary {
   cursor: pointer;
-  animation: bounce 3s ease;
-  animation-iteration-count: 5;
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+  max-width: 65ch;
 }
 
-@keyframes bounce {
-  70% {
-    transform: translateY(0%);
-  }
-
-  80% {
-    transform: translateY(-15%);
-  }
-
-  90% {
-    transform: translateY(0%);
-  }
-
-  95% {
-    transform: translateY(-7%);
-  }
-
-  97% {
-    transform: translateY(0%);
-  }
-
-  99% {
-    transform: translateY(-3%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+aside > details > summary {
+  background: #005a9c;
+  color: #fff;
 }
 
+/* =========================
+   Blockquotes & Code
+   ========================= */
 div:has(> blockquote) {
   color: light-dark(#222, #fff);
   background-color: light-dark(#ededed, #223a2c);
@@ -70,90 +176,8 @@ blockquote p::after {
   content: '\201D';
 }
 
-blockquote+p {
+blockquote + p {
   text-align: right;
-}
-
-nav.header {
-  margin: 0 auto;
-  background: #005a9c;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  font-size: 1em;
-  align-items: center;
-  text-align: left;
-  padding-inline: 20px;
-  min-height: 0%;
-}
-
-nav a,
-nav a:hover {
-  color: white;
-}
-
-.back-side,
-.forward-side {
-  font-size: 3em;
-}
-
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 1em;
-  align-items: center;
-  gap: 8px;
-  padding: 10px;
-}
-
-aside {
-  padding-inline: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1em;
-  align-items: center;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-aside>* {
-  width: 100%;
-}
-
-summary {
-  cursor: pointer;
-}
-
-aside>details>summary {
-  background: #005a9c;
-  color: #fff;
-}
-
-a {
-  font-size: 1.10em;
-  color: light-dark(#005a9c, #fff);
-}
-
-a:hover {
-  color: light-dark(#024488, #fff);
-}
-
-.tag {
-  margin: 0px;
-  font-size: medium;
-  margin-right: 2px;
-}
-
-.tagline {
-  margin: 0px;
-}
-
-.taglist {
-  gap: 2px;
-  max-width: 100%;
 }
 
 code {
@@ -162,101 +186,9 @@ code {
   padding: 0 3px;
 }
 
-.fancy-url {
-  background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
-  transition: background-size 350ms;
-  /* --bg-h: 100%; */
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.fancy-url:where(:hover, :focus-visible) {
-  background-size: 100% var(--bg-h);
-  background-position-x: left;
-}
-
-.fancy-url {
-  padding-bottom: 2px;
-  --bg-h: 2px;
-  font-size: 1.7em;
-}
-
-details {
-  border: 1px solid #bdbdbd;
-  border-radius: 4px;
-  padding: 0.5em 0.5em 0;
-  font-size: 1.2em;
-  max-width: 65ch;
-}
-
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em;
-  max-width: 65ch;
-}
-
-details[open] {
-  padding: 0.5em;
-}
-
-details[open] summary {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em;
-}
-
-h1,
-h2 {
-  font-size: 1.4em;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-body {
-  margin: 0px;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
-}
-
-.section {
-  margin: 16px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  min-height: 15vh;
-}
-
-@media only screen and (max-width: 450px) {
-  .section {
-    flex-direction: column;
-  }
-}
-
-output {
-  padding-top: 8px;
-  max-width: 65ch;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-output>p,
-output>a,
-output>h2 {
-  font-size: 1.5em;
-}
-
-main {
-  padding-inline: 8px;
-  display: flex;
-  justify-content: center;
-}
-
-.extended {
-  min-height: 1000px;
-}
-
+/* =========================
+   Buttons
+   ========================= */
 .button {
   --button-bg: #342a21;
   --button-color: #ffffff;
@@ -286,8 +218,6 @@ main {
   letter-spacing: 0.05ch;
   font-family: sans-serif;
   line-height: 1.1;
-  /* Set or buttons will be different sizes (<a>/<button>) */
-
   cursor: pointer;
 }
 
@@ -297,7 +227,6 @@ main {
   flex: none;
 }
 
-/* Hover/focus/active */
 .button:hover {
   background: var(--button-hover-bg);
   color: var(--button-hover-color);
@@ -307,15 +236,14 @@ main {
   outline-width: var(--button-outline-width, var(--button-border-width));
   outline-style: var(--button-outline-style, var(--button-border-style));
   outline-color: var(--button-outline-color, var(--button-border-color));
-  outline-offset: var(--button-outline-offset,
-      calc(var(--button-border-width) * 2));
+  outline-offset: var(--button-outline-offset, calc(var(--button-border-width) * 2));
 }
 
 .button:active {
   transform: scale(.95);
 }
 
-/* Variants */
+/* Button Variants */
 .button[data-button-variant="primary"] {
   --button-bg: #005a9c;
   --button-color: #ffffff;
@@ -352,15 +280,17 @@ main {
   margin: 4px;
 }
 
-
-/* Radius variants */
+/* Button Radius Variant */
 .button[data-button-radius="hard"] {
   --button-radius: 0;
 }
 
+/* =========================
+   Clusters, Tags, Lists
+   ========================= */
 .cluster {
-  margin: 0px;
-  padding-left: 0px;
+  margin: 0;
+  padding-left: 0;
   --cluster-row-gap: 2px;
   list-style-type: none;
   display: flex;
@@ -372,6 +302,73 @@ main {
   align-items: var(--cluster-vertical-alignment, center);
 }
 
+.tag {
+  margin: 0;
+  font-size: medium;
+  margin-right: 2px;
+}
+
+.tagline {
+  margin: 0;
+}
+
+.taglist {
+  gap: 2px;
+  max-width: 100%;
+}
+
+/* =========================
+   Miscellaneous
+   ========================= */
+#package {
+  text-align: center;
+  margin-top: 24px;
+  align-content: center;
+  font-size: 12em;
+  cursor: pointer;
+  animation: bounce 3s ease;
+  animation-iteration-count: 5;
+}
+
+@keyframes bounce {
+  70% { transform: translateY(0%); }
+  80% { transform: translateY(-15%); }
+  90% { transform: translateY(0%); }
+  95% { transform: translateY(-7%); }
+  97% { transform: translateY(0%); }
+  99% { transform: translateY(-3%); }
+  100% { transform: translateY(0); }
+}
+
+.fancy-url {
+  background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
+  transition: background-size 350ms;
+  padding-bottom: 2px;
+  --bg-h: 2px;
+  font-size: 1.7em;
+}
+
+.fancy-url:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+
+.extended {
+  min-height: 1000px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: .85em 0;
+  padding: 0;
+}
+
+/* =========================
+   Accessibility Helpers
+   ========================= */
 .hidden,
 [hidden] {
   display: none !important;
@@ -387,14 +384,7 @@ main {
   position: absolute;
   white-space: nowrap;
   width: 1px;
-  /* 1 */
 }
-
-/*
-* Extends the .visually-hidden class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
 
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
@@ -405,13 +395,4 @@ main {
   position: static;
   white-space: inherit;
   width: auto;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: .85em 0;
-  padding: 0;
 }
