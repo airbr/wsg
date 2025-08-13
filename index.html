@@ -1,487 +1,65 @@
 <!doctype html>
 <html class="no-js" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Get a Guideline (WSG)</title>
-  <style>
-    html {
-      font-size: 1.10em;
-      line-height: 1.4;
-      height: 100%;
-    }
-
-    :root {
-      color-scheme: light dark;
-    }
-
-    body {
-      color: light-dark(#201d1e, #fff);
-      background-color: light-dark(#fff, #201d1e);
-    }
-
-    #package {
-      text-align: center;
-      margin-top: 24px;
-      align-content: center;
-      font-size: 12em;
-      cursor: pointer;
-      animation: bounce 3s ease;
-      animation-iteration-count: 5;
-    }
-
-    @keyframes bounce {
-      70% {
-        transform: translateY(0%);
-      }
-
-      80% {
-        transform: translateY(-15%);
-      }
-
-      90% {
-        transform: translateY(0%);
-      }
-
-      95% {
-        transform: translateY(-7%);
-      }
-
-      97% {
-        transform: translateY(0%);
-      }
-
-      99% {
-        transform: translateY(-3%);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    div:has(> blockquote) {
-      color: light-dark(#222, #fff);
-      background-color: light-dark(#ededed, #223a2c);
-      margin: 10px auto;
-      padding: 15px;
-      border-radius: 5px;
-      font-size: 1.1em;
-    }
-
-    blockquote p::before {
-      content: '\201C';
-    }
-
-    blockquote p::after {
-      content: '\201D';
-    }
-
-    blockquote+p {
-      text-align: right;
-    }
-
-    nav.header {
-      margin: 0 auto;
-      background: #005a9c;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      /* justify-content: center; */
-      font-size: 1em;
-      align-items: center;
-      text-align: left;
-      padding-inline: 20px;
-      min-height: 0%;
-    }
-
-    nav a,
-    nav a:hover {
-      color: white;
-    }
-
-    .back-side,
-    .forward-side {
-      font-size: 3em;
-    }
-
-    footer {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      font-size: 1em;
-      align-items: center;
-      gap: 8px;
-      padding: 10px;
-    }
-
-    aside {
-      padding-inline: 8px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 1em;
-      align-items: center;
-      gap: 8px;
-      margin-top: 16px;
-    }
-
-    aside>* {
-      width: 100%;
-    }
-
-    summary {
-      cursor: pointer;
-    }
-
-    aside>details>summary {
-      background: #005a9c;
-      color: #fff;
-    }
-
-    a {
-      font-size: 1.10em;
-      color: light-dark(#005a9c, #fff);
-    }
-
-    a:hover {
-      color: light-dark(#024488, #fff);
-    }
-
-    .tag {
-      margin: 0px;
-      font-size: medium;
-      margin-right: 2px;
-    }
-
-    .tagline {
-      margin: 0px;
-    }
-
-    .taglist {
-      gap: 2px;
-      max-width: 100%;
-    }
-
-    code {
-      border-radius: 3px;
-      font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-      padding: 0 3px;
-    }
-
-    .fancy-url {
-      background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
-      transition: background-size 350ms;
-      /* --bg-h: 100%; */
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-    }
-
-    .fancy-url:where(:hover, :focus-visible) {
-      background-size: 100% var(--bg-h);
-      background-position-x: left;
-    }
-
-    .fancy-url {
-      padding-bottom: 2px;
-      --bg-h: 2px;
-      font-size: 1.7em;
-    }
-
-    details {
-      border: 1px solid #bdbdbd;
-      border-radius: 4px;
-      padding: 0.5em 0.5em 0;
-      font-size: 1.2em;
-      max-width: 65ch;
-    }
-
-    summary {
-      font-weight: bold;
-      margin: -0.5em -0.5em 0;
-      padding: 0.5em;
-      max-width: 65ch;
-    }
-
-    details[open] {
-      padding: 0.5em;
-    }
-
-    details[open] summary {
-      border-bottom: 1px solid #aaa;
-      margin-bottom: 0.5em;
-    }
-
-    h1,
-    h2 {
-      font-size: 1.4em;
-      margin-top: 16px;
-      margin-bottom: 16px;
-    }
-
-    body {
-      margin: 0px;
-      font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
-    }
-
-    .section {
-      margin: 16px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      min-height: 15vh;
-    }
-
-    @media only screen and (max-width: 450px) {
-      .section {
-        flex-direction: column;
-      }
-    }
-
-    output {
-      padding-top: 8px;
-      max-width: 65ch;      
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-
-    output>p,
-    output>a,
-    output>h2 {
-      font-size: 1.5em;
-    }
-
-    main {
-      padding-inline: 8px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .extended {
-      min-height: 1000px;
-    }
-
-    .button {
-      --button-bg: #342a21;
-      --button-color: #ffffff;
-      --button-hover-bg: #4b4b4a;
-      --button-hover-color: #ffffff;
-      --button-border-width: 3px;
-      --button-border-style: solid;
-      --button-border-color: var(--button-bg);
-      --button-radius: 0.5em;
-
-      display: inline-flex;
-      align-items: center;
-      gap: var(--button-gap, 0.5em);
-      padding: var(--button-padding, 0.7em 1.2em);
-
-      background: var(--button-bg);
-      color: var(--button-color);
-
-      border-width: var(--button-border-width);
-      border-style: var(--button-border-style);
-      border-color: var(--button-border-color);
-      border-radius: var(--button-radius);
-
-      text-decoration: none;
-      font-weight: var(--button-font-weight, 700);
-      font-size: var(--button-font-size, 1.5em);
-      letter-spacing: 0.05ch;
-      font-family: sans-serif;
-      line-height: 1.1;
-      /* Set or buttons will be different sizes (<a>/<button>) */
-
-      cursor: pointer;
-    }
-
-    .button svg {
-      height: var(--button-icon-size, 1.2cap);
-      width: auto;
-      flex: none;
-    }
-
-    /* Hover/focus/active */
-    .button:hover {
-      background: var(--button-hover-bg);
-      color: var(--button-hover-color);
-    }
-
-    .button:focus {
-      outline-width: var(--button-outline-width, var(--button-border-width));
-      outline-style: var(--button-outline-style, var(--button-border-style));
-      outline-color: var(--button-outline-color, var(--button-border-color));
-      outline-offset: var(--button-outline-offset,
-          calc(var(--button-border-width) * 2));
-    }
-
-    .button:active {
-      transform: scale(.95);
-    }
-
-    /* Variants */
-    .button[data-button-variant="primary"] {
-      --button-bg: #005a9c;
-      --button-color: #ffffff;
-      --button-border-color: currentColor;
-      --button-hover-bg: #043f6a;
-      --button-hover-color: #d7e5d8;
-      --button-outline-color: #150202;
-      --button-font-size: 1em;
-      margin: 2px;
-    }
-
-    .button[data-button-variant="main"] {
-      --button-bg: #f9dc4a;
-      --button-color: #342a21;
-      --button-border-color: currentColor;
-      --button-hover-bg: #f1d979;
-      --button-hover-color: #342a21;
-      --button-font-size: 2em;
-    }
-
-    .button[data-button-variant="positive"] {
-      --button-bg: #2d936c;
-      --button-border-color: #107350;
-      --button-hover-bg: #359d75;
-      --button-font-size: 1.2em;
-      margin: 4px;
-    }
-
-    .button[data-button-variant="tagbutton"] {
-      --button-bg: rgb(68, 91, 179);
-      --button-border-color: #81b0dc;
-      --button-hover-bg: #2d6ba2;
-      --button-font-size: 1em;
-      margin: 4px;
-    }
-
-
-    /* Radius variants */
-    .button[data-button-radius="hard"] {
-      --button-radius: 0;
-    }
-
-    .cluster {
-      margin: 0px;
-      padding-left: 0px;
-      --cluster-row-gap: 2px;
-      list-style-type: none;
-      display: flex;
-      flex-direction: var(--cluster-direction, row);
-      flex-wrap: var(--cluster-wrap, wrap);
-      column-gap: var(--cluster-column-gap, var(--gutter, var(--space-s-m)));
-      row-gap: var(--cluster-row-gap, var(--gutter, var(--space-s-m)));
-      justify-content: var(--cluster-horizontal-alignment, flex-start);
-      align-items: var(--cluster-vertical-alignment, center);
-    }
-
-    .hidden,
-    [hidden] {
-      display: none !important;
-    }
-
-    .visually-hidden {
-      border: 0;
-      clip: rect(0, 0, 0, 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-      /* 1 */
-    }
-
-    /*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-    .visually-hidden.focusable:active,
-    .visually-hidden.focusable:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      white-space: inherit;
-      width: auto;
-    }
-
-    hr {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid #ccc;
-      margin: .85em 0;
-      padding: 0;
-    }
-  </style>
   <meta name="description" content="A lightweight interactive website using the Web Sustainability Guidelines (WSGs)">
   <meta property="og:title" content="Open a WSG today">
-  <meta property="og:description"
-    content="A lightweight interactive website using the Web Sustainability Guidelines (WSGs)">
+  <meta property="og:description" content="A lightweight interactive website using the Web Sustainability Guidelines (WSGs)">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wsg-o-matic.com/">
+  <meta property="og:image" content="https://wsg-o-matic.com/img/android-chrome-192x192.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
-  <meta property="og:image" content="https://wsg-o-matic.com/img/android-chrome-192x192.png">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <nav class="header">
-    <h1><a href="/"><strong>WSG-o-matic:</strong></a> a resource about sustainability. Randomness
-      encouraged.</h1>
-    <a href="#button" class="skip visually-hidden">Skip to main content</a>
+  <nav class="header" aria-label="Main navigation">
+    <h1>
+      <a href="/"><strong>WSG-o-matic:</strong></a> a resource about sustainability. Randomness encouraged.
+    </h1>
+    <a href="#main-content" class="skip visually-hidden" aria-label="Skip to main content">Skip to main content</a>
     <noscript>
-      <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the draft WSG's
-        directly</a>
+      <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the draft WSG's directly</a>
     </noscript>
   </nav>
+
   <div class="section">
-    <button id="button" class="button" data-button-variant="main" onclick="getGuideline(getRandomInt(1,5), true)">Open
-      Random
-      Guideline</button>
+    <button id="random-guideline" class="button" data-button-variant="main">Open Random Guideline</button>
   </div>
-  <main>
+
+  <main id="main-content">
     <output id="output">
-      <span onclick="getGuideline(getRandomInt(1,5), true)" id="package">📦</span>
+      <span id="package" style="cursor:pointer;">📦</span>
       <!-- Guideline is generated here -->
       <noscript>
-        <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the WSG's
-          directly</a>
+        <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the WSG's directly</a>
       </noscript>
     </output>
   </main>
+
   <footer>
-    <button id="go-back" class="button" data-button-variant="positive"
-      onclick="getGuideline(getRandomInt(1,5))">← Back </button>
-    <button id="go-forward" class="button" data-button-variant="positive"
-      onclick="getGuideline(getRandomInt(1,5))">Forward →</button>
+    <button id="go-back" class="button" data-button-variant="positive">← Back</button>
+    <button id="go-forward" class="button" data-button-variant="positive">Forward →</button>
   </footer>
+
   <aside>
     <details open class="about">
       <summary>More about this website and the draft Web Sustainability Guidelines (WSGs)</summary>
       This is an educational resource project <a href="https://github.com/airbr/wsg">demo made by Morgan Murrah</a>
-      including the draft Web
-      Sustainability Guidelines, making use of the JSON API. Click "Open Random Guideline" to get a draft guideline in
-      full to display. <a href="https://w3c.github.io/sustainableweb-wsg/#acknowledgments">All credit to all the
-        contributors</a>, this work is intended to help educate.
-      <p><strong>Why: </strong>Improve digital sustainability so that the Web works better for all people and the
-        planet. See the
+      including the draft Web Sustainability Guidelines, making use of the JSON API. Click "Open Random Guideline" to get a draft guideline in full to display.
+      <a href="https://w3c.github.io/sustainableweb-wsg/#acknowledgments">All credit to all the contributors</a>, this work is intended to help educate.
+      <p><strong>Why: </strong>Improve digital sustainability so that the Web works better for all people and the planet. See the
         <a href="https://w3c.github.io/sustainableweb-wsg/">draft WSGs</a>.
       </p>
       <p><strong>What:</strong><a href="https://wsg-facts.netlify.app">See WSG Facts for facts about the WSGs</a>.</p>
     </details>
     <details class="categories">
-      <summary onclick="generateButtonList()">Get a random WSG by topic</summary>
+      <summary id="topic-summary">Get a random WSG by topic</summary>
       <span><em>Scroll above after making a selection</em></span>
       <ul class="cluster" id="buttonlist">
         <li>Topics...</li>
@@ -489,26 +67,47 @@
       </ul>
     </details>
   </aside>
-  <script async src="js/app.js"></script>
+
+  <script src="js/app.js" defer></script>
   <script>
+    // Helper for mobile scroll
     function mobileScroll() {
       if (window.matchMedia("(orientation: portrait)").matches) {
         document.getElementById('output').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
       }
     }
-    window.onload = function () {
+
+    // Event listeners for navigation
+    document.addEventListener('DOMContentLoaded', function () {
+      // Open random guideline button
+      document.getElementById('random-guideline').addEventListener('click', function () {
+        getGuideline(getRandomInt(1, 5), true);
+      });
+
+      // Clickable package icon
+      document.getElementById('package').addEventListener('click', function () {
+        getGuideline(getRandomInt(1, 5), true);
+      });
+
+      // Topic summary click
+      document.getElementById('topic-summary').addEventListener('click', function () {
+        generateButtonList();
+      });
+
+      // Back/forward navigation
+      document.getElementById("go-forward").addEventListener("click", () => {
+        history.forward();
+      });
+      document.getElementById("go-back").addEventListener("click", () => {
+        history.back();
+      });
+
+      // On load, check for URL param
       const url = new URL(window.location.href);
       const params = new URLSearchParams(url.search);
-      const parameterName = 'url';
-      if (params.has(parameterName)) {
+      if (params.has('url')) {
         getGuideline(getRandomInt(1, 5));
       }
-    };
-    document.getElementById("go-forward").addEventListener("click", () => {
-      history.forward();
-    });
-    document.getElementById("go-back").addEventListener("click", () => {
-      history.back();
     });
   </script>
 </body>

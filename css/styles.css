@@ -1,5 +1,5 @@
 html {
-  font-size: 1.15em;
+  font-size: 1.10em;
   line-height: 1.4;
   height: 100%;
 }
@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  color: light-dark(#111111, #fff);
-  background-color: light-dark(#fff, #223a2c);
+  color: light-dark(#201d1e, #fff);
+  background-color: light-dark(#fff, #201d1e);
 }
 
 #package {
@@ -59,7 +59,7 @@ div:has(> blockquote) {
   margin: 10px auto;
   padding: 15px;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 1.1em;
 }
 
 blockquote p::before {
@@ -78,7 +78,6 @@ nav.header {
   margin: 0 auto;
   background: #005a9c;
   color: #fff;
-  width: 100%;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -89,17 +88,28 @@ nav.header {
   min-height: 0%;
 }
 
-nav a, nav a:hover {
+nav a,
+nav a:hover {
   color: white;
 }
 
-.back-side, .forward-side {
+.back-side,
+.forward-side {
   font-size: 3em;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1em;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
 }
 
 aside {
   padding-inline: 8px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,7 +119,7 @@ aside {
   margin-top: 16px;
 }
 
-aside > * {
+aside>* {
   width: 100%;
 }
 
@@ -123,7 +133,7 @@ aside>details>summary {
 }
 
 a {
-  font-size: 1.15em;
+  font-size: 1.10em;
   color: light-dark(#005a9c, #fff);
 }
 
@@ -134,14 +144,15 @@ a:hover {
 .tag {
   margin: 0px;
   font-size: medium;
-  margin-right: 10px;
+  margin-right: 2px;
 }
 
 .tagline {
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 .taglist {
+  gap: 2px;
   max-width: 100%;
 }
 
@@ -167,7 +178,7 @@ code {
 .fancy-url {
   padding-bottom: 2px;
   --bg-h: 2px;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 details {
@@ -175,12 +186,14 @@ details {
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
   font-size: 1.2em;
+  max-width: 65ch;
 }
 
 summary {
   font-weight: bold;
   margin: -0.5em -0.5em 0;
   padding: 0.5em;
+  max-width: 65ch;
 }
 
 details[open] {
@@ -205,8 +218,7 @@ body {
 }
 
 .section {
-  gap: 8px;
-  margin-top: 16px;
+  margin: 16px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -222,8 +234,8 @@ body {
 }
 
 output {
-  padding-top: 24px;
-  max-width: 840px;
+  padding-top: 8px;
+  max-width: 65ch;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -328,9 +340,18 @@ main {
   --button-bg: #2d936c;
   --button-border-color: #107350;
   --button-hover-bg: #359d75;
-  --button-font-size: 20px;
+  --button-font-size: 1.2em;
   margin: 4px;
 }
+
+.button[data-button-variant="tagbutton"] {
+  --button-bg: rgb(68, 91, 179);
+  --button-border-color: #81b0dc;
+  --button-hover-bg: #2d6ba2;
+  --button-font-size: 1em;
+  margin: 4px;
+}
+
 
 /* Radius variants */
 .button[data-button-radius="hard"] {
@@ -338,8 +359,9 @@ main {
 }
 
 .cluster {
+  margin: 0px;
   padding-left: 0px;
-  --cluster-row-gap: 10px;
+  --cluster-row-gap: 2px;
   list-style-type: none;
   display: flex;
   flex-direction: var(--cluster-direction, row);
@@ -368,6 +390,12 @@ main {
   /* 1 */
 }
 
+/*
+* Extends the .visually-hidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
   clip: auto;
@@ -377,4 +405,13 @@ main {
   position: static;
   white-space: inherit;
   width: auto;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: .85em 0;
+  padding: 0;
 }
