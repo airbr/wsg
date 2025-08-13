@@ -1,26 +1,63 @@
-# Get a Web Sustainability Guideline randomized, bite sized style.
+# WSG-o-matic
 
-# [Live Deployment](https://wsg-o-matic.com/)
+A lightweight interactive website for exploring the [Web Sustainability Guidelines (WSGs)](https://w3c.github.io/sustainableweb-wsg/). This project helps users discover and learn about sustainability guidelines for the web.
 
-# Updated 2025-04-09
+## Features
 
-### Made with [HTML5 Boilerplate](https://html5boilerplate.com/) and the [WSG JSON API](https://github.com/w3c/sustainableweb-wsg/blob/main/guidelines.json)
+- **Random Guideline Generator:** Instantly view a random WSG guideline.
+- **Topic-Based Browsing:** Filter and explore guidelines by topic.
+- **Interactive UI:** Responsive, accessible design with dynamic content.
+- **Sustainable Tooling And Reporting (STAR):** View related STAR tests for each guideline.
+- **Client-side Only:** No backend required; all data is loaded via JSON.
 
-#### [Check out the Draft 1.0 Web Sustainability Guidelines (WSG) online](https://w3c.github.io/sustainableweb-wsg/). 
+## Getting Started
 
-The data used in this project is the work of many people at the W3C from the former Sustainable Web Design Community Group and current Sustainable Web Interest Group. Definitely keep an eye on the real deal and the fresh data.
+1. **Clone this repository:**
+   ```sh
+   git clone https://github.com/airbr/wsg-o-matic.git
+   cd wsg-o-matic
+   ```
 
-### This project aims to meet as many of the 253 success criteria of the WSG's as possible.
+2. **Install dependencies:**  
+   No dependencies required. All code is static HTML, CSS, and JS.
 
-# Current Status:
+3. **Run locally:**  
+   Open `index.html` in your browser, or use a local server:
+   ```sh
+   # Python 3.x
+   python3 -m http.server
+   # Then visit http://localhost:8000
+   ```
 
-### Pre v1.0 Development: Getting it working.
+## Project Structure
 
-The plan is to use the WSG's as I build.
+```
+/
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── app.js
+├── js/guidelines.json
+├── js/star.json
+└── ...
+```
 
-Note: I have temporarily disabled the Service Worker implementation, with a no-operation service worker as a replacement for now. Caching should operate as normal, and relying on "regular" caching. 
+## Customization
 
-### Commentary on Web Sustainability Guidelines's applied to this project starting with [Web Development](https://w3c.github.io/sustainableweb-wsg/star.html#web-development):
+- **Style changes:**  
+  Modify `css/styles.css` for custom themes or layouts.
+- **JS logic:**  
+  Update `js/app.js` for new features or UI changes.
 
-* [WD09-1](https://w3c.github.io/sustainableweb-wsg/star.html#WD09-1): Set Scripts To Load Either Asynchronously or Deferred
-    * Added async tag to `app.js`
+## Credits
+
+- [Web Sustainability Guidelines (WSGs)](https://w3c.github.io/sustainableweb-wsg/) by the W3C Community Group.
+- Project by [Morgan Murrah](https://github.com/airbr).
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+*This project is for educational and demonstration purposes. All guideline content credit to the W3C and contributors.*
