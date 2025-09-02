@@ -13,6 +13,7 @@ html {
 
 body {
   margin: 0;
+  /* font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif; */
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
   color: light-dark(#201d1e, #fff);
   background-color: light-dark(#fff, #201d1e);
@@ -328,6 +329,12 @@ code {
   cursor: pointer;
   animation: bounce 3s ease;
   animation-iteration-count: 5;
+}
+
+:focus {
+      outline: 2px solid #000; /* Black outline */
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px #fff; /* White box-shadow for contrast */
 }
 
 @keyframes bounce {

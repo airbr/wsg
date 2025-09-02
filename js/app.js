@@ -148,9 +148,9 @@ function buildGuideline(guideline, getStars) {
         `;
     }
 
-    for (const example of guideline.example) {
-        examplelist += `<code>${markdownToAnchor(example.content)}</code>`;
-    }
+    // for (const example of guideline.example) {
+    //     examplelist += `<code>${markdownToAnchor(example.content)}</code>`;
+    // }
 
     for (const tag of guideline.tags) {
         taglist += `
@@ -175,15 +175,12 @@ function buildGuideline(guideline, getStars) {
         <hr />
         <h2>Success criteria for this guideline:</h2>
         ${criterialist}
-        <div>
-            <blockquote>
-                <h3>example: ${examplelist}</h3>
-            </blockquote>
-        </div>
+        <hr>
         <details>
             <summary>Benefits of this guideline</summary>
             ${benefitlist}
         </details>
+        <hr>
     `;
 
     getStars;
