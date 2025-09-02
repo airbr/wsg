@@ -8,7 +8,7 @@ A lightweight interactive website for exploring the [Web Sustainability Guidelin
 - **Topic-Based Browsing:** Filter and explore guidelines by topic.
 - **Interactive UI:** Responsive, accessible design with dynamic content.
 - **Sustainable Tooling And Reporting (STAR):** View related STAR tests for each guideline.
-- **Client-side Only:** No backend required; all data is loaded via JSON.
+- **Client-side Only:** 'No backend required'; all data is loaded via JSON and ideally cached too.
 
 ## Getting Started
 
@@ -52,8 +52,8 @@ A lightweight interactive website for exploring the [Web Sustainability Guidelin
 
 ## Credits
 
-- [Web Sustainability Guidelines (WSGs)](https://w3c.github.io/sustainableweb-wsg/) by the W3C Community Group.
-- Project by [Morgan Murrah](https://github.com/airbr).
+- [Web Sustainability Guidelines (WSGs)](https://w3c.github.io/sustainableweb-wsg/) by the W3C Community Group and now the Sustainable Web Interest Group.
+- Project by [Morgan Murrah](https://github.com/airbr), with all credit to the contributors for the guidelines themselves.
 
 ## License
 
