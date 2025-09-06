@@ -37,7 +37,7 @@ function getGuideline(categoryIndex, forceRandom = false) {
             const params = new URLSearchParams(url.search);
             const paramName = 'url';
             let guideline;
-            if (params.has(paramName) && !forceRandom) {
+            if (params.has(paramName) && forceRandom == false) {
                 guideline = findObjectByValue(data, params.get(paramName));
             } else {
                 guideline = getRandomItem(data.category[categoryIndex].guidelines);
@@ -170,7 +170,7 @@ function buildGuideline(guideline, getStars) {
             <p>Guideline Draft Intent: <cite>${guideline.guideline}</cite></p>
         </div>
         <hr />
-        <p class="tagline">Tags:</p>
+        <p class="tagline">Get Random Guideline by Tag:</p>
         <ul class="taglist cluster">${taglist}</ul>
         <hr />
         <h2>Success criteria for this guideline:</h2>

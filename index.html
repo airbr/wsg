@@ -43,8 +43,10 @@
   </main>
 
   <footer>
-    <button id="go-back" class="button" data-button-variant="positive">← Back</button>
-    <button id="go-forward" class="button" data-button-variant="positive">Forward →</button>
+    <!-- <button id="go-back" class="button" data-button-variant="positive">← Back</button>
+    <button id="go-forward" class="button" data-button-variant="positive">Forward →</button> -->
+
+    <!-- <button onclick="navigator.clipboard.writeText(window.location.href);" class="button" data-button-variant="positive"> Copy to Clipboard </button> -->
   </footer>
 
   <aside>
@@ -95,12 +97,12 @@
       });
 
       // Back/forward navigation
-      document.getElementById("go-forward").addEventListener("click", () => {
-        history.forward();
-      });
-      document.getElementById("go-back").addEventListener("click", () => {
-        history.back();
-      });
+      // document.getElementById("go-forward").addEventListener("click", () => {
+      //   history.forward();
+      // });
+      // document.getElementById("go-back").addEventListener("click", () => {
+      //   history.back();
+      // });
 
       // On load, check for URL param
       const url = new URL(window.location.href);

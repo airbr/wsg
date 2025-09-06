@@ -85,7 +85,7 @@ main {
 
 output {
   padding-top: 8px;
-  max-width: 65ch;
+  max-width: 68ch;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,7 +132,7 @@ details {
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
   font-size: 1.2em;
-  max-width: 65ch;
+  max-width: 68ch;
 }
 
 details[open] {
