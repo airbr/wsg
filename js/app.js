@@ -165,9 +165,9 @@ function buildGuideline(guideline, getStars) {
         <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong>.</p>
         <div>
             <blockquote cite="${guideline.url}">
-                <p><strong>${guideline.intent}</strong></p>
+                <p><strong>${guideline.subheading}</strong></p>
             </blockquote>
-            <p>Guideline Draft Intent: <cite>${guideline.guideline}</cite></p>
+            <p>Guideline Draft Subheading: <cite>${guideline.guideline}</cite></p>
         </div>
         <hr />
         <p class="tagline">Get Random Guideline by Tag:</p>
@@ -205,21 +205,6 @@ function generateButtonList() {
             <button class="button" data-button-radius="hard" data-button-variant="tagbutton" onclick="getGuidelineByTag('${tag}'); mobileScroll()">${tag}</button>
         </li>`
     ).join('');
-
-    buttonlist += `
-        <li>
-            <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuideline(1); mobileScroll()">UX Design</button>
-        </li>
-        <li>
-            <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuideline(2); mobileScroll()">Web Development</button>
-        </li>
-        <li>
-            <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuideline(3); mobileScroll()">Hosting & Infrastructure</button>
-        </li>
-        <li>
-            <button class="button" data-button-radius="hard" data-button-variant="primary" onclick="getGuideline(4); mobileScroll()">Business & Product Strategy</button>
-        </li>
-    `;
 
     document.getElementById("buttonlist").innerHTML = buttonlist;
 }
