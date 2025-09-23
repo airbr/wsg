@@ -77,6 +77,18 @@ nav a:hover {
   }
 }
 
+.arrows {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.smol {
+  font-size: 4em;
+}
+
 main {
   padding-inline: 8px;
   display: flex;
