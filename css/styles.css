@@ -22,10 +22,14 @@ body {
 /* =========================
    Typography & Links
    ========================= */
-h1,
+h1 {
+  font-size: 1.8em;
+}
+
+
 h2 {
   font-size: 1.4em;
-  margin: 16px 0;
+  /* margin: 16px 0; */
 }
 
 a {

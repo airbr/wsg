@@ -161,26 +161,19 @@ function buildGuideline(guideline, getStars) {
     }
 
     document.getElementById("output").innerHTML = `
-        <h2><a class="fancy-url" href="${guideline.url}">${guideline.guideline}</a></h2>
-        <p>Impact: <strong>${guideline.impact}</strong>. Effort: <strong>${guideline.effort}</strong>.</p>
+        <p class="tagline">Want another? get a random Guideline by Tag:</p>
+        <ul class="taglist cluster">${taglist}</ul>
+        <h2><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h2>
         <div>
             <blockquote cite="${guideline.url}">
                 <p><strong>${guideline.subheading}</strong></p>
             </blockquote>
             <p>Guideline Draft Subheading: <cite>${guideline.guideline}</cite></p>
         </div>
-        <hr />
-        <p class="tagline">Get Random Guideline by Tag:</p>
-        <ul class="taglist cluster">${taglist}</ul>
-        <hr />
         <h2>Success criteria for this guideline:</h2>
         ${criterialist}
-        <hr>
-        <details>
-            <summary>Benefits of this guideline</summary>
-            ${benefitlist}
-        </details>
-        <hr>
+        <h2>Benefits of this guideline</h2>
+        ${benefitlist}
     `;
 
     getStars;
