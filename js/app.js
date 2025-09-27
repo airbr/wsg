@@ -85,7 +85,9 @@ function getStars(categoryIndex, guidelineId) {
                         </li>
                     `;
                 });
-                newElement.innerHTML = `<details><summary>Sustainable Tooling And Reporting (STAR)</summary><ol>${htmlContent}</ol></details>`;
+                newElement.innerHTML = 
+                `<h2>Sustainable Tooling And Reporting (STAR)</h2>
+                <details><summary>Techniques</summary><ol>${htmlContent}</ol></details>`;
                 document.getElementById('output').appendChild(newElement);
             }
         })
@@ -161,7 +163,7 @@ function buildGuideline(guideline, getStars) {
     }
 
     document.getElementById("output").innerHTML = `
-        <p class="tagline">Want another? get a random Guideline by Tag:</p>
+        <p class="tagline">Want another? get a random Guideline by tag:</p>
         <ul class="taglist cluster">${taglist}</ul>
         <h2><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h2>
         <div>
@@ -172,7 +174,7 @@ function buildGuideline(guideline, getStars) {
         </div>
         <h2>Success criteria for this guideline:</h2>
         ${criterialist}
-        <h2>Benefits of this guideline</h2>
+        <h2>Benefits of this guideline:</h2>
         ${benefitlist}
     `;
 
