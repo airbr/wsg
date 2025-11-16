@@ -16,14 +16,14 @@ body {
   /* font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif; */
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
   color: light-dark(#201d1e, #fff);
-  background-color: light-dark(#fff, #201d1e);
+  background-color: light-dark( whitesmoke, #201d1e);
 }
 
 /* =========================
    Typography & Links
    ========================= */
 h1 {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 
@@ -99,17 +99,20 @@ main {
   justify-content: center;
 }
 
-output {
+section {
   padding-top: 8px;
-  max-width: 68ch;
+  max-width: 74ch;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-output > p,
-output > a,
-output > h2 {
+section > a,
+section > h2 {
+  font-size: 1.5em;
+}
+
+section > p {
   font-size: 1.5em;
 }
 
@@ -191,8 +194,8 @@ details {
   border: 1px solid #bdbdbd;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
-  font-size: 1.2em;
-  max-width: 68ch;
+  font-size: 1.35em;
+  max-width: 75ch;
 }
 
 details[open] {
@@ -391,10 +394,10 @@ code {
   animation-iteration-count: 5;
 }
 
-:focus {
-      outline: 2px solid #000; /* Black outline */
-      outline-offset: 2px;
-      box-shadow: 0 0 0 4px #fff; /* White box-shadow for contrast */
+*:focus-visible { 
+  outline: 3px solid light-dark(#201d1e, #fff);
+	outline-offset: 0.35rem;
+	border-radius: 0.125rem;
 }
 
 @keyframes bounce {

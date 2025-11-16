@@ -1,3 +1,5 @@
+"use strict";
+
 // Helper: Markdown link to HTML anchor
 function markdownToAnchor(text) {
     return text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>');
@@ -89,6 +91,8 @@ function getStars(categoryIndex, guidelineId) {
                 `<h2>Sustainable Tooling And Reporting (STAR)</h2>
                 <details><summary>Techniques</summary><ol>${htmlContent}</ol></details>`;
                 document.getElementById('output').appendChild(newElement);
+                document.getElementById("output").focus();
+
             }
         })
         .catch(error => console.error('Error loading data:', error));
@@ -116,6 +120,9 @@ function getGuidelineByTag(tag) {
             url.search = params.toString();
             history.pushState(null, '', url.toString());
             buildGuideline(guideline, getStars(Number(categoryId), guideline.id));
+        })
+        .then(data => {
+            document.getElementById("output").focus();
         })
         .catch(error => console.error('Error loading data:', error));
 }
@@ -161,11 +168,11 @@ function buildGuideline(guideline, getStars) {
             </li>
         `;
     }
-
+    document.getElementById("output").focus();
     document.getElementById("output").innerHTML = `
+        <h2 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h2>
         <p class="tagline">Want another? get a random Guideline by tag:</p>
         <ul class="taglist cluster">${taglist}</ul>
-        <h2><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h2>
         <div>
             <blockquote cite="${guideline.url}">
                 <p><strong>${guideline.subheading}</strong></p>
