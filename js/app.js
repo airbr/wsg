@@ -141,7 +141,7 @@ function buildGuideline(guideline, getStars) {
         criterialist += `
             <details>
                 <summary>${element.title}</summary>
-                ${element.description} ${markdownToAnchor(element.testable)}
+                ${element.description}
                 <p>Resources list</p>
                 <ul>${resourcelist}</ul>
             </details>
