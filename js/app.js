@@ -170,7 +170,7 @@ function buildGuideline(guideline, getStars) {
     }
     document.getElementById("output").focus();
     document.getElementById("output").innerHTML = `
-        <h2 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h2>
+        <h1 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h1>
         <p class="tagline">Want another? get a random Guideline by tag:</p>
         <ul class="taglist cluster">${taglist}</ul>
         <div>
@@ -204,7 +204,7 @@ function generateButtonList() {
 
     let buttonlist = tags.map(tag =>
         `<li>
-            <button class="button" data-button-radius="hard" data-button-variant="tagbutton" onclick="getGuidelineByTag('${tag}'); mobileScroll()">${tag}</button>
+            <button class="button" data-button-radius="hard" data-button-variant="tagbutton" onclick="getGuidelineByTag('${tag}');">${tag}</button>
         </li>`
     ).join('');
 

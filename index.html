@@ -19,24 +19,22 @@
 
 <body>
   <nav class="header" aria-label="Main navigation">
-    <h1>
-      <a href="/"><strong>WSG-o-matic:</strong></a> a resource about sustainability. Randomness encouraged.
-    </h1>
+    📦 <a href="/"><strong>WSG-o-matic:</strong></a>&nbsp<strong>a resource about sustainability. Randomness encouraged.</strong>
     <!-- <a href="#main-content" class="skip visually-hidden" aria-label="Skip to main content">Skip to main content</a> -->
     <noscript>
       <a href="https://w3c.github.io/sustainableweb-wsg/">No JavaScript is available. I suggest visiting the draft WSG's directly</a>
     </noscript>
   </nav>
 
-  <div class="section">
+  <div class="button-container">
     <button id="random-guideline" class="button" data-button-variant="main">Open Random Guideline</button>
   </div>
 
   <main id="main-content">
     <section id="output" tabindex="-1" aria-labelledby="guideline-header">
-      <h2 id="guideline-header" style="text-align: center;">Unbox the 2025-12-14 Draft Note</h2>
+      <h1 id="guideline-header" style="text-align: center;">Unbox the 2025-12-14 Draft Note</h1>
       <div class="arrows">
-      <span class="smol">→</span><span id="package" style="cursor:pointer;">📦</span><span class="smol">←</span>
+      <button id="package">📦</button>
       </div>
       <!-- Guideline is generated here -->
       <noscript>
@@ -44,13 +42,7 @@
       </noscript>
     </section>
   </main>
-
-  <!-- <footer>
-    <button id="go-back" class="button" data-button-variant="positive">← Back</button>
-    <button onclick="navigator.clipboard.writeText(window.location.href);" class="button" data-button-variant="positive"> Copy to Clipboard </button>
-    <button id="go-forward" class="button" data-button-variant="positive">Forward →</button>
-  </footer> -->
-
+  
   <aside>
     <details open class="about">
       <summary>More about this website and the draft Web Sustainability Guidelines (WSGs)</summary>
@@ -75,38 +67,17 @@
 
   <script src="js/app.js" defer></script>
   <script>
-    // Helper for mobile scroll
-    function mobileScroll() {
-      if (window.matchMedia("(orientation: portrait)").matches) {
-        document.getElementById('output').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-      }
-    }
-
     // Event listeners for navigation
     document.addEventListener('DOMContentLoaded', function () {
-      // Open random guideline button
       document.getElementById('random-guideline').addEventListener('click', function () {
         getGuideline(getRandomInt(1, 5), true);
       });
-
-      // Clickable package icon
       document.getElementById('package').addEventListener('click', function () {
         getGuideline(getRandomInt(1, 5), true);
       });
-
-      // Topic summary click
       document.getElementById('topic-summary').addEventListener('click', function () {
         generateButtonList();
       });
-
-      // Back/forward navigation
-      // document.getElementById("go-forward").addEventListener("click", () => {
-      //   history.forward();
-      // });
-      // document.getElementById("go-back").addEventListener("click", () => {
-      //   history.back();
-      // });
-
       // On load, check for URL param
       const url = new URL(window.location.href);
       const params = new URLSearchParams(url.search);
