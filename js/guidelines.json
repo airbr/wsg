@@ -1,7 +1,7 @@
 {
 	"title": "Web Sustainability Guidelines",
 	"edition": "Draft Note",
-	"lastModified": "2025-12-14",
+	"lastModified": "2026-01-16",
 	"category": [
 		{
 			"id": "1",
@@ -14,7 +14,7 @@
 			"guidelines": [
 				{
 					"id": "1",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#examine-and-disclose-any-external-factors-interacting-with-your-project",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#examine-and-disclose-any-external-factors-interacting-with-your-project",
 					"guideline": "Examine and disclose any external factors interacting with your project",
 					"subheading": "Identify, track, and publicly disclose negative external factors.",
 					"criteria": [
@@ -98,7 +98,7 @@
 				},
 				{
 					"id": "2",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#understand-user-requirements-or-constraints-resolving-barriers-to-access",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#understand-user-requirements-or-constraints-resolving-barriers-to-access",
 					"guideline": "Understand user requirements or constraints, resolving barriers to access",
         			"subheading": "Understand the audience and their requirements, remove their constraints and barriers, and give them an equal role in decision making.",
 					"criteria": [
@@ -148,7 +148,7 @@
 						},
 						{
 							"title": "Barrier removal",
-							"description": "Remove identified barriers to access. These can include deceptive design patterns, accessibility issues, or other pain points.",
+							"description": "Remove identified barriers to access, provided they do not introduce or increase security or safety risks or exposure. Removable pain points can include deceptive design patterns and accessibility hurdles, but not include user verification or authentication mechanisms.",
 							"resources": [
 								{
 									"AFNOR Spec 5.1.1 & 5.1.2 (French)": "https://www.boutique.afnor.org/en-gb/standard/afnor-spec-2201//fa203506/323315",
@@ -201,7 +201,7 @@
 				},
 				{
 					"id": "3",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#integrate-sustainability-into-every-stage-of-the-ideation-process",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#integrate-sustainability-into-every-stage-of-the-ideation-process",
 					"guideline": "Integrate sustainability into every stage of the ideation process",
 					"subheading": "Optimize materials created at every stage of the process and consider the needs of and impact on the planet, and other affected parties.",
 					"criteria": [
@@ -269,7 +269,7 @@
 					],
 					"benefits": [
 						{
-							"Accessibility": "Understanding real-world accessibility requirements in the early development stages makes it possible to prioritize inclusive design throughout the entire lifecycle. This improves efficiency, as developers will not be prompted to add in accessibility later. It will also reduce emissions associated with the patching process.",
+							"Accessibility": "Understanding real-world accessibility requirements in the early development stages by involving people with disabilities makes it possible to prioritize inclusive design throughout the entire lifecycle. This improves efficiency, as developers will not be prompted to add in accessibility later. It will also reduce emissions associated with the patching process.",
 							"Conversion": "Testing user interfaces usually leads to improved conversion rates as they can be optimized accordingly. This includes removing anything that causes friction and designing content in a way that optimizes user flow, reducing emissions while maximizing conversion.",
 							"Economic": "Incorporating wireframes, prototypes, and user testing into early product design cycles reduces money and effort otherwise wasted building features people will not use.",
 							"Environment": "Helping key contributors to better understand the environmental impact makes it possible to track and reduce that impact throughout the lifecycle of a project.",
@@ -288,7 +288,7 @@
 				},
 				{
 					"id": "4",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#minimize-non-essential-content-interactivity-or-journeys",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#minimize-non-essential-content-interactivity-or-journeys",
 					"guideline": "Minimize non-essential content, interactivity, or journeys",
 					"subheading": "Use distraction and clutter-free design, showing the user only what they need without interruptions or wasted resource consumption.",
 					"criteria": [
@@ -299,7 +299,7 @@
 								{
 									"AFNOR Spec 5.2.1 and 5.2.2 (French)": "https://www.boutique.afnor.org/en-gb/standard/afnor-spec-2201//fa203506/323315",
 									"Customer Experience Mapping": "https://www.startupgrind.com/blog/customer-experience-mapping-what-is-it-and-how-to-do-it/",
-									"GreenIT - 003 - Optimize the user journey": "https://rweb.greenit.fr/en/fiches/RWEB_0003-optimizing-the-user-journey",
+									"GreenIT - 0005 - Optimize the user journey": "https://rweb.greenit.fr/en/fiches/RWEB_0005-optimizing-the-user-journey",
 									"How can we design sustainably?": "https://medium.com/@sandra.pallier/how-can-we-design-sustainably-3be7530a0f5b",
 									"How To Minimize The Environmental Impact Of Your Website": "https://www.smashingmagazine.com/2025/09/how-minimize-environmental-impact-website/",
 									"OpQuast - 29 - A product or service can be purchased without creating an account.": "https://checklists.opquast.com/en/web-quality-assurance/a-product-or-service-can-be-purchased-without-creating-an-account",
@@ -349,7 +349,7 @@
 						},
 						{
 							"title": "Eliminate the non-essential",
-							"description": "Only show users information that is relevant to their experience, hiding non-essential information from view.",
+							"description": "Only present information that is relevant to the user. Do not present non-essential information until requested by the user, and do so in ways appropriate to the accessibility requirements of different users.",
 							"resources": [
 								{
 									"A manifesto for small, static, web apps": "https://rosswintle.uk/2024/02/a-manifesto-for-small-static-web-apps/",
@@ -357,7 +357,7 @@
 									"AFNOR Spec 5.2.1 and 5.2.2 (French)": "https://www.boutique.afnor.org/en-gb/standard/afnor-spec-2201//fa203506/323315",
 									"GPF - General Policy Framework (PDF) - 3.1 - Architecture (Impact Reduction)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GR491 - 2-7033 - Lighter Framework / Library": "https://gr491.isit-europe.org/en/crit.php?id=2-7033-backend-for-an-equal-functional-scope-several-technical",
-									"GreenIT - 001 - Eliminate non-essential features": "https://rweb.greenit.fr/en/fiches/RWEB_0001-eliminate-non-essential-features",
+									"GreenIT - 0001 - Eliminate non-essential features": "https://rweb.greenit.fr/en/fiches/RWEB_0001-eliminate-non-essential-features",
 									"How can we design sustainably?": "https://medium.com/@sandra.pallier/how-can-we-design-sustainably-3be7530a0f5b",
 									"How to Become an Eco Web Designer": "https://onextrapixel.com/how-to-become-an-eco-web-designer/",
 									"Remove non-essential features from the scope": "https://climateproductleaders.org/playbook/remove-non-essential-features-from-the-scope",
@@ -426,11 +426,11 @@
 							"emissions": "Medium"
 						}
 					],
-					"tags": ["Content", "Patterns", "Performance", "Social Equity", "UI", "Usability"]
+					"tags": ["Accessibility", "Content", "Patterns", "Performance", "Social Equity", "UI", "Usability"]
 				},
 				{
 					"id": "5",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#ensure-that-navigation-and-wayfinding-are-well-structured",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#ensure-that-navigation-and-wayfinding-are-well-structured",
 					"guideline": "Ensure that navigation and wayfinding are well-structured",
 					"subheading": "Provide good information architecture that signposts users, both human and machine, to what they need, so they can reach their destination as efficiently as possible.",
 					"criteria": [
@@ -455,7 +455,7 @@
 								{
 									"Build and submit a sitemap": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=en",
 									"GPF - General Policy Framework (PDF) - 4.3 - UX and UI (Optimized Clickstream)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
-									"GreenIT - 4008 - Set up an efficient sitemap": "https://rweb.greenit.fr/en/fiches/RWEB_4008-set-up-an-efficient-sitemap",
+									"GreenIT - 0090 - Set up an efficient sitemap": "https://rweb.greenit.fr/en/fiches/RWEB_0090-set-up-an-efficient-sitemap",
 									"HTML Sitemap: The Benefits for SEO and Users": "https://www.semrush.com/blog/html-sitemap/",
 									"OpQuast - 213 - The website provides a sitemap file listing the content to be crawled.": "https://checklists.opquast.com/en/web-quality-assurance/the-website-provides-a-sitemap-file-listing-the-content-to-be-crawled",
 									"When and how to use HTML sitemaps for SEO and UX": "https://searchengineland.com/html-sitemaps-seo-ux-when-how-394763"
@@ -497,7 +497,7 @@
 				},
 				{
 					"id": "6",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#design-to-assist-and-not-to-distract",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#design-to-assist-and-not-to-distract",
 					"guideline": "Design to assist and not to distract",
 					"subheading": "Provide engagement that keeps the user's focus where it needs to be, avoiding anything that will either reduce efficiency or artificially prolong engagement.",
 					"criteria": [
@@ -545,7 +545,7 @@
 									"GR491 - 8-5057 - Attention Capturing": "https://gr491.isit-europe.org/en/crit.php?id=8-5057-frontend-the-attention-of-the-user-is-a",
 									"GR491 - 10-3072 - Respect for the User": "https://gr491.isit-europe.org/en/crit.php?id=10-3072-uxui-addictions-some-services-are-designed-to-create",
 									"GR491 - 10-3074 - Attention Control": "https://gr491.isit-europe.org/en/crit.php?id=10-3074-uxui-the--users-attention-is-an-asset",
-									"GreenIT - 4035 - Prefer pagination over infinite scrolling": "https://rweb.greenit.fr/en/fiches/RWEB_4035-prefer-pagination-to-infinite-scrolling",
+									"GreenIT - 0013 - Prefer pagination over infinite scrolling": "https://rweb.greenit.fr/en/fiches/RWEB_0013-prefer-pagination-to-infinite-scrolling",
 									"Humane By Design": "https://humanebydesign.com/principles",
 									"Laws Of UX": "https://lawsofux.com/",
 									"Psychology of Design": "https://growth.design/psychology",
@@ -573,11 +573,11 @@
 							"emissions": "Medium"
 						}
 					],
-					"tags": ["Assets", "Patterns", "UI", "Usability"]
+					"tags": ["Accessibility", "Assets", "Patterns", "UI", "Usability"]
 				},
 				{
 					"id": "7",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#avoid-being-manipulative-or-deceptive",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#avoid-being-manipulative-or-deceptive",
 					"guideline": "Avoid being manipulative or deceptive",
 					"subheading": "Avoid using patterns, content, tools, or techniques that may artificially manipulate or deceive the user and waste energy.",
 					"criteria": [
@@ -699,7 +699,7 @@
 				},
 				{
 					"id": "8",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#make-deliverables-understandable-and-reusable",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#make-deliverables-understandable-and-reusable",
 					"guideline": "Make deliverables understandable and reusable",
 					"subheading": "Create discoverable, well documented deliverables so that future users can find and make use of them without requiring assistance or expending unnecessary time and resources.",
 					"criteria": [
@@ -787,11 +787,11 @@
 							"emissions": "Medium"
 						}
 					],
-					"tags": ["Assets", "Content", "Education", "Patterns", "Software"]
+					"tags": ["Accessibility", "Assets", "Content", "Education", "Patterns", "Software"]
 				},
 				{
 					"id": "9",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-a-design-system-for-interface-consistency",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-a-design-system-for-interface-consistency",
 					"guideline": "Use a design system for interface consistency",
 					"subheading": "Keep the components of the project as consistent and clear as possible by using a design system to organize reusable features.",
 					"criteria": [
@@ -835,7 +835,7 @@
 									"What is a Design System?": "https://www.mightybytes.com/insights/what-is-a-design-system/",
 									"Why digital isn't always greener or fairer": "https://www.southampton.ac.uk/blog/digitalteam/2021/03/03/why-digital-isnt-always-greener-or-fairer/",
 									"GR491 - 5-3029 - Visual Soberness": "https://gr491.isit-europe.org/en/crit.php?id=5-3029-uxui-visual-sound-and-tactile-elements-/-components",
-									"GreenIT - 005 - Simple, clean and friendly web design": "https://rweb.greenit.fr/en/fiches/RWEB_0005-simple-clean-and-friendly-web-design",
+									"GreenIT - 0012 - Simple, clean and friendly web design": "https://rweb.greenit.fr/en/fiches/RWEB_0012-simple-clean-and-friendly-web-design",
 									"How UX design can help tackle climate change": "https://www.cyber-duck.co.uk/insights/how-sustainable-design-can-help-climate-change"
 								}
 							]
@@ -858,11 +858,11 @@
 							"emissions": "Low"
 						}
 					],
-					"tags": ["Assets", "CSS", "Education", "Patterns", "Strategy", "UI", "Usability"]
+					"tags": ["Accessibility", "Assets", "CSS", "Education", "Patterns", "Strategy", "UI", "Usability"]
 				},
 				{
 					"id": "10",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#provide-clear-inclusive-content-with-purpose",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#provide-clear-inclusive-content-with-purpose",
 					"guideline": "Provide clear, inclusive content with purpose",
 					"subheading": "Provide content that meets the needs of the audience, ensuring it is formatted for readability and incorporating SEO for visibility, so they can reach their destination as efficiently as possible.",
 					"criteria": [
@@ -932,7 +932,7 @@
 				},
 				{
 					"id": "11",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#optimize-media-for-sustainability",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#optimize-media-for-sustainability",
 					"guideline": "Optimize media for sustainability",
 					"subheading": "Ensure all media - including audio, video, animation, images, and other novel formats, when deemed necessary in the design, are optimized, correctly sized and formatted, use lazy loading where appropriate, and managed effectively.",
 					"criteria": [
@@ -951,8 +951,8 @@
 									"GR491 - 2-4011 - Text Replacement": "https://gr491.isit-europe.org/en/crit.php?id=2-4011-contents-the-weight-of-an-image-thus-its",
 									"GR491 - 3-4028 - Meaningful Videos": "https://gr491.isit-europe.org/en/crit.php?id=3-4028-contents-video-streams-are-one-of-the-elements",
 									"GR491 - 3-4029 - Video Avoidance": "https://gr491.isit-europe.org/en/crit.php?id=3-4029-contents-in-digital-service-uses-video-streams-are",
-									"GreenIT - 023 - Use CSS instead of images": "https://rweb.greenit.fr/en/fiches/RWEB_0023-use-css-instead-of-images",
-									"GreenIT - 030 - Prefer glyphs over images": "https://rweb.greenit.fr/en/fiches/RWEB_0030-prefer-glyphs-over-images",
+									"GreenIT - 0037 - Use CSS instead of images": "https://rweb.greenit.fr/en/fiches/RWEB_0037-use-css-instead-of-images",
+									"GreenIT - 0050 - Prefer glyphs over images": "https://rweb.greenit.fr/en/fiches/RWEB_0050-prefer-glyphs-over-images",
 									"The Carbon Impact of Web Standards (PDF)": "https://websitesustainability.com/cache/files/research23.pdf",
 									"Streaming the future of sustainability (PDF)": "https://hotcarbon.org/assets/2024/pdf/hotcarbon24-final81.pdf",
 									"Use multimedia wisely": "https://climateproductleaders.org/playbook/use-multimedia-wisely",
@@ -985,8 +985,8 @@
 									"GR491 - 8-3060 - Video and Animation Usage": "https://gr491.isit-europe.org/en/crit.php?id=8-3060-uxui-video-streams-and-animations-generate-a-large",
 									"GR491 - 8-3061 - Optimized Images": "https://gr491.isit-europe.org/en/crit.php?id=8-3061-uxui-the-volume-of-data-exchanged-for-the",
 									"Greening The Web: A Study On Low-Carbon Image Formats": "https://michaelandersen93.substack.com/p/greening-the-web-a-study-on-low-carbon?r=3dzajs",
-									"GreenIT - 036 - Optimize vector images": "https://rweb.greenit.fr/en/fiches/RWEB_0036-optimize-vector-images",
-									"GreenIT - 080 - Optimized images": "https://rweb.greenit.fr/en/fiches/RWEB_0080-optimize-images",
+									"GreenIT - 0100 - Optimize vector images": "https://rweb.greenit.fr/en/fiches/RWEB_0100-optimize-vector-images",
+									"GreenIT - 0049 - Optimize images": "https://rweb.greenit.fr/en/fiches/RWEB_0049-optimize-images",
 									"How can we design sustainably?": "https://medium.com/@sandra.pallier/how-can-we-design-sustainably-3be7530a0f5b",
 									"How to Build a Low-tech Website?": "https://solar.lowtechmagazine.com/2018/09/how-to-build-a-low-tech-website/",
 									"How to Compress a Video File without Losing Quality (Video)": "https://www.youtube.com/watch?v=sgmE1T8A4UY",
@@ -1032,7 +1032,7 @@
 									"GPF - General Policy Framework (PDF) - 4.1 - UX and UI (Autoplay)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GR491 - 9-5071 - Autoplay": "https://gr491.isit-europe.org/en/crit.php?id=9-5071-frontend-active-content-uses-technical-resources-to-function.",
 									"GR491 - 9-5068 - Lazy Loading": "https://gr491.isit-europe.org/en/crit.php?id=9-5068-frontend-when-loading-the-service-on-the-user",
-									"GreenIT - 037 - Use lazy loading": "https://rweb.greenit.fr/en/fiches/RWEB_0037-use-lazy-loading",
+									"GreenIT - 0051 - Use lazy loading": "https://rweb.greenit.fr/en/fiches/RWEB_0051-use-lazy-loading",
 									"How to Defer Offscreen Images and Background Images": "https://www.debugbear.com/blog/defer-offscreen-images",
 									"Lazy Load Background Images with the IntersectionObserver API": "https://www.debugbear.com/blog/lazy-load-background-images-intersection-observer",
 									"Lazy load third-party resources with facades": "https://developer.chrome.com/docs/lighthouse/performance/third-party-facades?hl=en",
@@ -1061,8 +1061,7 @@
 									"GR491 - 2-4010 - Image Avoidance": "https://gr491.isit-europe.org/en/crit.php?id=2-4010-contents-the-weight-of-an-image-thus-its",
 									"GR491 - 7-5050 - Sizes and Formats": "https://gr491.isit-europe.org/en/crit.php?id=7-5050-frontend-front-end-operations-may-require-file-transfers-between",
 									"GR491 - 7-5053 - Convert and Resize": "https://gr491.isit-europe.org/en/crit.php?id=7-5053-frontend-image-transfers-introduce-peculiarities-related-to-the",
-									"GreenIT - 034 - Avoid resizing images in the browser": "https://rweb.greenit.fr/en/fiches/RWEB_0034-avoid-resizing-images-in-the-browser",
-									"GreenIT - 112 - Adapt audio formats to listening contexts": "https://rweb.greenit.fr/en/fiches/RWEB_0112-adapt-sounds-to-the-listening-context",
+									"GreenIT - 0048 - Avoid resizing images in the browser": "https://rweb.greenit.fr/en/fiches/RWEB_0048-avoid-resizing-images-in-the-browser",
 									"OpQuast - 114 - Thumbnails and previews are not larger images resized on the client side.": "https://checklists.opquast.com/en/web-quality-assurance/thumbnails-and-previews-are-not-larger-images-resized-on-the-client-side",
 									"OpQuast - 118 - The length of video and audio content is indicated.": "https://checklists.opquast.com/en/web-quality-assurance/the-length-of-video-and-audio-content-is-displayed",
 									"OpQuast - 119 - Videos are user-triggered.": "https://checklists.opquast.com/en/web-quality-assurance/videos-are-user-triggered",
@@ -1112,11 +1111,11 @@
 						}
 					],
 					"example": "<picture> \n  <source type=\"image/avif\" srcset=\"image.avif\">\n  <source type=\"image/webp\" srcset=\"image.webp\">\n  <img width=\"100px\" height=\"100px\" src=\"image.jpg\" alt=\"\" loading=\"lazy\"/>\n</picture>",
-					"tags": ["Assets", "Content", "HTML", "Performance", "Software", "UI", "Usability"]
+					"tags": ["Accessibility", "Assets", "Content", "HTML", "Performance", "Software", "UI", "Usability"]
 				},
 				{
 					"id": "12",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#ensure-animation-is-proportionate-and-easy-to-control",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#ensure-animation-is-proportionate-and-easy-to-control",
 					"guideline": "Ensure animation is proportionate and easy to control",
 					"subheading": "Ensure any animation deemed necessary is not overdone and that the user can control its ability to run.",
 					"criteria": [
@@ -1127,8 +1126,8 @@
 								{
 									"Climate Change Implications of Gaming Products and Services (PDF)": "https://openresearch.surrey.ac.uk/discovery/delivery/44SUR_INST:ResearchRepository/99512335802346#13140594990002346",
 									"GR491 - 9-5079 - Animation Necessity": "https://gr491.isit-europe.org/en/crit.php?id=9-5079-frontend-the-processing-of-animations-consumes-technical-resources",
-									"GreenIT - 4030 - Limiting the use of carousels": "https://rweb.greenit.fr/en/fiches/RWEB_4030-limiting-the-use-of-carousels",
-									"GreenIT - 4035 - Prefer pagination over infinite scrolling": "https://rweb.greenit.fr/en/fiches/RWEB_4035-prefer-pagination-to-infinite-scrolling",
+									"GreenIT - 0010 - Limiting the use of carousels": "https://rweb.greenit.fr/en/fiches/RWEB_0010-limiting-the-use-of-carousels",
+									"GreenIT - 0013 - Prefer pagination over infinite scrolling": "https://rweb.greenit.fr/en/fiches/RWEB_0013-prefer-pagination-to-infinite-scrolling",
 									"How can we design sustainably?": "https://medium.com/@sandra.pallier/how-can-we-design-sustainably-3be7530a0f5b",
 									"The Carbon Impact of Web Standards (PDF)": "https://websitesustainability.com/cache/files/research23.pdf",
 									"Web Animation: Delightful or Distracting?": "https://constructive.co/insight/web-animation-delightful-or-distracting/",
@@ -1142,10 +1141,10 @@
 							"resources": [
 								{
 									"Equations relating total annual energy consumption and chips energy efficiency": "https://www.researchgate.net/publication/371938289_Equations_relating_total_annual_energy_consumption_and_chips_energy_efficiency",
-									"GreenIT - 039 - Avoid JavaScript / CSS animations": "https://rweb.greenit.fr/en/fiches/RWEB_0039-avoid-javascriptcss-animations",
-									"GreenIT - 4002 - Limit the use of animated GIFs": "https://rweb.greenit.fr/en/fiches/RWEB_4002-limit-the-use-of-animated-gif",
+									"GreenIT - 0009 - Avoid JavaScript / CSS animations": "https://rweb.greenit.fr/en/fiches/RWEB_0009-avoid-javascriptcss-animations",
+									"GreenIT - 0099 - Limit the use of animated GIFs": "https://rweb.greenit.fr/en/fiches/RWEB_0099-limit-the-use-of-animated-gif",
 									"Humane By Design": "https://humanebydesign.com/principles/",
-									"The Web Animation Performance Tier List": "https://motion.dev/blog/web-animation-performance-tier-list",
+									"The Web Animation Performance Tier List": "https://motion.dev/magazine/web-animation-performance-tier-list",
 									"The ultimate guide to proper use of animation in UX": "https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9",
 									"UI Animation: Please Use Responsibly": "https://uxdesign.cc/ui-animation-please-use-responsibly-e707dbdb12d5",
 									"Web Almanac: Sustainability": "https://almanac.httparchive.org/en/2024/sustainability"
@@ -1191,13 +1190,13 @@
 				},
 				{
 					"id": "13",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-optimized-and-appropriate-web-typography",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-optimized-and-appropriate-web-typography",
 					"guideline": "Use optimized and appropriate web typography",
 					"subheading": "Provide custom fonts in the most suitable file format, but with a preference for pre-installed typefaces where possible.",
 					"criteria": [
 						{
 							"title": "Pre-installed typefaces",
-							"description": "Use pre-installed, web-safe typefaces and system fonts wherever possible.",
+							"description": "Use pre-installed fonts, such as system fonts, wherever possible, to reduce the reliance on user-installed or web fonts.",
 							"resources": [
 								{
 									"Apple System Fonts": "https://developer.apple.com/fonts/system-fonts/",
@@ -1207,7 +1206,7 @@
 									"Fallback lister": "https://r12a.github.io/scripts/fontlist/",
 									"Font style matcher": "https://meowni.ca/font-style-matcher/",
 									"GR491 - 2-4016 - System Fonts": "https://gr491.isit-europe.org/en/crit.php?id=2-4016-contents-system-fonts-are-embedded-in-the-presentation",
-									"GreenIT - 029 - Prefer standard fonts": "https://rweb.greenit.fr/en/fiches/RWEB_0029-prefer-standard-fonts",
+									"GreenIT - 0032 - Prefer standard fonts": "https://rweb.greenit.fr/en/fiches/RWEB_0032-prefer-standard-fonts",
 									"How can we design sustainably?": "https://medium.com/@sandra.pallier/how-can-we-design-sustainably-3be7530a0f5b",
 									"List of typefaces included with macOS": "https://en.wikipedia.org/wiki/List_of_typefaces_included_with_macOS",
 									"List of typefaces included with Microsoft Windows": "https://en.wikipedia.org/wiki/List_of_typefaces_included_with_Microsoft_Windows",
@@ -1221,8 +1220,8 @@
 							]
 						},
 						{
-							"title": "Font optimization",
-							"description": "Limit the number and complexity of fonts downloaded. Design or subset fonts to omit unnecessary or unused stylistic variations, such as font weight or italics. Additionally design or subset to omit unused characters only where you and not the user or a third party control the input and output and can be sure only the confirmed Unicode range or character set will be used. When using a variable font, also restrict the supported axes and ranges to those required by your project whenever this reduces file size. Use the most performant file format available.",
+							"title": "Web font optimization",
+							"description": "Limit the number and complexity of fonts downloaded. When using a variable font, also restrict the supported axes and ranges to those required by your project whenever this reduces file size. Use the most performant file format available.",
 							"resources": [
 								{
 									"A Guide to Understanding What Makes a Typeface Accessible": "https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0",
@@ -1233,14 +1232,28 @@
 									"GPF - General Policy Framework (PDF) - 5.7 - Content (File Size Reduction)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GR491 - 2-4015 - Font Limits": "https://gr491.isit-europe.org/en/crit.php?id=2-4015-contents-each-font-is-encoded-in-a-file",
 									"GR491 - 8-3058 - Fonts and Varients": "https://gr491.isit-europe.org/en/crit.php?id=8-3058-uxui-fonts-can-be-very-large.-by-reducing",
-									"Incremental Font Transfer": "https://www.w3.org/TR/IFT/",
 									"Preload Fonts On Your Website For Better Core Web Vitals": "https://www.debugbear.com/blog/preload-web-fonts",
 									"Reduce web font size": "https://web.dev/articles/reduce-webfont-size?hl=en",
-									"The performance cost of custom web fonts, and how to solve it": "https://www.wholegraindigital.com/blog/performant-web-fonts/",
 									"Should you preload fonts for performance?": "https://www.erwinhofman.com/blog/should-you-preload-fonts-for-performance",
 									"The Ultimate Guide to Font Performance Optimization": "https://www.debugbear.com/blog/website-font-performance",
 									"Web Almanac: Sustainability": "https://almanac.httparchive.org/en/2024/sustainability",
 									"Web Font Performance - How Your Fonts Affect Page Speed": "https://speedy.site/web-font-performance-how-your-fonts-affect-page-speed/",
+									"You're loading fonts wrong": "https://www.jonoalderson.com/performance/youre-loading-fonts-wrong/"
+								}
+							]
+						},
+						{
+							"title": "Web font subsetting",
+							"description": "Design or subset fonts to omit unnecessary or unused stylistic variations, such as font weight or italics. Design or subset web fonts based on explicitly supported languages and Unicode scripts rather than assumed defaults. Where you are in full control of all input and output, fonts can be subset to include only the relevant Unicode range or character set. In all other instances - particularly where content is user-generated or affected by dynamic input and output - provide full script coverage and use a solution such as Incremental Font Transfer (IFT) to load the required segments of the font on demand.",
+							"resources": [
+								{
+									"Best practices for fonts": "https://web.dev/articles/font-best-practices?hl=en",
+									"GPF - General Policy Framework (PDF) - 4.8 - UX and UI (Font Limits)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
+									"Incremental Font Transfer": "https://www.w3.org/TR/IFT/",
+									"Reduce web font size": "https://web.dev/articles/reduce-webfont-size?hl=en",
+									"The performance cost of custom web fonts, and how to solve it": "https://www.wholegraindigital.com/blog/performant-web-fonts/",
+									"The Ultimate Guide to Font Performance Optimization": "https://www.debugbear.com/blog/website-font-performance",
+									"Web Almanac: Sustainability": "https://almanac.httparchive.org/en/2024/sustainability",
 									"You're loading fonts wrong": "https://www.jonoalderson.com/performance/youre-loading-fonts-wrong/"
 								}
 							]
@@ -1262,11 +1275,11 @@
 						}
 					],
 					"example": "font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;",
-					"tags": ["CSS", "Performance", "UI", "Usability"]
+					"tags": ["Accessibility", "CSS", "Performance", "UI", "Usability"]
 				},
 				{
 					"id": "14",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#offer-suitable-alternatives-for-every-format-used",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#offer-suitable-alternatives-for-every-format-used",
 					"guideline": "Offer suitable alternatives for every format used",
 					"subheading": "Integrate fallbacks so that if something cannot load or is not compatible, there is an accessible alternative to ensure equal access to the content.",
 					"criteria": [
@@ -1374,7 +1387,7 @@
 				},
 				{
 					"id": "15",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#provide-accessible-usable-minimal-web-forms",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#provide-accessible-usable-minimal-web-forms",
 					"guideline": "Provide accessible, usable, minimal web forms",
 					"subheading": "Ensure forms are as minimalistic and friction-free as possible, reduce the impact of submitting, and only collecting required data.",
 					"criteria": [
@@ -1408,7 +1421,7 @@
 									"Autofill in action: real-world insights": "https://developer.chrome.com/blog/autofill-insights-2024?hl=en",
 									"Avoid Unnecessarily Complex Password-Creation Requirements (82% Don't)": "https://baymard.com/blog/password-requirements-and-password-reset",
 									"Don't Get Clever with Login Forms": "https://bradfrost.com/blog/post/dont-get-clever-with-login-forms/",
-									"GreenIT - 004 - Avoid autocomplete in favor of other techniques to facilitate user input": "https://rweb.greenit.fr/en/fiches/RWEB_0004-prefer-assisted-input-to-autocomplete",
+									"GreenIT - 0014 - Prefer assisted input to autocomplete": "https://rweb.greenit.fr/en/fiches/RWEB_0014-prefer-assisted-input-to-autocomplete",
 									"How to turn off form autocompletion": "https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion",
 									"How to turn off password managers for fields": "https://www.stefanjudis.com/snippets/turn-off-password-managers/",
 									"Making password managers play ball with your login form": "https://hidde.blog/making-password-managers-play-ball-with-your-login-form/",
@@ -1438,7 +1451,7 @@
 				},
 				{
 					"id": "16",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#provide-useful-notifications",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#provide-useful-notifications",
 					"guideline": "Provide useful notifications",
 					"subheading": "Ensure any required notifications or alerts are clearly explained before activation, and that the user can both control and change them.",
 					"criteria": [
@@ -1468,9 +1481,9 @@
 									"Carbon Footprint of Email Spam Report (PDF)": "https://twosidesna.org/wp-content/uploads/sites/16/2018/05/McAfee_and_ICF_The_Carbon_Footprint_of_Email_Spam_Report_2009.pdf",
 									"Five Mistakes in Designing Mobile Push Notifications": "https://www.nngroup.com/articles/push-notification/",
 									"GR491 - 5-3034 - E-mailing Necessity": "https://gr491.isit-europe.org/en/crit.php?id=5-3034-uxui-emailing--especially-when-the-emails-contain",
-									"GreenIT - 109 - Avoid sending heavy and redundant emails": "https://rweb.greenit.fr/en/fiches/RWEB_0109-avoid-heavy-and-redondant-emails",
-									"GreenIT - 111 - Reduce emails size": "https://rweb.greenit.fr/en/fiches/RWEB_0111-limit-the-size-of-email-sent",
-									"Notifications": "https://web.dev/explore/notifications",
+									"GreenIT - 0103 - Avoid sending heavy and redundant emails": "https://rweb.greenit.fr/en/fiches/RWEB_0103-avoid-heavy-and-redondant-emails",
+									"GreenIT - 0102 - Limit the size of sent emails": "https://rweb.greenit.fr/en/fiches/RWEB_0111-limit-the-size-of-email-sent",
+									"Notifications": "https://web.dev/explore/notifications?hl=en-us",
 									"The Ultimate Guide to Not F#!@ing Up Push Notifications": "https://stephaniewalter.design/blog/the-ultimate-guide-to-not-fck-up-push-notifications/"
 								}
 							]
@@ -1492,11 +1505,11 @@
 						}
 					],
 					"example": "<form>\r\n\t<label for=\"choose\">Would you prefer a banana or cherry? (required)<\/label>\r\n\t<input id=\"choose\" name=\"i-like\" required \/>\r\n\t<button>Submit<\/button>\r\n<\/form>",
-					"tags": ["JavaScript", "Privacy", "UI", "Usability"]
+					"tags": ["Accessibility", "JavaScript", "Privacy", "UI", "Usability"]
 				},
 				{
 					"id": "17",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#reduce-the-impact-of-downloadable-and-physical-documents",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#reduce-the-impact-of-downloadable-and-physical-documents",
 					"guideline": "Reduce the impact of downloadable and physical documents",
 					"subheading": "Reduce the need for physical documents as much as possible by allowing the saving of well-labeled, optimized digital downloads and having a print style sheet.",
 					"criteria": [
@@ -1510,7 +1523,7 @@
 									"CSS Design: Going to Print": "https://alistapart.com/article/goingtoprint/",
 									"GR491 - 6-3044 - Paper Printing": "https://gr491.isit-europe.org/en/crit.php?id=6-3044-uxui-the-flows-of-dematerialization-are-sometimes-broken",
 									"GR491 - 9-5076 - Ink Saving": "https://gr491.isit-europe.org/en/crit.php?id=9-5076-frontend-the-flows-of-dematerialization-are-sometimes-broken",
-									"GreenIT - 027 - Provide a print CSS": "https://rweb.greenit.fr/en/fiches/RWEB_0027-provide-a-css-print",
+									"GreenIT - 0031 - Provide a print CSS": "https://rweb.greenit.fr/en/fiches/RWEB_0031-provide-a-css-print",
 									"How to Become an Eco Web Designer": "https://onextrapixel.com/how-to-become-an-eco-web-designer/",
 									"OpQuast - 190 - The website offers styles dedicated to printing.": "https://checklists.opquast.com/en/web-quality-assurance/the-site-provides-at-least-one-style-sheet-for-printing",
 									"OpQuast - 191 - The content of each page can be printed without printing the navigation blocks.": "https://checklists.opquast.com/en/web-quality-assurance/the-content-of-each-page-can-be-printed-without-navigation-blocks",
@@ -1545,7 +1558,7 @@
 							"resources": [
 								{
 									"A full comparison of 6 JS libraries for generating PDFs": "https://dev.to/handdot/generate-a-pdf-in-js-summary-and-comparison-of-libraries-3k0p",
-									"GreenIT - 4039 - Do not display documents within pages": "https://rweb.greenit.fr/en/fiches/RWEB_4039-do-not-display-documents-within-pages",
+									"GreenIT - 0033 - Do not display documents within pages": "https://rweb.greenit.fr/en/fiches/RWEB_0033-do-not-display-documents-within-pages",
 									"How To Create A PDF From Your Web Application": "https://www.smashingmagazine.com/2019/06/create-pdf-web-application/",
 									"How To Use Cookie-Free Domains": "https://kinsta.com/blog/use-cookie-free-domains/",
 									"Securing Your Website: How to Disable Iframes to Prevent Click-Hijacking Attacks": "https://medium.com/@kesen.somar.99/securing-your-website-how-to-disable-iframes-to-prevent-click-hijacking-attacks-98cd2004720f",
@@ -1585,11 +1598,11 @@
 							"emissions": "Low"
 						}
 					],
-					"tags": ["Assets", "Compatibility", "Content", "E-Waste", "Hardware", "Performance", "Software", "UI", "Usability"]
+					"tags": ["Accessibility", "Assets", "Compatibility", "Content", "E-Waste", "Hardware", "Performance", "Software", "UI", "Usability"]
 				},
 				{
 					"id": "18",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#involve-users-and-contributors-early-in-the-project",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#involve-users-and-contributors-early-in-the-project",
 					"guideline": "Involve users and contributors early in the project",
 					"subheading": "Document the test process for new features with real users and validate the results, ensuring resources and training are provided to maintain the project's viability and minimize rework.",
 					"criteria": [
@@ -1628,7 +1641,7 @@
 				},
 				{
 					"id": "19",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#audit-and-test-for-bugs-or-issues-requiring-resolution",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#audit-and-test-for-bugs-or-issues-requiring-resolution",
 					"guideline": "Audit and test for bugs or issues requiring resolution",
 					"subheading": "Regularly audit for issues or problems, running tests at regular intervals in both simulated and real-world scenarios to ensure stability of the project.",
 					"criteria": [
@@ -1785,7 +1798,7 @@
 				},
 				{
 					"id": "20",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#verify-that-real-world-users-can-successfully-use-your-work",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#verify-that-real-world-users-can-successfully-use-your-work",
 					"guideline": "Verify that real-world users can successfully use your work",
 					"subheading": "Factor the ways people use the project into your decision making and evaluate how this can be optimized for both people and the planet.",
 					"criteria": [
@@ -1820,7 +1833,7 @@
 									"CrUX Vis": "https://cruxvis.withgoogle.com/#/",
 									"GPF - General Policy Framework (PDF) - 1.2 - Strategy (Target Users)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GPF - General Policy Framework (PDF) - 1.4 - Strategy (Regular Reviews)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
-									"GreenIT - 4014 - Validating the user journey": "https://rweb.greenit.fr/en/fiches/RWEB_4014-validating-the-user-journey",
+									"GreenIT - 0006 - Validating the user journey": "https://rweb.greenit.fr/en/fiches/RWEB_0006-validating-the-user-journey",
 									"Inclusive Design Principles": "https://inclusivedesignprinciples.info/",
 									"Learn Accessibility": "https://web.dev/learn/accessibility?hl=en",
 									"Little Book of Accessibility": "https://uxdesign.cc/the-little-book-of-accessibility-a9b59d82b412",
@@ -1875,7 +1888,7 @@
 				},
 				{
 					"id": "21",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#regularly-test-and-maintain-compatibility",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#regularly-test-and-maintain-compatibility",
 					"guideline": "Regularly test and maintain compatibility",
 					"subheading": "Produce a regularly updated compatibility policy that details support levels, scenarios tested against, and technology used to benefit users.",
 					"criteria": [
@@ -1959,8 +1972,8 @@
 									"GR491 - 4-5028 - Compatibility Range": "https://gr491.isit-europe.org/en/crit.php?id=4-5028-frontend-user-equipment-is-increasingly-efficient.-when-digital",
 									"GR491 - 4-5031 - Older Equipment": "https://gr491.isit-europe.org/en/crit.php?id=4-5031-frontend-the-sector-of-activity-and-the-profile",
 									"GR491 - 6-3039 - Software or Hardware Configurations": "https://gr491.isit-europe.org/en/crit.php?id=6-3039-uxui-users-equipement-is-increasingly-more-efficient-and",
-  									"GreenIT - 002 - Accurately quantify the dimensions of features and components": "https://rweb.greenit.fr/en/fiches/RWEB_0002-accurately-quantify-the-dimensions-of-features-and-components",
-									"GreenIT - 4009 - Ensure compatibility with older devices and software configurations": "https://rweb.greenit.fr/en/fiches/RWEB_4009-ensure-compatibility-with-older-devices-and-software-configurations",
+  									"GreenIT - 0002 - Accurately quantify the dimensions of features and components": "https://rweb.greenit.fr/en/fiches/RWEB_0002-accurately-quantify-the-dimensions-of-features-and-components",
+									"GreenIT - 0058 - Ensure compatibility with older devices and software configurations": "https://rweb.greenit.fr/en/fiches/RWEB_0058-ensure-compatibility-with-older-devices-and-software-configurations",
 									"How can we design sustainably?": "https://medium.com/@sandra.pallier/how-can-we-design-sustainably-3be7530a0f5b",
 									"How web bloat impacts users with slow connections": "https://danluu.com/web-bloat/",
 									"How web bloat impacts users with slow devices": "https://danluu.com/slow-device/",
@@ -2001,7 +2014,7 @@
 								{
 									"Assessing the Impact of Service Workers on the Energy Efficiency of Progressive Web Apps (PDF)": "https://www.ivanomalavolta.com/files/papers/Mobilesoft_2017.pdf",
 									"Evaluating the Impact of Caching on the Energy Consumption and Performance of Progressive Web Apps (PDF)": "https://www.ivanomalavolta.com/files/papers/MOBILESoft_Caching_PWA_2020.pdf",
-									"GreenIT - 4019 - Prefer PWA over native mobile applications that are similar to the website": "https://rweb.greenit.fr/en/fiches/RWEB_4019-prefer-pwa-over-native-mobile-applications-that-are-similar-to-the-website",
+									"GreenIT - 0019 - Prefer PWA over native mobile applications that are similar to the website": "https://rweb.greenit.fr/en/fiches/RWEB_0019-prefer-pwa-over-native-mobile-applications-that-are-similar-to-the-website",
 									"Investigating the correlation between performance scores and energy consumption of mobile web apps (PDF)": "https://www.ivanomalavolta.com/files/papers/EASE_2020.pdf",
 									"PWA Builder": "https://www.pwabuilder.com/",
 									"Starbucks Ordering and Store Locator PWA": "https://nearform.com/work/starbucks-progressive-web-app/",
@@ -2040,7 +2053,7 @@
 			"guidelines": [
 				{
 					"id": "1",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#set-goals-based-on-performance-and-energy-impact",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#set-goals-based-on-performance-and-energy-impact",
 					"guideline": "Set goals based on performance and energy impact",
 					"subheading": "Account for the difference in energy intensity that different types of content may have on a project and set goals based on what you would like to achieve.",
 					"criteria": [
@@ -2121,7 +2134,7 @@
 				},
 				{
 					"id": "2",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#remove-unnecessary-or-redundant-information",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#remove-unnecessary-or-redundant-information",
 					"guideline": "Remove unnecessary or redundant information",
 					"subheading": "Remove redundant characters from code to reduce the amount of data being stored and transferred to devices.",
 					"criteria": [
@@ -2159,11 +2172,11 @@
 						}
 					],
 					"example": "!function(e,t){\"use strict\";\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=e.document?t(e,!0):function(e){if(!e.document)throw new Error(\"jQuery requires a window with a document\");return t(e)}:t(e)}(\"undefined\"!=typeof window?window:this,function(g,e){\"use strict\";var t=[],r=Object.getPrototypeOf,s=t.slice,v=t.flat?function(e){return t.flat.call(e)}:function(e){return t.concat.apply([],e)},u=t.push,i=t.indexOf",
-					"tags": ["CSS", "HTML", "JavaScript", "Performance"]
+					"tags": ["Accessibility", "CSS", "HTML", "JavaScript", "Performance"]
 				},
 				{
 					"id": "3",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#modularize-bandwidth-heavy-components",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#modularize-bandwidth-heavy-components",
 					"guideline": "Modularize bandwidth-heavy components",
 					"subheading": "Break down large components into smaller, self-contained pieces that can be requested only when required to save bandwidth.",
 					"criteria": [
@@ -2207,7 +2220,7 @@
 				},
 				{
 					"id": "4",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#remove-unnecessary-code",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#remove-unnecessary-code",
 					"guideline": "Remove unnecessary code",
 					"subheading": "Clear out dead or unused code as it builds up in a project to reduce the amount of wasted data being transferred.",
 					"criteria": [
@@ -2254,7 +2267,7 @@
 				},
 				{
 					"id": "5",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#avoid-redundancy-and-duplication-in-code",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#avoid-redundancy-and-duplication-in-code",
 					"guideline": "Avoid redundancy and duplication in code",
 					"subheading": "Improve solutions rather than recreating them, using good organization strategies to simplify code where possible and reduce redundancy.",
 					"criteria": [
@@ -2330,13 +2343,13 @@
 				},
 				{
 					"id": "6",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#give-third-parties-the-same-priority-as-first-parties-during-assessment",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#give-third-parties-the-same-priority-as-first-parties-during-assessment",
 					"guideline": "Give third parties the same priority as first parties during assessment",
 					"subheading": "Avoid using large third-party libraries and frameworks where possible, and where these must be used, self host, defer loading, allow the user to object, and provide alternatives.",
 					"criteria": [
 						{
 							"title": "Assess and reduce",
-							"description": "Assess third-party content and/or services (including plugins, widgets, feeds, maps, carousels, tracking scripts, and more) as early as possible in the ideation or creation process. Use as few as possible, preferring lighter, less complex solutions to reduce the overall environmental impact, including Scope 3 emissions.",
+							"description": "Assess third-party content and/or services (including plugins, widgets, feeds, maps, carousels, tracking scripts, and more) as early as possible in the ideation or creation process. Use as few as possible, preferring lighter, less complex solutions to reduce the overall environmental impact, including Scope 3 emissions. Ensure that third-party vendors enforce the same Compliance, Security, and Privacy standards as the first party. This includes data deletion policies, data retention limits, and mandatory security updates.",
 							"resources": [
 								{
 									"6 steps to reduce the carbon footprint of your website": "https://opensource.com/article/23/3/reduce-carbon-footprint-website",
@@ -2373,7 +2386,7 @@
 									"Front-End Performance 2021: Defining The Environment": "https://www.smashingmagazine.com/2021/01/front-end-performance-defining-the-environment/",
 									"GPF - General Policy Framework (PDF) - 3.1 - Architecture (Impact Reduction)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GPF - General Policy Framework (PDF) - 7.3 - Back-End (Background Processing)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
-									"GreenIT - 4030 - Limiting the use of carousels": "https://rweb.greenit.fr/en/fiches/RWEB_4030-limiting-the-use-of-carousels",
+									"GreenIT - 0010 - Limiting the use of carousels": "https://rweb.greenit.fr/en/fiches/RWEB_0010-limiting-the-use-of-carousels",
 									"It's time to lazy-load offscreen iframes!": "https://web.dev/articles/iframe-lazy-loading?hl=en",
 									"Lighthouse: Lazy load third-party resources with facades": "https://gtmetrix.com/lazy-load-third-party-resources-with-facades.html",
 									"Reduce the weight of a web page: which elements have the greatest impact?": "https://greenspector.com/en/reduce-the-weight-of-a-web-page-which-elements-have-the-greatest-impact/",
@@ -2401,7 +2414,7 @@
 									"GPF - General Policy Framework (PDF) - 2.10 - Specifications (Third-Party Services)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GPF - General Policy Framework (PDF) - 4.4 - UX and UI (Third-Party Enablement)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GPF - General Policy Framework (PDF) - 6.7 - Front-End (Server Host)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
-									"GreenIT - 019 - Replace official social networks share buttons": "https://rweb.greenit.fr/en/fiches/RWEB_0019-replace-the-official-social-network-sharing-buttons",
+									"GreenIT - 0059 - Replace official social networks share buttons": "https://rweb.greenit.fr/en/fiches/RWEB_0059-replace-the-official-social-network-sharing-buttons",
 									"Own your content": "https://yieldcode.blog/post/own-your-content/",
 									"Plain Vanilla": "https://plainvanillaweb.com/",
 									"Reckoning": "https://infrequently.org/2024/08/",
@@ -2454,11 +2467,11 @@
 						}
 					],
 					"example": "<iframe src=\"https:\/\/example.com\" loading=\"lazy\" width=\"600\" height=\"400\"><\/iframe>",
-					"tags": ["JavaScript", "Performance", "Privacy", "Security", "Software", "UI", "Usability"]
+					"tags": ["Accessibility", "JavaScript", "Performance", "Privacy", "Security", "Software", "UI", "Usability"]
 				},
 				{
 					"id": "7",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#ensure-code-follows-good-semantic-practices",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#ensure-code-follows-good-semantic-practices",
 					"guideline": "Ensure code follows good semantic practices",
 					"subheading": "Use semantic markup free of optional or non-standard code, use the latest version of technical specifications, and only using custom solutions when native ones are insufficient.",
 					"criteria": [
@@ -2493,7 +2506,7 @@
 									"Web Accessibility Lawsuits": "https://www.levelaccess.com/blog/web-accessibility-lawsuits-2022-recap-and-what-to-expect-in-2023/",
 									"Web Standards: The What, The Why, And The How": "https://www.smashingmagazine.com/2019/01/web-standards-guide/",
 									"What is page bloat?": "https://www.speedcurve.com/blog/page-bloat-web-performance/",
-									"What's wrong with this HTML, and is it valid?": "https://htmhell.dev/adventcalendar/2025/8/",
+									"What's wrong with this HTML, and is it valid?": "https://www.htmhell.dev/adventcalendar/2025/8/",
 									"Where Has All the Valid HTML Gone": "https://meiert.com/blog/where-has-all-the-valid-html-gone/",
 									"Why and How to Write Minimal and Valid HTML, a Link Guide": "https://meiert.com/blog/minimal-and-valid-html/",
 									"Why semantic HTML still matters": "https://www.jonoalderson.com/conjecture/why-semantic-html-still-matters/"
@@ -2540,7 +2553,7 @@
 									"The history of deprecated and changed HTML tags": "https://msandrini.medium.com/the-history-of-deprecated-and-changed-html-tags-47cdfd2c427e",
 									"The Neverending Story": "https://garrettdimon.com/journal/posts/the-neverending-story",
 									"Thou Shalt Not Depend on Me (PDF)": "https://www.ndss-symposium.org/ndss2017/ndss-2017-programme/thou-shalt-not-depend-me-analysing-use-outdated-javascript-libraries-web/",
-									"Use JSON for data exchange": "https://www.genelify.com/blog/how-to-improve-php-performance#_7_Use_JSON_for_data_exchange",
+									"Use JSON for data exchange": "https://betterexplained.com/articles/using-json-to-exchange-data/",
 									"W3C Validator": "https://validator.w3.org/",
 									"Website Maintenance Tips for Front-End Developers": "https://www.smashingmagazine.com/2009/11/website-maintenance-tips-for-front-end-developers/",
 									"Where Has All the Valid HTML Gone": "https://meiert.com/blog/where-has-all-the-valid-html-gone/",
@@ -2573,7 +2586,7 @@
 									"Energy Efficiency across Programming Languages (PDF)": "https://greenlab.di.uminho.pt/wp-content/uploads/2017/10/sleFinal.pdf",
 									"GPF - General Policy Framework (PDF) - 1.9 - Strategy (Interoperable Technologies)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GPF - General Policy Framework (PDF) - 4.5 - UX and UI (Native Components)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
-									"How to improve PHP performance in your web application": "https://www.genelify.com/blog/how-to-improve-php-performance#8_Take_advantage_of_the_native_functions_of_PHP",
+									"Improving PHP Performance for Web Applications": "https://www.keycdn.com/blog/php-performance",
 									"Native features of the browser": "https://subscription.packtpub.com/book/game-development/9781849696029/1/ch01lvl1sec13/native-features-of-the-browser",
 									"PHP Function and Method listing": "https://www.php.net/manual/en/indexes.functions.php",
 									"Web APIs": "https://developer.mozilla.org/en-US/docs/Web/API"
@@ -2604,7 +2617,7 @@
 				},
 				{
 					"id": "8",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#defer-the-loading-of-non-critical-resources",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#defer-the-loading-of-non-critical-resources",
 					"guideline": "Defer the loading of non-critical resources",
 					"subheading": "Avoid render-blocking slowdowns by asynchronously loading, deferring, or prioritizing external resources as appropriate.",
 					"criteria": [
@@ -2666,11 +2679,11 @@
 						}
 					],
 					"example": "<img src=\"image.png\" loading=\"lazy\" alt=\"\u2026\" width=\"200\" height=\"200\">",
-					"tags": ["Assets", "CSS", "JavaScript", "Performance"]
+					"tags": ["Accessibility", "Assets", "CSS", "JavaScript", "Performance"]
 				},
 				{
 					"id": "9",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#provide-information-to-help-understand-the-usefulness-of-a-page",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#provide-information-to-help-understand-the-usefulness-of-a-page",
 					"guideline": "Provide information to help understand the usefulness of a page",
 					"subheading": "Ensure that accessibility tooling can access a project to reduce unnecessary journeys.",
 					"criteria": [
@@ -2710,7 +2723,7 @@
 				},
 				{
 					"id": "10",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#validate-form-errors-and-account-for-tooling-requirements",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#validate-form-errors-and-account-for-tooling-requirements",
 					"guideline": "Validate form errors and account for tooling requirements",
 					"subheading": "Label forms correctly while also checking for errors both prior to and during submission to reduce the impact of erroneous data entry.",
 					"criteria": [
@@ -2781,7 +2794,7 @@
 				},
 				{
 					"id": "11",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#structure-metadata-for-machine-readability",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#structure-metadata-for-machine-readability",
 					"guideline": "Structure metadata for machine readability",
 					"subheading": "Include the required metadata and structured microdata to increase the visibility and findability of resources.",
 					"criteria": [
@@ -2852,7 +2865,7 @@
 				},
 				{
 					"id": "12",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-sustainability-beneficial-user-preference-media-queries",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-sustainability-beneficial-user-preference-media-queries",
 					"guideline": "Use sustainability beneficial user preference media queries",
 					"subheading": "Use sustainable media queries, such as dark mode and scripting media queries, to customize an interface to suit user preferences and reduce emissions.",
 					"criteria": [
@@ -2921,7 +2934,7 @@
 				},
 				{
 					"id": "13",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#ensure-layouts-work-for-different-devices-and-requirements",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#ensure-layouts-work-for-different-devices-and-requirements",
 					"guideline": "Ensure layouts work for different devices and requirements",
 					"subheading": "Use a mix of carbon-aware design techniques to adapt to different layouts, different modes of interaction, and also progressively enhance content.",
 					"criteria": [
@@ -2942,7 +2955,7 @@
 									"GR491 - 3-3018 - Electronicism": "https://gr491.isit-europe.org/en/crit.php?id=3-3018-uxui-diminishing-inequalities-of-access-to-digital-service",
 									"GR491 - 3-3019 - The Digital Gap": "https://gr491.isit-europe.org/en/crit.php?id=3-3019-uxui-dealing-with-cases-of-digital-exclusion-is",
 									"GR491 - 4-5028 - Compatibility Range": "https://gr491.isit-europe.org/en/crit.php?id=4-5028-frontend-user-equipment-is-increasingly-efficient.-when-digital",
-									"GreenIT - 006 - Use the mobile first strategy": "https://rweb.greenit.fr/en/fiches/RWEB_0006-use-the-mobile-first-strategy-andor-consider-adaptive-loading",
+									"GreenIT - 0004 - Use the mobile first strategy": "https://rweb.greenit.fr/en/fiches/RWEB_0004-use-the-mobile-first-strategy-andor-consider-adaptive-loading",
 									"Going Responsive": "https://goingresponsive.com/",
 									"Here's how much it costs to charge a smartphone for a year": "https://www.zdnet.com/article/heres-how-much-it-costs-to-charge-a-smartphone-for-a-year/",
 									"How to Become an Eco Web Designer": "https://onextrapixel.com/how-to-become-an-eco-web-designer/",
@@ -3030,7 +3043,7 @@
 									"Design Constraints in Grid-Aware Web Development": "https://branch.climateaction.tech/issues/issue-9/design-constraints-in-grid-aware-web-development/",
 									"Design for Carbon-Aware Digital Experiences": "https://branch.climateaction.tech/issues/issue-1/design-for-carbon-aware-digital-experiences/",
 									"Electricity 2025": "https://www.iea.org/reports/electricity-2025",
-									"Electricity Maps": "https://app.electricitymaps.com",
+									"Electricity Maps": "https://app.electricitymaps.com/map/live/fifteen_minutes",
 									"Optimize for clean energy": "https://climateproductleaders.org/playbook/optimize-for-clean-energy",
 									"Pause: Building Awareness and Agency into the Grid-Aware Web": "https://branch.climateaction.tech/issues/issue-9/pause-building-awareness-and-agency-into-the-grid-aware-web/",
 									"Pause or deactivate services tactically": "https://climateproductleaders.org/playbook/pause-or-deactivate-services-tactically",
@@ -3080,11 +3093,11 @@
 						}
 					],
 					"example": "@media screen and (min-width: 600px) {\r\n\tbody {\r\n\t\tcolor: red;\r\n\t}\r\n}",
-					"tags": ["AI", "Compatibility", "Content", "CSS", "Performance", "Social Equity", "UI", "Usability"]
+					"tags": ["Accessibility", "AI", "Compatibility", "Content", "CSS", "Performance", "Social Equity", "UI", "Usability"]
 				},
 				{
 					"id": "14",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-standards-based-javascript-and-apis",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-standards-based-javascript-and-apis",
 					"guideline": "Use standards-based JavaScript and APIs",
 					"subheading": "Use JavaScript in an energy-efficient and accessible way, only using APIs and making external calls when this enhances a project's sustainability.",
 					"criteria": [
@@ -3114,7 +3127,7 @@
 									"Low- and Mid-Tier Mobile for the Real World (2025)": "https://csswizardry.com/2025/08/low-and-mid-tier-mobile-for-the-real-world-2025/",
 									"Memory leaks: the forgotten side of web performance": "https://nolanlawson.com/2022/01/05/memory-leaks-the-forgotten-side-of-web-performance/",
 									"Optimizing Javascript for fun and for profit": "https://romgrk.com/posts/optimizing-javascript",
-									"The Great Software Quality Collapse: How We Normalized Catastrophe": "https://techtrenches.substack.com/p/the-great-software-quality-collapse",
+									"The Great Software Quality Collapse: How We Normalized Catastrophe": "https://techtrenches.dev/p/the-great-software-quality-collapse",
 									"The Performance Inequality Gap": "https://infrequently.org/series/performance-inequality/",
 									"W3C Web Performance Working Group": "https://www.w3.org/webperf/",
 									"WebAssembly versus JavaScript: Energy and Runtime Performance": "https://repositorio.inesctec.pt/server/api/core/bitstreams/0870fb76-d463-456b-9e34-5b33bb7c0dd1/content",
@@ -3135,7 +3148,7 @@
 									"Page Visibility API": "https://www.w3.org/TR/page-visibility/",
 									"Vibration API": "https://www.w3.org/TR/vibration/",
 									"Web APIs": "https://developer.mozilla.org/en-US/docs/Web/API",
-									"What Web Can Do Today?": "https://whatwebcando.today/"
+									"What Web Can Do Today?": "https://progressier.com/what-web-can-do-today"
 								}
 							]
 						},
@@ -3176,7 +3189,7 @@
 				},
 				{
 					"id": "15",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#ensure-that-your-code-is-secure",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#ensure-that-your-code-is-secure",
 					"guideline": "Ensure that your code is secure",
 					"subheading": "Regularly check code for exploitable security issues that could affect both users and hosting infrastructure.",
 					"criteria": [
@@ -3234,7 +3247,7 @@
 				},
 				{
 					"id": "16",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-dependencies-appropriately-and-ensure-maintenance",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-dependencies-appropriately-and-ensure-maintenance",
 					"guideline": "Use dependencies appropriately and ensure maintenance",
 					"subheading": "Use libraries and frameworks only where necessary, when plain code or smaller packages are inappropriate for the use case, and they are kept up to date.",
 					"criteria": [
@@ -3260,7 +3273,7 @@
 						},
 						{
 							"title": "Dependency necessity",
-							"description": "Limit your use of libraries and frameworks to the genuinely necessary as this will reduce the amount of code that has to be downloaded and parsed by the browser. Consider whether you can use plain code instead. Check the package size and whether individual modules can be installed and imported individually or a more performant alternative can be used in its place, as opposed to the entire library.",
+							"description": "Limit your use of libraries and frameworks to the genuinely necessary as this will reduce the amount of code that has to be downloaded and parsed by the browser. Consider whether you can use plain code instead. Check the package size and whether individual modules can be installed and imported individually or a more performant alternative can be used in its place, as opposed to the entire library. Do not replace established and trusted security libraries with scoped-down or custom implementations. Custom security code increases vulnerability, which itself can negatively affect sustainability.",
 							"resources": [
 								{
 									"Boring Web Development": "https://meiert.com/blog/boring-web-development/",
@@ -3330,11 +3343,11 @@
 						}
 					],
 					"example": "npm uninstall <package-name>",
-					"tags": ["JavaScript", "Patterns", "Performance", "Privacy", "Security", "Software"]
+					"tags": ["Accessibility", "JavaScript", "Patterns", "Performance", "Privacy", "Security", "Software"]
 				},
 				{
 					"id": "17",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#include-expected-and-beneficial-files",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#include-expected-and-beneficial-files",
 					"guideline": "Include expected and beneficial files",
 					"subheading": "Always provide expected files and optionally offer environmentally or otherwise beneficial files to enhance the project.",
 					"criteria": [
@@ -3402,11 +3415,11 @@
 						}
 					],
 					"example": "User-agent: *\r\nDisallow: \/cgi-bin\/",
-					"tags": ["Assets", "Compatibility", "Marketing", "Patterns", "Security", "UI"]
+					"tags": ["Accessibility", "Assets", "Compatibility", "Marketing", "Patterns", "Security", "UI"]
 				},
 				{
 					"id": "18",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-the-most-efficient-solution-for-your-service",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-the-most-efficient-solution-for-your-service",
 					"guideline": "Use the most efficient solution for your service",
 					"subheading": "Identify the project requirements, use the most efficient approach, aim for static over dynamic where possible, and consider the impact of extensions and components.",
 					"criteria": [
@@ -3459,7 +3472,7 @@
 									"GR491 - 3-5021 - Functionality VS Native": "https://gr491.isit-europe.org/en/crit.php?id=3-5021-frontend-some-features-are-available-in-several-forms.",
 									"GR491 - 6-3041 - Sustainable IT Impact": "https://gr491.isit-europe.org/en/crit.php?id=6-3041-uxui-the-simpler-the-visual-theme-the-more",
 									"GR491 - 8-3059 - Native System Features": "https://gr491.isit-europe.org/en/crit.php?id=8-3059-uxui-some-features-are-available-in-multiple-forms.",
-									"GreenIT - 011 - Prefer custom solutions to CMS": "https://rweb.greenit.fr/en/fiches/RWEB_0011-prefer-custom-solutions-to-cms",
+									"GreenIT - 0022 - Prefer custom solutions to CMS": "https://rweb.greenit.fr/en/fiches/RWEB_0022-prefer-custom-solutions-to-cms",
 									"Headless CMS vs. static site generator": "https://www.contentstack.com/cms-guides/headless-cms-vs-static-site-generator",
 									"How Many WordPress Plugins Are Too Many?": "https://www.elegantthemes.com/blog/wordpress/how-many-wordpress-plugins-are-too-many",
 									"Quels sont les avantages des sites statiques? (French)": "https://www.osuny.org/actualites/2023-01-16-quels-sont-les-avantages-des-sites-statiques/",
@@ -3479,7 +3492,7 @@
 									"GPF - General Policy Framework (PDF) - 3.1 - Architecture (Impact Reduction)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GR491 - 6-3041 - Sustainable IT Impact": "https://gr491.isit-europe.org/en/crit.php?id=6-3041-uxui-the-simpler-the-visual-theme-the-more",
 									"GR491 - 8-3059 - Native System Features": "https://gr491.isit-europe.org/en/crit.php?id=8-3059-uxui-some-features-are-available-in-multiple-forms.",
-									"GreenIT - 4037 - Choose the right theme and limit CMS extensions": "https://rweb.greenit.fr/en/fiches/RWEB_4037-choose-your-theme-carefully-and-limit-the-number-of-extensions-in-a-cms",
+									"GreenIT - 0069 - Choose your theme carefully and limit the number of extensions in a CMS": "https://rweb.greenit.fr/en/fiches/RWEB_0069-choose-your-theme-carefully-and-limit-the-number-of-extensions-in-a-cms",
 									"How to audit your CMS for unused features that slow down performance": "https://www.mocono.io/how-to-audit-your-cms-for-unused-features-that-slow-down-performance/",
 									"Outdated CMS Plugins": "https://www.sitelock.com/blog/outdated-cms-plugins-a-hidden-danger-for-websites/"
 								}
@@ -3520,11 +3533,11 @@
 							"emissions": "Medium"
 						}
 					],
-					"tags": ["Compatibility", "Ideation", "Performance", "Software", "Strategy"]
+					"tags": ["Accessibility", "Compatibility", "Ideation", "Performance", "Software", "Strategy"]
 				},
 				{
 					"id": "19",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-the-latest-stable-language-version",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-the-latest-stable-language-version",
 					"guideline": "Use the latest stable language version",
 					"subheading": "Consider the environmental impact of the chosen syntax language, while always ensuring you use the latest build of any language or framework.",
 					"criteria": [
@@ -3576,30 +3589,33 @@
 							"emissions": "Medium"
 						}
 					],
-					"tags": ["Compatibility", "Performance", "Security"]
+					"tags": ["Accessibility", "Compatibility", "Performance", "Security"]
 				},
 				{
 					"id": "20",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#reduce-the-number-and-complexity-of-database-queries",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#reduce-the-number-and-complexity-of-database-queries",
 					"guideline": "Reduce the number and complexity of database queries",
 					"subheading": "Optimize any information provided via databases, both in terms of access schedules and how queries are sent and received.",
 					"criteria": [
 						{
 							"title": "Database queries",
-							"description": "Optimize database queries, especially for frequently accessed information. If you need information that is stored in a database, and you require it or it is likely to be requested more than once in your code, the database should only be accessed once and the data stored locally for subsequent processing. Avoid relying on framework helpers that might defer filtering to later in the process.",
+							"description": "Optimize database queries, especially for frequently accessed information. If you need information that is stored in a database, and you require it or it is likely to be requested more than once in your code, the database should only be accessed once and the data stored locally for subsequent processing. Avoid relying on framework helpers that might defer filtering to later in the process. Practice good database hygiene with data modeling best practices such as data minimization, such as Time-to-Live (TTL), de-identification, UUIDs, and purpose limitation.",
 							"resources": [
 								{
+									"Choosing The Right ID Strategy": "https://anilkumarvalluru.medium.com/choosing-the-right-id-strategy-auto-increment-uuid-ulid-or-snowflake-id-e21fe24af55f",
 									"get_post_meta": "https://developer.wordpress.org/reference/functions/get_post_meta/",
 									"GPF - General Policy Framework (PDF) - 4.9 - UX and UI (Server Requests)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GPF - General Policy Framework (PDF) - 6.5 - Front-End (Upload Triggers)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GPF - General Policy Framework (PDF) - 7.3 - Back-End (Background Processing)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"High Performance MySQL: Query Performance Optimization": "https://www.oreilly.com/library/view/high-performance-mysql/9780596101718/ch04.html",
 									"Improving PHP Performance for Web Applications": "https://www.keycdn.com/blog/php-performance#9-limit-your-database-hits",
+									"Keeping Databases Lean with TTL": "https://medium.com/@leela.kumili/keeping-databases-lean-with-ttl-practical-insights-and-strategies-ec6d9d09f91a",
 									"Minimizing SQL query response times": "https://www.ibm.com/docs/en/cognos-analytics/11.1.x?topic=performance-minimizing-sql-query-response-times",
 									"Performance Tuning SQL Queries": "https://www.thoughtspot.com/sql-tutorial/sql-performance-tuning",
 									"Proactive Energy Management in Database Systems (PDF)": "https://hotcarbon.org/assets/2024/pdf/hotcarbon24-final111.pdf",
 									"Query optimization techniques in SQL Server": "https://www.sqlshack.com/query-optimization-techniques-in-sql-server-tips-and-tricks/",
-									"SQL Query Optimization": "https://codedamn.com/news/sql/sql-query-optimization-tips-tricks-faster-queries"
+									"SQL Query Optimization": "https://codedamn.com/news/sql/sql-query-optimization-tips-tricks-faster-queries",
+									"Why Everyone Needs a Data Privacy Vault": "https://softwareengineeringdaily.com/2022/03/12/why-everyone-needs-a-data-privacy-vault/"
 								}
 							]
 						}
@@ -3631,7 +3647,7 @@
 			"guidelines": [
 				{
 					"id": "1",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-sustainable-hosting",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-sustainable-hosting",
 					"guideline": "Use sustainable hosting",
 					"subheading": "Ensure that hosting and domain infrastructure and service providers offer monitoring of resource use capabilities, low-carbon operations, and proper equipment maintenance and disposal.",
 					"criteria": [
@@ -3861,7 +3877,7 @@
 				},
 				{
 					"id": "2",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#optimize-caching-and-support-offline-access",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#optimize-caching-and-support-offline-access",
 					"guideline": "Optimize caching and support offline access",
 					"subheading": "Use caching on all appropriate resources, prioritizing the ability to use the resource offline if possible.",
 					"criteria": [
@@ -3896,8 +3912,7 @@
 									"My solar-powered and self-hosted website": "https://dri.es/my-solar-powered-and-self-hosted-website",
 									"NginX Server Configs": "https://github.com/h5bp/server-configs-nginx",
 									"Resilient web design": "https://resilientwebdesign.com/",
-									"Varnish Cache": "https://wp-rocket.me/wordpress-cache/varnish-http-cache-server/",
-									"Web Caching 101": "https://nitropack.io/blog/web-caching-beginner-guide/"
+									"Varnish Cache": "https://wp-rocket.me/wordpress-cache/varnish-http-cache-server/"
 								}
 							]
 						},
@@ -3946,11 +3961,11 @@
 						}
 					],
 					"example": "<IfModule mod_expires.c>\r\n\tExpiresActive on\r\n\t# Default: Fallback\r\n\tExpiresDefault                                      \"access plus 1 year\"\r\n\t# Specific: Assets\r\n\tExpiresByType image\/x-icon                          \"access plus 1 week\"\r\n\tExpiresByType application\/rss+xml                   \"access plus 1 hour\"\r\n\tExpiresByType application\/json                      \"access\"\r\n<\/IfModule>",
-					"tags": ["Assets", "HTML", "JavaScript", "Networking", "Performance", "Software"]
+					"tags": ["Accessibility", "Assets", "HTML", "JavaScript", "Networking", "Performance", "Software"]
 				},
 				{
 					"id": "3",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#reduce-data-transfer-with-compression",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#reduce-data-transfer-with-compression",
 					"guideline": "Reduce data transfer with compression",
 					"subheading": "Use compression on all appropriate resources either before or as part of the transfer process.",
 					"criteria": [
@@ -4040,7 +4055,7 @@
 				},
 				{
 					"id": "4",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#setup-necessary-error-pages-and-redirection-links",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#setup-necessary-error-pages-and-redirection-links",
 					"guideline": "Setup necessary error pages and redirection links",
 					"subheading": "Use error and redirection handling on projects to reduce the impact of unnecessary journeys or unhelpful detours.",
 					"criteria": [
@@ -4098,17 +4113,17 @@
 						}
 					],
 					"example": "ErrorDocument 404 /404.html",
-					"tags": ["Compatibility", "Content", "Marketing", "Networking", "UI", "Usability"]
+					"tags": ["Accessibility", "Compatibility", "Content", "Marketing", "Networking", "UI", "Usability"]
 				},
 				{
 					"id": "5",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#avoid-maintaining-unnecessary-virtualized-environments-or-containers",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#avoid-maintaining-unnecessary-virtualized-environments-or-containers",
 					"guideline": "Avoid maintaining unnecessary virtualized environments or containers",
 					"subheading": "Reduce the number of unnecessary virtualized environments to save hardware utilization.",
 					"criteria": [
 						{
 							"title": "Unused environments",
-							"description": "Minimize the number of active environments, including virtualized environments (such as containers). Where applicable, also evaluate running services. Audit codebases and setups for unused branches, environments, and services and remove them as appropriate.",
+							"description": "Reduce the number of active environments by deactivating and/or offlining unused or redundant virtual (e.g., containers, virtual machines) or physical environments wherever this can be done without reducing the required security, isolation, or compliance guarantees. Where applicable, also evaluate running services in the same way. Similarly audit codebases and setups for unused branches, environments, and services and prune as appropriate.",
 							"resources": [
 								{
 									"AWS WAF - SUS02-BP03 - Stop the creation and maintenance of unused assets": "https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sus_sus_user_a4.html",
@@ -4141,7 +4156,7 @@
 				},
 				{
 					"id": "6",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-automation-wisely",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-automation-wisely",
 					"guideline": "Use automation wisely",
 					"subheading": "Automate recurring tasks only where this saves resources, such as scaling services to reduce consumption or handling suspicious activity.",
 					"criteria": [
@@ -4255,11 +4270,11 @@
 							"emissions": "Low"
 						}
 					],
-					"tags": ["AI", "Performance", "Security", "Software"]
+					"tags": ["Accessibility", "AI", "Performance", "Security", "Software"]
 				},
 				{
 					"id": "7",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#define-the-frequency-of-data-refreshes",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#define-the-frequency-of-data-refreshes",
 					"guideline": "Define the frequency of data refreshes",
 					"subheading": "Decide when to refresh data based on a balance of user and sustainability considerations.",
 					"criteria": [
@@ -4300,13 +4315,13 @@
 				},
 				{
 					"id": "8",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#back-up-critical-data-at-routine-intervals",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#back-up-critical-data-at-routine-intervals",
 					"guideline": "Back up critical data at routine intervals",
 					"subheading": "Back up data at regular intervals to ensure that there are failsafes that can be relied upon should an issue occur.",
 					"criteria": [
 						{
 							"title": "Data backups",
-							"description": "Ensure backups of system and user data are secure and incremental to minimize storage use, reduce backup time, and protect against data loss or breaches.",
+							"description": "Ensure backups of system and user data are secure and incremental to minimize storage use, reduce backup time. Establish mechanisms to prevent user identifiable information from being stored long term, limit access, and protect against data loss or breaches.",
 							"resources": [
 								{
 									"The 3-2-1 Backup Strategy": "https://www.backblaze.com/blog/the-3-2-1-backup-Strategy/",
@@ -4346,7 +4361,7 @@
 				},
 				{
 					"id": "9",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#consider-the-impact-and-requirements-of-data-processing",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#consider-the-impact-and-requirements-of-data-processing",
 					"guideline": "Consider the impact and requirements of data processing",
 					"subheading": "Account for the energy involved in data transfer, considering factors such as the protocol used, whether it is processed client- or server-side, and the environment used.",
 					"criteria": [
@@ -4446,7 +4461,7 @@
 				},
 				{
 					"id": "10",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-content-delivery-networks-cdns-appropriately",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-content-delivery-networks-cdns-appropriately",
 					"guideline": "Use Content Delivery Networks (CDNs) appropriately",
 					"subheading": "Use CDNs where they bring a sustainability benefit, ensuring the provider itself is sustainable, has nodes local to an audience, and they are only used to serve static resources on them.",
 					"criteria": [
@@ -4540,9 +4555,9 @@
 									"AWS WAF - SUS01-BP01 - Choose Region based on both business requirements and sustainability goals": "https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sus_sus_region_a2.html",
 									"AWS WAF - SUS02-BP04 - Optimize geographic placement of workloads based on their networking requirements": "https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sus_sus_user_a5.html",
 									"Consume Local: Towards Carbon Free Content Delivery (PDF)": "https://nms.kcl.ac.uk/netsys/~aravindh/publications/ICDCS2018-consume-local.pdf",
-									"Design for environmental sustainability": "https://docs.cloud.google.com/architecture/framework/sustainability",
+									"Design for environmental sustainability": "https://docs.cloud.google.com/architecture/framework/sustainability?hl=en-us",
 									"Edge computing": "https://en.wikipedia.org/wiki/Edge_computing",
-									"Electricity Maps": "https://app.electricitymaps.com",
+									"Electricity Maps": "https://app.electricitymaps.com/map/live/fifteen_minutes",
 									"Geographical Server Relocation: Opportunities and Challenges (PDF)": "https://hotcarbon.org/assets/2024/pdf/hotcarbon24-final20.pdf",
 									"GPF - General Policy Framework (PDF) - 2.3 - Specifications (Connection Issues)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GPF - General Policy Framework (PDF) - 6.2 - Front-End (Caching Mechanisms)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
@@ -4618,11 +4633,11 @@
 							"emissions": "Medium"
 						}
 					],
-					"tags": ["AI", "Content", "Hardware", "Networking", "Performance"]
+					"tags": ["Accessibility", "AI", "Content", "Hardware", "Networking", "Performance"]
 				},
 				{
 					"id": "11",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#ensure-infrastructure-fits-project-requirements",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#ensure-infrastructure-fits-project-requirements",
 					"guideline": "Ensure infrastructure fits project requirements",
 					"subheading": "Maintain the infrastructure you require rather than over-provisioning. Autoscale to meet demand and preserve hardware resources.",
 					"criteria": [
@@ -4667,7 +4682,7 @@
 				},
 				{
 					"id": "12",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#store-data-according-to-the-needs-of-your-users",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#store-data-according-to-the-needs-of-your-users",
 					"guideline": "Store data according to the needs of your users",
 					"subheading": "Set expiration dates on data so it can be archived, made available offline, or removed when no longer used or required, with the remaining content tagged for future management.",
 					"criteria": [
@@ -4736,7 +4751,7 @@
 						},
 						{
 							"title": "Optimized logging",
-							"description": "Optimize log collection and storage by scheduling backups during low-activity hours, rotating logs appropriately, and using off-site, sustainable providers.",
+							"description": "Optimize log collection and storage by scheduling backups during low-activity hours, rotating logs appropriately, and using off-site, sustainable providers. Establish mechanisms to ensure identifiable user information does not appear in logs to reduce security and privacy risks and exposure.",
 							"resources": [
 								{
 									"An Engineer's Checklist of Logging Best Practices": "https://www.honeycomb.io/blog/engineers-checklist-logging-best-practices",
@@ -4781,7 +4796,7 @@
 						}
 					],
 					"example": "Accept-Encoding: zstd, gzip, br, deflate",
-					"tags": ["Content", "E-Waste", "Hardware", "Performance", "Privacy"]
+					"tags": ["Accessibility", "Content", "E-Waste", "Hardware", "Performance", "Privacy"]
 				}
 			]
 		},
@@ -4792,7 +4807,7 @@
 			"guidelines": [
 				{
 					"id": "1",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#have-an-ethical-and-sustainable-product-strategy",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#have-an-ethical-and-sustainable-product-strategy",
 					"guideline": "Have an ethical and sustainable product strategy",
 					"subheading": "Produce policies and documents showcasing evidence, achievements, and onboarding underpinned by good governance.",
 					"criteria": [
@@ -4814,7 +4829,7 @@
 									"Digital sustainability and Enel's code of conduct": "https://www.enel.com/company/stories/articles/2022/02/digital-sustainability-code-conduct",
 									"Environmental policy (Italian) (PDF)": "https://www.piano-d.it/environmental-policy.pdf",
 									"Ethical marketing policy (Italian) (PDF)": "https://www.piano-d.it/ethical-marketing-policy.pdf",
-									"Ethical Policy": "https://www.wholegraindigital.com/wholegrain-ethical-policy/",
+									"Ethical Policy": "https://www.wholegraindigital.com/ethical-screening-policy/",
 									"Guiding the future of ethical design": "https://uxdesign.cc/guiding-the-future-of-ethical-design-796e7cc3c9b1",
 									"How to Write An Effective Sustainability Statement": "https://ecocart.io/sustainability-statement/",
 									"Mightybytes Sustainability Statement": "https://www.mightybytes.com/sustainability/",
@@ -4834,10 +4849,10 @@
 							"description": "Publish achievements, features, compliance, and anything beyond the scope of these guidelines within a dedicated sustainability section.",
 							"resources": [
 								{
-									"8 places to share your sustainability practices on your website": "https://www.sustain.life/blog/sustainability-practices-on-your-website",
 									"AFNOR Spec 5.2.3 and 5.4.4 (French)": "https://www.boutique.afnor.org/en-gb/standard/afnor-spec-2201//fa203506/323315",
 									"EcoLabel Index": "https://www.ecolabelindex.com/ecolabels/",
 									"GR491 - 2-3014 - Compliance Labelling": "https://gr491.isit-europe.org/en/crit.php?id=2-3014-uxui-a-number-of-resources-are-available-to",
+									"Selling Sustainability": "https://ecochain.com/blog/selling-sustainability-how-to-navigate-greenwashing-concerns-for-your-eco-friendly-products/",
 									"Tips to build a sustainability page on your website": "https://www.our-trace.com/blog/tips-build-sustainability-page-website-examples",
 									"Top 10: Sustainability Certifications": "https://sustainabilitymag.com/top10/top-10-sustainability-certifications",
 									"United Nations SDGS - Goal 13 - Climate Change": "https://sdgs.un.org/goals/goal13#targets_and_indicators",
@@ -4928,7 +4943,7 @@
 				},
 				{
 					"id": "2",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#assign-a-sustainability-advocate",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#assign-a-sustainability-advocate",
 					"guideline": "Assign a sustainability advocate",
 					"subheading": "Appoint a sustainability advocate who is provided with what they require to speak about and for issues relating to sustainability.",
 					"criteria": [
@@ -4942,7 +4957,7 @@
 									"GPF - General Policy Framework (PDF) - 1.3 - Strategy (Ecodesign Supervisor)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"How effective is sustainability advocacy?": "https://trellis.net/article/whats-best-way-incentivize-supplier-sustainability/",
 									"Organizing for sustainability success": "https://www.mckinsey.com/capabilities/sustainability/our-insights/organizing-for-sustainability-success-where-and-how-leaders-can-start",
-									"Our Microsoft sustainability journey": "https://www.microsoft.com/en-us/corporate-responsibility/sustainability-journey",
+									"Our Microsoft sustainability journey": "https://www.microsoft.com/en-us/corporate-responsibility/sustainability",
 									"United Nations SDGS - Goal 1 - Poverty": "https://sdgs.un.org/goals/goal1#targets_and_indicators",
 									"United Nations SDGS - Goal 4 - Education": "https://sdgs.un.org/goals/goal4#targets_and_indicators",
 									"United Nations SDGS - Goal 12 - Consumption & Production": "https://sdgs.un.org/goals/goal12#targets_and_indicators",
@@ -4971,7 +4986,7 @@
 				},
 				{
 					"id": "3",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#inform-raise-awareness-and-train-for-sustainability",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#inform-raise-awareness-and-train-for-sustainability",
 					"guideline": "Inform, raise awareness, and train for sustainability",
 					"subheading": "Drive sustainability awareness both externally and internally with active encouragement and routine training offered where necessary.",
 					"criteria": [
@@ -5112,7 +5127,7 @@
 				},
 				{
 					"id": "4",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#communicate-the-environmental-impact-of-user-choices",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#communicate-the-environmental-impact-of-user-choices",
 					"guideline": "Communicate the environmental impact of user choices",
 					"subheading": "Empower users, allowing them to make decisions when their choices can influence the environmental impact they have.",
 					"criteria": [
@@ -5154,7 +5169,7 @@
 				},
 				{
 					"id": "5",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#calculate-the-environmental-impact",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#calculate-the-environmental-impact",
 					"guideline": "Calculate the environmental impact",
 					"subheading": "Calculate the environmental impact of the project and any tooling you use, and even that of a competitor, where possible, as this may be useful for comparison.",
 					"criteria": [
@@ -5259,7 +5274,7 @@
 				},
 				{
 					"id": "6",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#define-clear-organizational-sustainability-goals-and-metrics",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#define-clear-organizational-sustainability-goals-and-metrics",
 					"guideline": "Define clear organizational sustainability goals and metrics",
 					"subheading": "Publish a set of sustainability goals that can be used to track progress over a period of time.",
 					"criteria": [
@@ -5310,7 +5325,7 @@
 				},
 				{
 					"id": "7",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#validate-efforts-using-established-third-party-certifications",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#validate-efforts-using-established-third-party-certifications",
 					"guideline": "Validate efforts using established third-party certifications",
 					"subheading": "Obtain and maintain third-party certifications to externally validate progress toward sustainability goals.",
 					"criteria": [
@@ -5364,7 +5379,7 @@
 				},
 				{
 					"id": "8",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#support-mandatory-disclosures-and-reporting",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#support-mandatory-disclosures-and-reporting",
 					"guideline": "Support mandatory disclosures and reporting",
 					"subheading": "Create policies and documents showing evidence of commitment towards impact progress, how this is achieved, and any applicable regulations you are meeting.",
 					"criteria": [
@@ -5378,7 +5393,7 @@
 									"Pinterest 2024 ESG Impact Report (PDF)": "https://downloads.ctfassets.net/2pyx8rwuvz6x/73MnH9ns5snM3M3mXQ8X1o/e5158bccc8005e156588e2c3263bbe7b/Pinterest2024-ESG-Report-7.9.24-v1_en-GB.pdf",
 									"Global Reporting Initiative": "https://www.globalreporting.org/",
 									"Sustainability Accounting Standards Board": "https://sasb.ifrs.org/",
-									"TSMC ESG Data Hub": "https://esg.tsmc.com/en-US/resources/ESG-data-hub?tab=reportbuilder",
+									"TSMC ESG Data Hub": "https://esg.tsmc.com/en-US/ESG-data-hub/latest-sustainability-information",
 									"United Nations SDGS - Goal 4 - Education": "https://sdgs.un.org/goals/goal4#targets_and_indicators",
 									"United Nations SDGS - Goal 13 - Climate Change": "https://sdgs.un.org/goals/goal13#targets_and_indicators",
 									"United Nations SDGS - Goal 16 - Sustainable Society": "https://sdgs.un.org/goals/goal16#targets_and_indicators",
@@ -5460,7 +5475,7 @@
 				},
 				{
 					"id": "9",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#create-one-or-more-impact-business-models",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#create-one-or-more-impact-business-models",
 					"guideline": "Create one or more impact business models",
 					"subheading": "Produce a document that shows how the organisation is taking steps to become as resilient as possible.",
 					"criteria": [
@@ -5507,7 +5522,7 @@
 				},
 				{
 					"id": "10",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#follow-a-product-management-and-maintenance-strategy",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#follow-a-product-management-and-maintenance-strategy",
 					"guideline": "Follow a product management and maintenance strategy",
 					"subheading": "Explain through documentation how projects will be maintained, managed, resourced, and note issues while tracking measurements over time.",
 					"criteria": [
@@ -5624,11 +5639,11 @@
 							"emissions": "High"
 						}
 					],
-					"tags": ["Compatibility", "Strategy"]
+					"tags": ["Accessibility", "Compatibility", "Strategy"]
 				},
 				{
 					"id": "11",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#implement-continuous-improvement-procedures",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#implement-continuous-improvement-procedures",
 					"guideline": "Implement continuous improvement procedures",
 					"subheading": "Continuously improve projects through regular reviews and iteration, integrating technical debt and security management, determining if new or existing functionality is required.",
 					"criteria": [
@@ -5783,7 +5798,7 @@
 				},
 				{
 					"id": "12",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#document-future-updates-and-evolutions",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#document-future-updates-and-evolutions",
 					"guideline": "Document future updates and evolutions",
 					"subheading": "Provide documentation to help users find their way whenever functionality changes.",
 					"criteria": [
@@ -5826,7 +5841,7 @@
 				},
 				{
 					"id": "13",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#establish-if-a-digital-product-or-service-is-necessary",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#establish-if-a-digital-product-or-service-is-necessary",
 					"guideline": "Establish if a digital product or service is necessary",
 					"subheading": "Determine whether a project is necessary, eliminating obstacles for users, and aligning with SDGs and sustainability principles.",
 					"criteria": [
@@ -5835,11 +5850,11 @@
 							"description": "Identify where the product or service aligns with one of the UN (SDGs) and its appropriate targets within a sustainability statement.",
 							"resources": [
 								{
-									"10 Degrees Sustainability": "https://www.10degrees.uk/sustainability/",
 									"Aligning Your Organization with U.N. Sustainable Development Goals": "https://www.mightybytes.com/insights/aligning-un-sustainable-development-goals/",
 									"How tech helps advance the UN Sustainable Development Goals": "https://therecursive.com/how-tech-helps-advance-the-un-sustainable-development-goals/",
 									"Society Centered Design": "https://societycentered.design/",
 									"Sustainable Development Goals": "https://en.wikipedia.org/wiki/Sustainable_Development_Goals",
+									"The Role of Web Developers in Achieving Sustainable Development Goals": "https://moldstud.com/articles/p-exploring-the-role-of-web-developers-in-sustainable-development-goals",
 									"UN Sustainable Development Goals": "https://sdgs.un.org/goals"
 								}
 							]
@@ -5891,11 +5906,11 @@
 							"emissions": "High"
 						}
 					],
-					"tags": ["AI", "E-Waste", "Ideation", "Reporting", "Software"]
+					"tags": ["Accessibility", "AI", "E-Waste", "Ideation", "Reporting", "Software"]
 				},
 				{
 					"id": "14",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#provide-a-supplier-standards-of-practice-document",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#provide-a-supplier-standards-of-practice-document",
 					"guideline": "Provide a supplier standards of practice document",
 					"subheading": "Vet suppliers before onboarding, then collaborate to promote and encourage better sustainability practices.",
 					"criteria": [
@@ -5978,7 +5993,7 @@
 				},
 				{
 					"id": "15",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#share-economic-benefits",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#share-economic-benefits",
 					"guideline": "Share economic benefits",
 					"subheading": "Share benefits associated with being sustainably resilient with workers, incentivizing efforts, and advocating for those involved to meet sustainability goals.",
 					"criteria": [
@@ -6053,13 +6068,13 @@
 				},
 				{
 					"id": "16",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#share-decision-making-power-with-affected-parties",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#share-decision-making-power-with-affected-parties",
 					"guideline": "Share decision-making power with affected parties",
 					"subheading": "Ensure that all affected parties have the opportunity to get involved in helping the organisation become more sustainable.",
 					"criteria": [
 						{
 							"title": "Decision-making",
-							"description": "Assign all affected parties, from users to project managers, an equitable role in the decision-making process. Ensure all internal involved parties have the necessary power and autonomy to make key decisions on the organization's behalf.",
+							"description": "Assign all affected parties, from users to project managers, an equitable role in the decision-making process. Ensure all internal involved parties have the necessary power and autonomy to make key decisions on the organization's behalf. Where an autonomous system is able to make automated decisions, it must be possible to opt out, object, withdraw, and restrict the use of personal data. Any autonomous process must also be made as transparent as possible with evidence-based assurances that the metrics used are not biased. Affected parties must be able to obtain details about how the decision was made and offered a means to challenge decisions with human oversight.",
 							"resources": [
 								{
 									"Creating And Maintaining A Voice Of Customer Program": "https://www.smashingmagazine.com/2023/11/creating-maintaining-voice-customer-program/",
@@ -6075,7 +6090,8 @@
 									"Software proposal template": "https://wise.com/us/business-templates/business-proposal/software-proposal",
 									"United Nations SDGS - Goal 5 - Gender Equality": "https://sdgs.un.org/goals/goal5#targets_and_indicators",
 									"United Nations SDGS - Goal 10 - Inequality": "https://sdgs.un.org/goals/goal10#targets_and_indicators",
-									"United Nations SDGS - Goal 16 - Sustainable Society": "https://sdgs.un.org/goals/goal16#targets_and_indicators"
+									"United Nations SDGS - Goal 16 - Sustainable Society": "https://sdgs.un.org/goals/goal16#targets_and_indicators",
+									"W3C Privacy Principles - Data Rights": "https://www.w3.org/TR/privacy-principles/#data-rights"
 								}
 							]
 						}
@@ -6098,7 +6114,7 @@
 				},
 				{
 					"id": "17",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-justice-equity-diversity-inclusion-jedi-practices",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-justice-equity-diversity-inclusion-jedi-practices",
 					"guideline": "Use Justice, Equity, Diversity, Inclusion (JEDI) practices",
 					"subheading": "Implement JEDI practices to foster inclusive hiring practices within an organization, showing evidence of improvement over time.",
 					"criteria": [
@@ -6202,7 +6218,7 @@
 				},
 				{
 					"id": "18",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#promote-responsible-data-practices",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#promote-responsible-data-practices",
 					"guideline": "Promote responsible data practices",
 					"subheading": "Provide publicly accessible versions of documents required by law in a sustainable, easy-to-consume format, while also observing ethical data retention practices.",
 					"criteria": [
@@ -6223,7 +6239,7 @@
 						},
 						{
 							"title": "Data ownership",
-							"description": "Demonstrate measurable progress over time in regard to respecting data privacy and ownership. Specify how data disposal and a user's \"right to be forgotten\" or opt-out will be handled, along with ownership rights. Also, provide the ability to download or export data they have contributed into a non-proprietary format.",
+							"description": "Demonstrate measurable progress over time in regard to respecting data privacy and ownership. Specify how opt-out will be handled along with ownership rights. Data deletion or \"Right to be forgotten\" requests must immediately propagate to databases and local caches. Cached data must not persist after a user has revoked consent or deleted their account. Also provide the ability to download or export data created by or in relation to the user in a non-proprietary format.",
 							"resources": [
 								{
 									"10 CCPA Compliance Tips For Web Developers": "https://dataoverhaulers.medium.com/10-ccpa-compliance-tips-for-web-developers-1ce8382c7286",
@@ -6270,7 +6286,7 @@
 				},
 				{
 					"id": "19",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#implement-appropriate-data-management-procedures",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#implement-appropriate-data-management-procedures",
 					"guideline": "Implement appropriate data management procedures",
 					"subheading": "Allow users to manage, control, and delete their data upon request, while making outdated content searchable via a lightweight and simple archive.",
 					"criteria": [
@@ -6286,8 +6302,8 @@
 									"GR491 - 1-7006 - Obsolete Data": "https://gr491.isit-europe.org/en/crit.php?id=1-7006-backend-the-regulations-require-control-of-the-data",
 									"GR491 - 1-7016 - Expiration Dates": "https://gr491.isit-europe.org/en/crit.php?id=1-7016-backend-the-specifications-reveal-data-collections-of-asynchronous",
 									"GR491 - 5-3035 - Archiving and Management": "https://gr491.isit-europe.org/en/crit.php?id=5-3035-uxui-often-a-significant-amount-of-files-often",
-									"GreenIT - 4012 - Set up a data expiration and deletion policy": "https://rweb.greenit.fr/en/fiches/RWEB_4012-define-a-data-expiration-and-deletion-policy",
-									"GreenIT - 4031 - Set up a content end-of-life plan": "https://rweb.greenit.fr/en/fiches/RWEB_4031-set-up-a-content-end-of-life-plan",
+									"GreenIT - 0079 - Set up a data expiration and deletion policy": "https://rweb.greenit.fr/en/fiches/RWEB_0079-define-a-data-expiration-and-deletion-policy",
+									"GreenIT - 0114 - Set up a content end-of-life plan": "https://rweb.greenit.fr/en/fiches/RWEB_0114-set-up-a-content-end-of-life-plan",
 									"Internet Archive Wayback Machine": "https://web.archive.org/",
 									"Should You Update, Rewrite or Delete Outdated Content?": "https://www.greenmellenmedia.com/should-you-update-rewrite-or-delete-outdated-content/",
 									"Understanding the Operational Carbon Footprint of Storage Reliability and Management (PDF)": "https://hotcarbon.org/assets/2024/pdf/hotcarbon24-final61.pdf",
@@ -6309,8 +6325,8 @@
 									"GPF - General Policy Framework (PDF) - 8.8 - Hosting (Hot / Cold Data)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GR491 - 4-8042 - Customer Transparency": "https://gr491.isit-europe.org/en/crit.php?id=4-8042-hosting-the-activity-of-a-data-center-generates",
 									"GR491 - 5-3035 - Archiving and Management": "https://gr491.isit-europe.org/en/crit.php?id=5-3035-uxui-often-a-significant-amount-of-files-often",
-									"GreenIT - 4012 - Set up a data expiration and deletion policy": "https://rweb.greenit.fr/en/fiches/RWEB_4012-define-a-data-expiration-and-deletion-policy",
-									"GreenIT - 4031 - Set up a content end-of-life plan": "https://rweb.greenit.fr/en/fiches/RWEB_4031-set-up-a-content-end-of-life-plan",
+									"GreenIT - 0079 - Set up a data expiration and deletion policy": "https://rweb.greenit.fr/en/fiches/RWEB_0079-define-a-data-expiration-and-deletion-policy",
+									"GreenIT - 0114 - Set up a content end-of-life plan": "https://rweb.greenit.fr/en/fiches/RWEB_0114-set-up-a-content-end-of-life-plan",
 									"How To Protect Your Users With The Privacy By Design Framework": "https://www.smashingmagazine.com/2017/07/privacy-by-design-framework/",
 									"Learn Privacy": "https://web.dev/blog/introducing-learn-privacy?hl=en",
 									"OpQuast - 19 - Accounts and subscriptions opened online can be closed online by the same method.": "https://checklists.opquast.com/en/web-quality-assurance/accounts-and-subscriptions-opened-online-can-be-closed-online",
@@ -6341,7 +6357,7 @@
 				},
 				{
 					"id": "20",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#establish-responsible-practices-around-ai-and-emerging-or-disruptive-technologies",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#establish-responsible-practices-around-ai-and-emerging-or-disruptive-technologies",
 					"guideline": "Establish responsible practices around AI and emerging or disruptive technologies",
 					"subheading": "Implement policies, training, and auditing practices for AI and emerging or disruptive to ensure sustainability upon implementation, while accounting for associated legal issues.",
 					"criteria": [
@@ -6530,7 +6546,7 @@
 									"GR491 - 2-6010 - Is sensitive user data secure?": "https://gr491.isit-europe.org/en/crit.php?id=1-7020-backend-the-gdpr-requires-the-implementation-of-a",
 									"Mitigating Quantum Threats Beyond PQC": "https://postquantum.com/post-quantum/mitigating-quantum-threats-pqc/",
 									"Post-quantum cryptography": "https://en.wikipedia.org/wiki/Post-quantum_cryptography",
-									"Post Quantum Cryptography (PQC): You May Already Be Using It!": "https://www.domaintools.com/resources/blog/post-quantum-cryptography-pqc-you-may-already-be-using-it/",
+									"Post Quantum Cryptography (PQC): You May Already Be Using It!": "https://www.domaintools.com/blog/post-quantum-cryptography-pqc-you-may-already-be-using-it/",
 									"What Is the Future of Quantum-Proof Encryption?": "https://spectrum.ieee.org/post-quantum-cryptography-nist"
 								}
 							]
@@ -6550,11 +6566,11 @@
 							"emissions": "High"
 						}
 					],
-					"tags": ["AI", "Content", "E-Waste", "Governance", "Hardware", "Networking", "Performance", "Privacy", "Security", "Social Equity", "Software"]
+					"tags": ["Accessibility", "AI", "Content", "E-Waste", "Governance", "Hardware", "Networking", "Performance", "Privacy", "Security", "Social Equity", "Software"]
 				},
 				{
 					"id": "21",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#include-responsible-financial-policies",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#include-responsible-financial-policies",
 					"guideline": "Include responsible financial policies",
 					"subheading": "Ensure that a project is suitably budgeted for and funded through sustainable and ethical sources.",
 					"criteria": [
@@ -6618,7 +6634,7 @@
 				},
 				{
 					"id": "22",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#include-organizational-philanthropy-policies",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#include-organizational-philanthropy-policies",
 					"guideline": "Include organizational philanthropy policies",
 					"subheading": "Provide the opportunity to give back to the community through charitable or volunteer efforts via your organisation.",
 					"criteria": [
@@ -6679,7 +6695,7 @@
 				},
 				{
 					"id": "23",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#plan-for-a-digital-product-or-service-s-care-and-end-of-life",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#plan-for-a-digital-product-or-service-s-care-and-end-of-life",
 					"guideline": "Plan for a digital product or service's care and end-of-life",
 					"subheading": "Produce documentation to ensure that when a project is shut down, users are made aware of what will happen to their data.",
 					"criteria": [
@@ -6695,8 +6711,8 @@
 									"GPF - General Policy Framework (PDF) - 2.7 - Specifications (Maintainence & Decomissioning)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GPF - General Policy Framework (PDF) - 7.2 - Back-End (Data Retention)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
 									"GR491 - 4-8048 - End-Of-Life": "https://gr491.isit-europe.org/en/crit.php?id=4-8048-hosting-the-renewal-of-the-technical-park-is",
-									"GreenIT - 085 - Have an end of life strategy for the website": "https://rweb.greenit.fr/en/fiches/RWEB_0085-have-an-end-of-life-strategy-for-the-website",
-									"GreenIT - 4031 - Set up a content end-of-life plan": "https://rweb.greenit.fr/en/fiches/RWEB_4031-set-up-a-content-end-of-life-plan",
+									"GreenIT - 0115 - Have an end of life strategy for the website": "https://rweb.greenit.fr/en/fiches/RWEB_0115-have-an-end-of-life-strategy-for-the-website",
+									"GreenIT - 0114 - Set up a content end-of-life plan": "https://rweb.greenit.fr/en/fiches/RWEB_0114-set-up-a-content-end-of-life-plan",
 									"How can we keep domains working long after our death?": "https://cagrimmett.com/2023/11/04/domain-longevity/",
 									"Software can be finished": "https://rosswintle.uk/2025/10/software-can-be-finished/",
 									"What Does End-of-life (EOL) Mean For Your Website Platform?": "https://fruition.net/blog/what-does-eol-mean-for-your-website",
@@ -6726,7 +6742,7 @@
 				},
 				{
 					"id": "24",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#include-e-waste-right-to-repair-and-recycling-policies",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#include-e-waste-right-to-repair-and-recycling-policies",
 					"guideline": "Include e-waste, right to repair, and recycling policies",
 					"subheading": "Include policies and documentation explaining how sustainable e-waste, recycling, repairing, and refurbishment are handled.",
 					"criteria": [
@@ -6852,7 +6868,7 @@
 				},
 				{
 					"id": "25",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#define-performance-and-environmental-budgets",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#define-performance-and-environmental-budgets",
 					"guideline": "Define performance and environmental budgets",
 					"subheading": "Set budgets, taking people, planet, and performance into account alongside baselines, targets, evidence, and resources to help meet KPIs.",
 					"criteria": [
@@ -6862,7 +6878,6 @@
 							"resources": [
 								{
 									"AFNOR Spec 5.1.4 (French)": "https://www.boutique.afnor.org/en-gb/standard/afnor-spec-2201//fa203506/323315",
-									"Audits d'écoconception - conclusion (French)": "https://ldevernay.github.io/green/2020/07/05/audits-conclusion.html",
 									"CO2.js": "https://www.thegreenwebfoundation.org/co2-js/",
 									"Defining the environmental budget for a digital service": "https://greenspector.com/en/defining-the-environmental-budget-for-a-digital-service/",
 									"GPF - General Policy Framework (PDF) - 1.5 - Strategy (Impact Goals)": "https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf",
@@ -6959,7 +6974,7 @@
 				},
 				{
 					"id": "26",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#use-open-source-where-possible",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#use-open-source-where-possible",
 					"guideline": "Use open source where possible",
 					"subheading": "Produce a policy around open collaboration and contribution to creating and sustaining open source projects.",
 					"criteria": [
@@ -7053,11 +7068,11 @@
 							"emissions": "Medium"
 						}
 					],
-					"tags": ["Assets", "Ideation", "Social Equity", "Software", "UI"]
+					"tags": ["Accessibility", "Assets", "Ideation", "Social Equity", "Software", "UI"]
 				},
 				{
 					"id": "27",
-					"url": "https://w3c.github.io/sustainableweb-wsg/#create-a-business-continuity-and-disaster-recovery-plan",
+					"url": "https://www.w3.org/TR/web-sustainability-guidelines/#create-a-business-continuity-and-disaster-recovery-plan",
 					"guideline": "Create a business continuity and disaster recovery plan",
 					"subheading": "Create a plan of action with a system to recover from failure or alert users if or when a loss of service occurs.",
 					"criteria": [
