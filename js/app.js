@@ -132,6 +132,7 @@ function buildGuideline(guideline, getStars, getImpacts) {
     let benefitlist = '';
     let examplelist = '';
     let taglist = '';
+    var impacted = '';
 
     for (const element of guideline.criteria) {
         let resourcelist = '';
@@ -168,23 +169,35 @@ function buildGuideline(guideline, getStars, getImpacts) {
             </li>
         `;
     }
-    document.getElementById("output").focus();
-    document.getElementById("output").innerHTML = `
-        <h1 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h1>
-        <h2 class"impact-score">IMPACT SCORE: </h2>
-        <p class="tagline">Want another? get a random Guideline by tag:</p>
-        <ul class="taglist cluster">${taglist}</ul>
-        <div>
-            <blockquote cite="${guideline.url}">
-                <p><strong>${guideline.subheading}</strong></p>
-            </blockquote>
-            <p>Guideline Draft Subheading: <cite>${guideline.guideline}</cite></p>
-        </div>
-        <h2>Success criteria for this guideline:</h2>
-        ${criterialist}
-        <h2>Benefits of this guideline:</h2>
-        ${benefitlist}
-    `;
+
+    if (guideline.url) {
+        fetch('/js/impact.json')
+        .then(response => response.json())
+        .then(data => {
+            var impacted = findObjectByValue(data, guideline.url);
+                document.getElementById("output").focus();
+                document.getElementById("output").innerHTML = `
+                    <h1 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h1>
+                    <h2 class"impact-score">IMPACT SCORE: ${ impacted ? JSON.stringify(impacted.points.impactScore, null, 2) : "No score...yet"} </h2>
+                    <p class="tagline">Want another? get a random Guideline by tag:</p>
+                    <ul class="taglist cluster">${taglist}</ul>
+                    <div>
+                        <blockquote cite="${guideline.url}">
+                            <p><strong>${guideline.subheading}</strong></p>
+                        </blockquote>
+                        <p>Guideline Draft Subheading: <cite>${guideline.guideline}</cite></p>
+                    </div>
+                    <h2>Success criteria for this guideline:</h2>
+                    ${criterialist}
+                    <h2>Benefits of this guideline:</h2>
+                    ${benefitlist}
+                `;
+        })
+        .then(data => {
+            document.getElementById("output").focus();
+        })
+        .catch(error => console.error('Error loading data:', error));
+    }
 
     getStars;
 }
