@@ -114,6 +114,10 @@ th {
   padding: 8px 10px;
 }
 
+.metrics-header {
+  margin-block: 0px;
+}
+
 /* =========================
    Footer & Aside
    ========================= */

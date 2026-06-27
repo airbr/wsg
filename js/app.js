@@ -174,14 +174,29 @@ function buildGuideline(guideline, getStars, getImpacts) {
         fetch('/js/impact.json')
         .then(response => response.json())
         .then(data => {
-            var impacted = findObjectByValue(data, guideline.url);
+
+                var impacted = findObjectByValue(data, guideline.url);
+                var metricslist = "";
+                if (impacted !== null){
+                    if ("metrics" in impacted){
+                        for (var metric of impacted.metrics) {
+                            metricslist += `
+                                <li>
+                                    <strong>${metric}</strong>
+                                </li>
+                            `;
+                        }
+                    }
+                }
+                console.log(metricslist);
                 document.getElementById("output").focus();
                 document.getElementById("output").innerHTML = `
                     <h1 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h1>
+                     ${metricslist ? '<h2 class="metrics-header">Impactful metrics for this guideline:</h2><ul>'+metricslist+'</ul>' : ''}
                     <table style="text-align: left;">
-                    <caption>
-                        ${ impacted ? JSON.stringify(impacted.rationale, null, 2) : ""}
-                    </caption>
+                    <caption><strong>
+                        ${ impacted ? JSON.stringify(impacted.rationale, null, 2) : "No Impact Measurement yet reported for this guideline."}
+                    </strong></caption>
                     ${ impacted ? `<thead>
                         <tr>
                         <th scope="col"><strong>People Impact</strong></th>
