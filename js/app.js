@@ -191,7 +191,7 @@ function buildGuideline(guideline, getStars, getImpacts) {
                     <h1 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h1>
                     ${ metricslist ? '<div class="metrics-background"><h2 class="metrics-header">Impactful metrics for this guideline:</h2><ul>'+metricslist+'</ul> </div>' : ''}
                     ${ impacted ? `
-                    <h3>${ impacted ? JSON.stringify(impacted.rationale, null, 2) : ""}</h3>
+                    <p><strong>${ impacted ? JSON.stringify(impacted.rationale, null, 2) : ""}</strong></p>
                     <div class="impacts">
                     <p>People Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.people, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.people, null, 2) : "n/a yet"}</p>   
                     <p>Planet Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.planet, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.planet, null, 2) : "n/a yet"}</p>    

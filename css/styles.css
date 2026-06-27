@@ -256,13 +256,17 @@ code {
 .button:hover {
   background: var(--button-hover-bg);
   color: var(--button-hover-color);
+  outline: 3px solid #005a9c;
+	outline-offset: 0.25rem;
 }
 
 .button:focus {
-  outline-width: var(--button-outline-width, var(--button-border-width));
+  /* outline-width: var(--button-outline-width, var(--button-border-width));
   outline-style: var(--button-outline-style, var(--button-border-style));
   outline-color: var(--button-outline-color, var(--button-border-color));
-  outline-offset: var(--button-outline-offset, calc(var(--button-border-width) * 2));
+  outline-offset: var(--button-outline-offset, calc(var(--button-border-width) * 2)); */
+  outline: 3px solid #005a9c;
+	outline-offset: 0.25rem;
 }
 
 .button:active {
@@ -354,6 +358,12 @@ code {
   text-decoration: none;
   background: light-dark(whitesmoke, #201d1e);
   border: 0px whitesmoke;
+}
+
+#package:hover {
+  outline: 3px solid #005a9c;
+	outline-offset: 0.25rem;
+  border-radius: .125em;
 }
 
 *:focus-visible { 
