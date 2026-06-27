@@ -191,48 +191,14 @@ function buildGuideline(guideline, getStars, getImpacts) {
                     <h1 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h1>
                     ${ metricslist ? '<div class="metrics-background"><h2 class="metrics-header">Impactful metrics for this guideline:</h2><ul>'+metricslist+'</ul> </div>' : ''}
                     ${ impacted ? `
-                    <table style="text-align: left;">
-                    <caption>
-                        <blockquote>
-                        ${ impacted ? JSON.stringify(impacted.rationale, null, 2) : ""}
-                        </blockquote>
-                    </strong>
-                    <thead>
-                        <tr>
-                        <th scope="col"><strong>People Impact</strong></th>
-                        <th scope="col"><strong>Planet Impact</strong></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.people, null, 2) : "n/a yet"}</th>
-                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.planet, null, 2) : "n/a yet"}</th>
-                        </tr>
-                        <tr>
-                        <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.people, null, 2) : "n/a yet"}</th>
-                        <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.planet, null, 2) : "n/a yet"}</th>
-                        </tr>
-                    </tbody>
-                    </table>
-                    <table style="text-align: left;">
-                    <thead>
-                        <tr>
-                        <th scope="col"><strong>Prosperity Impact</strong></th>
-                        <th scope="col"><strong>Timeframe Impact</strong></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.prosperity, null, 2) : "n/a yet"}</th>
-                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.timeframe, null, 2) : "n/a yet"}</th>
-                        </tr>
-                        <tr>
-                        <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.prosperity, null, 2) : "n/a yet"}</th>
-                        <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.timeframe, null, 2) : "n/a yet"}</th>
-                        </tr>
-                    </tbody>
-                    </table>
-                    `
+                    <h3>${ impacted ? JSON.stringify(impacted.rationale, null, 2) : ""}</h3>
+                    <div class="impacts">
+                    <p>People Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.people, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.people, null, 2) : "n/a yet"}</p>   
+                    <p>Planet Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.planet, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.planet, null, 2) : "n/a yet"}</p>    
+                    <p>Prosperity Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.prosperity, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.prosperity, null, 2) : "n/a yet"}</p>    
+                    <p>Timeframe Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.timeframe, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.timeframe, null, 2) : "n/a yet"}</p>    
+                    </div>
+                    <span class="big-number">Impact Score: ${ impacted ? impacted.points.people+impacted.points.planet+impacted.points.prosperity+impacted.points.timeframe : ""}</span>`
                     : "" }
                     <p class="tagline">Want another? get a random Guideline by tag:</p>
                     <ul class="taglist cluster">${taglist}</ul>

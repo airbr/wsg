@@ -100,20 +100,6 @@ section > p {
   font-size: 1.5em;
 }
 
-table {
-	border-collapse: collapse;
-	border: 2px solid rgb(140 140 140);
-	font-family: sans-serif;
-	font-size: 1rem;
-	letter-spacing: 2px;
-	width: 100%;
-}
-
-th {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
-}
-
 .metrics-header {
   margin-block: 0px;
 }
@@ -121,6 +107,19 @@ th {
 .metrics-background {
   padding: 4px;
   background: lightgreen;
+}
+
+.big-number {
+  margin-block: 12px;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  line-height: 1;
+}
+
+.impacts > * {
+  font-size: 1.5em;
+  margin-block: 2px;
 }
 
 /* =========================
