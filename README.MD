@@ -1,5 +1,7 @@
 # WSG-o-matic
 
+*This project is for educational and demonstration purposes. All guideline content credit to the W3C and contributors.*
+
 A lightweight interactive website for exploring the [Web Sustainability Guidelines (WSGs)](https://w3c.github.io/sustainableweb-wsg/). This project helps users discover and learn about sustainability guidelines for the web.
 
 ## Features
@@ -8,6 +10,7 @@ A lightweight interactive website for exploring the [Web Sustainability Guidelin
 - **Topic-Based Browsing:** Filter and explore guidelines by topic.
 - **Interactive UI:** Responsive, accessible design with dynamic content.
 - **Sustainable Tooling And Reporting (STAR):** View related STAR tests for each guideline.
+- **Impact Ratings:** View Impact Ratings for those guidelines that have them.
 - **Client-side Only:** 'No backend required'; all data is loaded via JSON and ideally cached too.
 
 ## Getting Started
@@ -19,15 +22,16 @@ A lightweight interactive website for exploring the [Web Sustainability Guidelin
    ```
 
 2. **Install dependencies:**  
-   No dependencies required. All code is static HTML, CSS, and JS.
+   No dependencies required other than a web serve. All code is static HTML, CSS, and JS.
 
 3. **Run locally:**  
-   Open `index.html` in your browser, or use a local server:
+   Use a local server such as below:
    ```sh
    # Python 3.x
    python3 -m http.server
    # Then visit http://localhost:8000
    ```
+   In this implementation the JSON files do need to be fetched so it helps to have a web server rather than opening it as a file. 
 
 ## Project Structure
 
@@ -40,7 +44,7 @@ A lightweight interactive website for exploring the [Web Sustainability Guidelin
 │   └── app.js
 ├── js/guidelines.json
 ├── js/star.json
-└── ...
+└── js/impact.json
 ```
 
 ## Customization
