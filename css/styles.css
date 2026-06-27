@@ -118,6 +118,11 @@ th {
   margin-block: 0px;
 }
 
+.metrics-background {
+  padding: 4px;
+  background: lightgreen;
+}
+
 /* =========================
    Footer & Aside
    ========================= */
@@ -331,7 +336,7 @@ code {
 }
 
 .tagline {
-  margin: 0;
+  margin-top: 16px;
 }
 
 .taglist {

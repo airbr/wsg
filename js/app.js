@@ -158,10 +158,6 @@ function buildGuideline(guideline, getStars, getImpacts) {
         `;
     }
 
-    // for (const example of guideline.example) {
-    //     examplelist += `<code>${markdownToAnchor(example.content)}</code>`;
-    // }
-
     for (const tag of guideline.tags) {
         taglist += `
             <li class='tag'>
@@ -169,12 +165,13 @@ function buildGuideline(guideline, getStars, getImpacts) {
             </li>
         `;
     }
-
+    // Should always have URL, for now, always fetch Impact.json 
     if (guideline.url) {
         fetch('/js/impact.json')
         .then(response => response.json())
         .then(data => {
 
+                // Temporary Handling of Metrics and Impact Data
                 var impacted = findObjectByValue(data, guideline.url);
                 var metricslist = "";
                 if (impacted !== null){
@@ -188,16 +185,19 @@ function buildGuideline(guideline, getStars, getImpacts) {
                         }
                     }
                 }
-                console.log(metricslist);
+
                 document.getElementById("output").focus();
                 document.getElementById("output").innerHTML = `
                     <h1 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h1>
-                     ${metricslist ? '<h2 class="metrics-header">Impactful metrics for this guideline:</h2><ul>'+metricslist+'</ul>' : ''}
+                    ${ metricslist ? '<div class="metrics-background"><h2 class="metrics-header">Impactful metrics for this guideline:</h2><ul>'+metricslist+'</ul> </div>' : ''}
+                    ${ impacted ? `
                     <table style="text-align: left;">
-                    <caption><strong>
-                        ${ impacted ? JSON.stringify(impacted.rationale, null, 2) : "No Impact Measurement yet reported for this guideline."}
-                    </strong></caption>
-                    ${ impacted ? `<thead>
+                    <caption>
+                        <blockquote>
+                        ${ impacted ? JSON.stringify(impacted.rationale, null, 2) : ""}
+                        </blockquote>
+                    </strong>
+                    <thead>
                         <tr>
                         <th scope="col"><strong>People Impact</strong></th>
                         <th scope="col"><strong>Planet Impact</strong></th>
@@ -234,7 +234,6 @@ function buildGuideline(guideline, getStars, getImpacts) {
                     </table>
                     `
                     : "" }
-                    
                     <p class="tagline">Want another? get a random Guideline by tag:</p>
                     <ul class="taglist cluster">${taglist}</ul>
                     <div>
