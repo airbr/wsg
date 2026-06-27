@@ -127,7 +127,7 @@ function getGuidelineByTag(tag) {
         .catch(error => console.error('Error loading data:', error));
 }
 
-function buildGuideline(guideline, getStars) {
+function buildGuideline(guideline, getStars, getImpacts) {
     let criterialist = '';
     let benefitlist = '';
     let examplelist = '';
@@ -171,6 +171,7 @@ function buildGuideline(guideline, getStars) {
     document.getElementById("output").focus();
     document.getElementById("output").innerHTML = `
         <h1 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h1>
+        <h2 class"impact-score">IMPACT SCORE: </h2>
         <p class="tagline">Want another? get a random Guideline by tag:</p>
         <ul class="taglist cluster">${taglist}</ul>
         <div>
