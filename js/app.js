@@ -198,10 +198,10 @@ function buildGuideline(guideline, getStars, getImpacts) {
                         <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.timeframe, null, 2) : "n/a yet"}</th>
                         </tr>
                         <tr>
-                        <th scope="col">People score ${ impacted ? JSON.stringify(impacted.points.people, null, 2) : "n/a yet"}</th>
-                        <th scope="col">Planet score: ${ impacted ? JSON.stringify(impacted.points.planet, null, 2) : "n/a yet"}</th>
-                        <th scope="col">Prosperity score:${ impacted ? JSON.stringify(impacted.points.prosperity, null, 2) : "n/a yet"}</th>
-                        <th scope="col">Timeframe Points: ${ impacted ? JSON.stringify(impacted.points.timeframe, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.people, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.planet, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.prosperity, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.timeframe, null, 2) : "n/a yet"}</th>
                         </tr>
                     </tbody>
                     </table>`
