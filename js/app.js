@@ -186,25 +186,38 @@ function buildGuideline(guideline, getStars, getImpacts) {
                         <tr>
                         <th scope="col"><strong>People Impact</strong></th>
                         <th scope="col"><strong>Planet Impact</strong></th>
-                        <th scope="col"><strong>Prosperity Impact</strong></th>
-                        <th scope="col"><strong>Timeframe Impact</strong></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.people, null, 2) : "n/a yet"}</th>
                         <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.planet, null, 2) : "n/a yet"}</th>
-                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.prosperity, null, 2) : "n/a yet"}</th>
-                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.timeframe, null, 2) : "n/a yet"}</th>
                         </tr>
                         <tr>
                         <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.people, null, 2) : "n/a yet"}</th>
                         <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.planet, null, 2) : "n/a yet"}</th>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <table style="text-align: left;">
+                    <thead>
+                        <tr>
+                        <th scope="col"><strong>Prosperity Impact</strong></th>
+                        <th scope="col"><strong>Timeframe Impact</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.prosperity, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.timeframe, null, 2) : "n/a yet"}</th>
+                        </tr>
+                        <tr>
                         <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.prosperity, null, 2) : "n/a yet"}</th>
                         <th scope="col">Score: ${ impacted ? JSON.stringify(impacted.points.timeframe, null, 2) : "n/a yet"}</th>
                         </tr>
                     </tbody>
-                    </table>`
+                    </table>
+                    `
                     : "" }
                     
                     <p class="tagline">Want another? get a random Guideline by tag:</p>
