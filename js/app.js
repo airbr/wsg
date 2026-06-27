@@ -178,7 +178,35 @@ function buildGuideline(guideline, getStars, getImpacts) {
                 document.getElementById("output").focus();
                 document.getElementById("output").innerHTML = `
                     <h1 id="guideline-header"><a class="fancy-url" href="${guideline.url}">Guideline: ${guideline.guideline}</a></h1>
-                    <h2 class"impact-score">IMPACT SCORE: ${ impacted ? JSON.stringify(impacted.points.impactScore, null, 2) : "No score...yet"} </h2>
+                    <table style="text-align: left;">
+                    <caption>
+                        ${ impacted ? JSON.stringify(impacted.rationale, null, 2) : ""}
+                    </caption>
+                    ${ impacted ? `<thead>
+                        <tr>
+                        <th scope="col"><strong>People Impact</strong></th>
+                        <th scope="col"><strong>Planet Impact</strong></th>
+                        <th scope="col"><strong>Prosperity Impact</strong></th>
+                        <th scope="col"><strong>Timeframe Impact</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.people, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.planet, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.prosperity, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Rating: ${ impacted ? JSON.stringify(impacted.impactRatings.timeframe, null, 2) : "n/a yet"}</th>
+                        </tr>
+                        <tr>
+                        <th scope="col">People score ${ impacted ? JSON.stringify(impacted.points.people, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Planet score: ${ impacted ? JSON.stringify(impacted.points.planet, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Prosperity score:${ impacted ? JSON.stringify(impacted.points.prosperity, null, 2) : "n/a yet"}</th>
+                        <th scope="col">Timeframe Points: ${ impacted ? JSON.stringify(impacted.points.timeframe, null, 2) : "n/a yet"}</th>
+                        </tr>
+                    </tbody>
+                    </table>`
+                    : "" }
+                    
                     <p class="tagline">Want another? get a random Guideline by tag:</p>
                     <ul class="taglist cluster">${taglist}</ul>
                     <div>
@@ -213,7 +241,7 @@ function generateButtonList() {
         "Hardware", "Software", "Accessibility", "Ideation", "Research", "Compatibility", "Performance",
         "Networking", "Reporting", "UI", "Patterns", "Usability", "KPIs", "E-Waste", "Marketing",
         "Strategy", "Social Equity", "Content", "Assets", "HTML", "CSS", "Javascript", "Security",
-        "Privacy", "Education", "Governance"
+        "Privacy", "Education", "Governance", "AI"
     ];
 
     let buttonlist = tags.map(tag =>
