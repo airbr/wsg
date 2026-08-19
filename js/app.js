@@ -196,7 +196,7 @@ function buildGuideline(guideline, getStars, getImpacts) {
                     <p>Prosperity Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.prosperity, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.prosperity, null, 2) : "n/a yet"}</p>    
                     <p>Timeframe Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.timeframe, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.timeframe, null, 2) : "n/a yet"}</p>    
                     </div>
-                    <h3 class="big-number">Impact Score: ${ impacted ? impacted.points.people+impacted.points.planet+impacted.points.prosperity+impacted.points.timeframe : ""}</h3>`
+                    <h2 class="big-number">Impact Score: ${ impacted ? impacted.points.people+impacted.points.planet+impacted.points.prosperity+impacted.points.timeframe : ""}</h2>`
                     : "" }
                     <p class="tagline">Want another? get a random Guideline by tag:</p>
                     <ul class="taglist cluster">${taglist}</ul>
