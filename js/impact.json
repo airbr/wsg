@@ -1,7 +1,7 @@
 {
-	"title": "Web Sustainability Guidelines (WSG) Impact Measurement",
+	"title": "Web Sustainability Guidelines (WSG) Impact Ratings",
 	"edition": "Editor's Draft",
-	"lastModified": "2026-06-25",
+	"lastModified": "2026-08-06",
 	"category": [
 		{
 			"id": "1",
@@ -327,7 +327,7 @@
 					"rationale": "Improves usability and inclusivity through better testing practices."
 				},
 				{
-					"id": "https://www.w3.org/TR/web-sustainability-guidelines/#cross-platform-compatibility-support",
+					"id": "https://www.w3.org/TR/web-sustainability-guidelines/#provide-cross-platform-compatibility-support",
 					"impactRatings": {
 						"people": "Medium",
 						"planet": "Medium",
@@ -1296,7 +1296,7 @@
 						"planet": 0,
 						"prosperity": 0,
 						"timeframe": 2,
-						"impactScore": 5
+						"impactScore": 2
 					},
 					"rationale": "Philanthropy can support broader societal benefits depending on implementation."
 				},

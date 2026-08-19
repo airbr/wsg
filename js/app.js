@@ -135,28 +135,26 @@ function buildGuideline(guideline, getStars, getImpacts) {
     var impacted = '';
 
     for (const element of guideline.criteria) {
-        let resourcelist = '';
-        for (const [key, value] of Object.entries(element.resources[0])) {
-            resourcelist += `<li><a href="${value}">${key}</a></li>`;
-        }
+        // let resourcelist = '';
+        // for (const [key, value] of Object.entries(element.resources[0])) {
+        //     resourcelist += `<li><a href="${value}">${key}</a></li>`;
+        // }
         criterialist += `
             <details>
-                <summary>${element.title}</summary>
+                <summary><h3>${element.title}</h3></summary>
                 ${element.description}
-                <p>Resources list</p>
-                <ul>${resourcelist}</ul>
             </details>
         `;
     }
 
-    for (const [key, value] of Object.entries(guideline.benefits[0])) {
-        benefitlist += `
-            <details>
-                <summary>${key}</summary>
-                ${value}
-            </details>
-        `;
-    }
+    // for (const [key, value] of Object.entries(guideline.benefits[0])) {
+    //     benefitlist += `
+    //         <details>
+    //             <summary>${key}</summary>
+    //             ${value}
+    //         </details>
+    //     `;
+    // }
 
     for (const tag of guideline.tags) {
         taglist += `
@@ -198,7 +196,7 @@ function buildGuideline(guideline, getStars, getImpacts) {
                     <p>Prosperity Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.prosperity, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.prosperity, null, 2) : "n/a yet"}</p>    
                     <p>Timeframe Impact is rated ${ impacted ? JSON.stringify(impacted.impactRatings.timeframe, null, 2) : "n/a yet"}, with a score of ${ impacted ? JSON.stringify(impacted.points.timeframe, null, 2) : "n/a yet"}</p>    
                     </div>
-                    <span class="big-number">Impact Score: ${ impacted ? impacted.points.people+impacted.points.planet+impacted.points.prosperity+impacted.points.timeframe : ""}</span>`
+                    <h3 class="big-number">Impact Score: ${ impacted ? impacted.points.people+impacted.points.planet+impacted.points.prosperity+impacted.points.timeframe : ""}</h3>`
                     : "" }
                     <p class="tagline">Want another? get a random Guideline by tag:</p>
                     <ul class="taglist cluster">${taglist}</ul>
@@ -210,8 +208,6 @@ function buildGuideline(guideline, getStars, getImpacts) {
                     </div>
                     <h2>Success criteria for this guideline:</h2>
                     ${criterialist}
-                    <h2>Benefits of this guideline:</h2>
-                    ${benefitlist}
                 `;
         })
         .then(data => {

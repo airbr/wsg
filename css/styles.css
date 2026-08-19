@@ -25,6 +25,10 @@ h2 {
   font-size: 1.4em;
 }
 
+h3 {
+  display: inline;
+}
+
 a {
   font-size: 1.10em;
   color: light-dark(#005a9c, #fff);
