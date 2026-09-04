@@ -3,7 +3,7 @@
 }
 
 html {
-  font-size: 1.10em;
+  font-size: 1em;
   line-height: 1.4;
   height: 100%;
 }
@@ -17,7 +17,6 @@ body {
 
 .header {
   padding: 16px;
-  font-size: 1.6em;
   flex-wrap: wrap;
 }
 
