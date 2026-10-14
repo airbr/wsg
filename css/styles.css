@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  padding: 16px;
+  padding: 4px;
   flex-wrap: wrap;
 }
 
@@ -42,11 +42,16 @@ a:hover {
 /* =========================
    Navigation & Header
    ========================= */
+nav > * {
+  margin: 4px;
+}
+
 nav.header {
   background: #005a9c;
   color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-inline: 20px;
 }
@@ -248,6 +253,7 @@ code {
   font-family: sans-serif;
   line-height: 1.1;
   cursor: pointer;
+  box-shadow: -6px 6px 0px 0px #004d70;
 }
 
 .button svg {
@@ -260,7 +266,7 @@ code {
   background: var(--button-hover-bg);
   color: var(--button-hover-color);
   outline: 4px solid #005a9c;
-  outline-offset: 0.5rem;
+  outline-offset: 0.65rem;
 }
 
 .button:focus {
@@ -269,7 +275,7 @@ code {
   outline-color: var(--button-outline-color, var(--button-border-color));
   outline-offset: var(--button-outline-offset, calc(var(--button-border-width) * 2)); */
   outline: 4px solid #005a9c;
-	outline-offset: 0.5rem;
+	outline-offset: 0.65rem;
 }
 
 .button:active {
